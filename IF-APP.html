@@ -1,3 +1,5 @@
+
+<!-- saved from url=(0044)file:///Users/mac/Downloads/IF_App_v2_4.html -->
 <html lang="ro"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +31,7 @@ nav{display:flex;gap:2px}
 .tab-btn{padding:5px 14px;border:none;background:none;color:var(--text3);font-family:'Inter',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-radius:6px;transition:all .12s;letter-spacing:.3px}
 .tab-btn:hover{color:var(--text2);background:var(--bg3)}
 .tab-btn.active{color:var(--text);background:var(--bg3)}
+
 .hdr-right{margin-left:auto;display:flex;align-items:center;gap:10px}
 .ctr{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3)}
 .ctr b{color:var(--accent)}
@@ -97,6 +100,61 @@ table.ttbl tr:hover td{background:var(--bg3)}
 /* ============ STATS TAB ============ */
 #p-stats{flex-direction:column;overflow-y:auto;padding:18px;gap:16px}
 
+/* ============ CALCULATOR TAB ============ */
+#p-calc{overflow-y:auto;padding:10px 16px}
+.calc-wrap{width:100%;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:10px}
+.calc-params{grid-column:1/-1}
+.calc-right{display:contents}
+.calc-section{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:7px}
+.calc-section-title{font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);font-family:'JetBrains Mono',monospace;display:flex;align-items:center;gap:8px}
+.calc-section-title span{height:1px;flex:1;background:var(--border)}
+.calc-row{display:flex;gap:10px;align-items:flex-end}
+.calc-fld{display:flex;flex-direction:column;gap:5px}
+.calc-lbl{font-size:8px;font-weight:600;color:#dcdce6;letter-spacing:.3px}
+.calc-input{padding:6px 9px;background:var(--bg3);border:1.5px solid var(--border2);border-radius:7px;color:var(--text);font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;outline:none;transition:border-color .1s;-webkit-appearance:none;-moz-appearance:textfield;width:110px}
+.calc-input::-webkit-inner-spin-button{display:none}
+.calc-input:focus{border-color:var(--accent)}
+.calc-input.wide{width:160px}
+.risk-presets{display:flex;gap:5px}
+.rp-btn{padding:6px 11px;background:var(--bg3);border:1.5px solid var(--border2);border-radius:7px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--text2);cursor:pointer;transition:all .1s}
+.rp-btn:hover{color:var(--text);border-color:var(--text3)}
+.rp-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(74,222,128,.08)}
+.calc-accounts{display:flex;flex-direction:column;gap:7px}
+.calc-card{background:var(--bg3);border:1px solid var(--border2);border-radius:10px;overflow:hidden;position:relative}
+.calc-card-accent{height:2px;width:100%}
+.calc-card.inst .calc-card-accent{background:linear-gradient(90deg,var(--win),transparent)}
+.calc-card.ftmo80 .calc-card-accent{background:linear-gradient(90deg,var(--blue),transparent)}
+.calc-card.ftmo10 .calc-card-accent{background:linear-gradient(90deg,var(--blue),transparent)}
+.calc-card-header{display:flex;align-items:center;justify-content:space-between;padding:6px 12px 5px;border-bottom:1px solid var(--border)}
+.calc-card-name{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3);font-family:'JetBrains Mono',monospace}
+.calc-card-balance{font-size:10px;color:var(--text2);font-family:'JetBrains Mono',monospace}
+.calc-card-meta{font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace}
+.calc-card-body{display:grid;grid-template-columns:1fr 1px 1fr;gap:0}
+.calc-card-col{padding:8px 12px;display:flex;flex-direction:column;gap:2px}
+.calc-card-col-divider{background:var(--border);width:1px}
+.calc-col-label{font-size:8px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-bottom:1px}
+.calc-card-lot{font-size:24px;font-weight:800;font-family:'JetBrains Mono',monospace;letter-spacing:-1px;line-height:1}
+.calc-card.inst .calc-card-lot{color:var(--win)}
+.calc-card.ftmo80 .calc-card-lot{color:var(--blue)}
+.calc-card.ftmo10 .calc-card-lot{color:var(--blue)}
+.calc-card-lot-net{font-size:24px;font-weight:800;font-family:'JetBrains Mono',monospace;letter-spacing:-1px;line-height:1;color:var(--text)}
+.calc-card-sub{font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-top:0}
+.calc-divider{height:1px;background:var(--border);margin:3px 0}
+.calc-card-costs{display:flex;flex-direction:column;gap:1px;margin-top:3px}
+.calc-cost-row{display:flex;justify-content:space-between;font-size:9px;font-family:'JetBrains Mono',monospace;color:var(--text3)}
+.calc-cost-row span:last-child{color:var(--lose)}
+.calc-cost-total{display:flex;justify-content:space-between;font-size:10px;font-family:'JetBrains Mono',monospace;border-top:1px solid var(--border);padding-top:2px;margin-top:2px}
+.calc-cost-total span:first-child{color:var(--text2);font-weight:600}
+.calc-cost-total span:last-child{color:var(--lose);font-weight:700}
+.calc-diff-pill{display:inline-flex;align-items:center;gap:4px;margin-top:4px;padding:2px 7px;background:rgba(248,113,113,.07);border:1px solid rgba(248,113,113,.18);border-radius:20px;font-size:9px;font-family:'JetBrains Mono',monospace;color:var(--lose);font-weight:700}
+.calc-card-diff{font-size:10px;font-family:'JetBrains Mono',monospace;display:flex;align-items:center;gap:5px}
+.calc-card-diff .diff-lot{font-weight:700;font-size:13px}
+.calc-card-diff .diff-label{color:var(--text3)}
+.eurusd-row{display:flex;align-items:center;gap:8px;margin-top:2px}
+.eurusd-lbl{font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace}
+.calc-note{font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;padding:5px 8px;background:var(--bg);border-radius:6px;border:1px solid var(--border)}
+
+
 .fbar{display:flex;gap:6px;align-items:center;flex-wrap:wrap;background:var(--bg2);border-bottom:1px solid var(--border);padding:8px 14px;flex-shrink:0}
 .fltr-lbl{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-right:4px}
 .fsel{padding:5px 10px;background:var(--bg3);border:1.5px solid var(--border2);border-radius:6px;color:var(--text);font-family:'Inter',sans-serif;font-size:11px;font-weight:700;cursor:pointer;outline:none;transition:border-color .1s;width:auto;text-align:center;text-align-last:center;}
@@ -106,7 +164,7 @@ table.ttbl tr:hover td{background:var(--bg3)}
 .freset{padding:5px 10px;background:none;border:1.5px solid var(--border2);border-radius:6px;color:var(--text3);font-family:'Inter',sans-serif;font-size:11px;font-weight:700;cursor:pointer;transition:all .1s}
 .freset:hover{color:var(--lose);border-color:var(--lose)}
 
-.scards{display:grid;grid-template-columns:repeat(10,1fr);gap:8px}
+.scards{display:grid;grid-template-columns:repeat(9,1fr);gap:8px}
 .sc{background:var(--bg2);border:1px solid var(--border);border-radius:9px;padding:12px 10px}
 .sv{font-size:22px;font-weight:800;letter-spacing:-1px}.sl{font-size:8px;color:var(--text3);text-transform:uppercase;letter-spacing:.8px;margin-top:2px;font-family:'JetBrains Mono',monospace}
 
@@ -189,10 +247,10 @@ table.bktbl tr:last-child td{border-bottom:none}
 .insight-neu{background:rgba(251,191,36,.08);border-left:2px solid var(--be)}
 .insight-text strong{font-weight:700}
 .mc-box{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px}
-.mc-controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;align-items:flex-end}
+.mc-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px;align-items:flex-end}
 .mc-field{display:flex;flex-direction:column;gap:4px}
 .mc-field label{font-size:8px;letter-spacing:.8px;text-transform:uppercase;color:var(--text3);font-family:'JetBrains Mono',monospace}
-.mc-field input{width:80px;padding:6px 8px;background:var(--bg3);border:1.5px solid var(--border2);border-radius:6px;color:var(--text);font-family:'JetBrains Mono',monospace;font-size:12px;outline:none}
+.mc-field input{width:100%;padding:6px 8px;background:var(--bg3);border:1.5px solid var(--border2);border-radius:6px;color:var(--text);font-family:'JetBrains Mono',monospace;font-size:12px;outline:none}
 .mc-field input:focus{border-color:var(--accent)}
 .mc-run{padding:7px 16px;background:var(--accent);border:none;border-radius:7px;color:#000;font-family:'Inter',sans-serif;font-weight:800;font-size:12px;cursor:pointer;align-self:flex-end}
 .mc-run:hover{background:var(--accent2)}
@@ -204,7 +262,7 @@ table.bktbl tr:last-child td{border-bottom:none}
 .dist-chart{flex:1}
 
 /* ── EDGEPROOF FEATURES CSS ─────────────────────────── */
-.scards{display:grid;grid-template-columns:repeat(10,1fr);gap:8px}
+.scards{display:grid;grid-template-columns:repeat(9,1fr);gap:8px}
 .ep-row{display:grid;grid-template-columns:1fr 2fr;gap:10px}
 .hm-table{width:100%;border-collapse:separate;border-spacing:3px}
 .hm-table td{border-radius:5px;padding:7px 5px;text-align:center;font-size:9px;font-family:'JetBrains Mono',monospace;font-weight:700;transition:opacity .12s;cursor:default}
@@ -259,9 +317,11 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="logo-text">GBP/USD IF APP</div>
   </div>
   <nav>
-    <button class="tab-btn active" onclick="switchTab('entry')">📈 Trades</button>
-    <button class="tab-btn" onclick="switchTab('stats')">📊 Stats</button>
-    <button class="tab-btn" onclick="switchTab('io')"> Import / Export</button>
+    <button class="tab-btn" onclick="switchTab(&#39;entry&#39;)">📈 Trades</button>
+    <button class="tab-btn active" onclick="switchTab(&#39;stats&#39;)">📊 Stats</button>
+    <button class="tab-btn" onclick="switchTab(&#39;notes&#39;)">📝 Notes</button>
+    <button class="tab-btn" onclick="switchTab(&#39;calc&#39;)">⚖️ Lot size</button>
+    <button class="tab-btn" onclick="switchTab(&#39;io&#39;)"> Import / Export</button>
   </nav>
   <div class="hdr-right">
     <span class="ctr"><b id="hdr-count">6</b> trades</span>
@@ -271,73 +331,73 @@ table.bktbl tr:last-child td{border-bottom:none}
 <main>
 
 <!-- ============ ENTRY TAB ============ -->
-<div id="p-entry" class="panel active">
+<div id="p-entry" class="panel">
   <div class="eform">
     <!-- DATA + ORA -->
     <div style="display:flex;gap:8px">
       <div class="fld" style="flex:2">
         <div class="flbl">Data <span class="kbd">Tab</span></div>
-        <input type="date" id="f-data" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('f-data')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('f-data')}">
+        <input type="date" id="f-data" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;f-data&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;f-data&#39;)}">
       </div>
       <div class="fld" style="flex:1">
         <div class="flbl">Ora</div>
-        <input type="time" id="f-ora" placeholder="HH:MM" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('f-ora')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('f-ora')}">
+        <input type="time" id="f-ora" placeholder="HH:MM" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;f-ora&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;f-ora&#39;)}">
       </div>
     </div>
     <!-- SESIUNE -->
     <div class="fld">
       <div class="flbl">Sesiune <span><span class="kbd">1</span> <span class="kbd">2</span> <span class="kbd">3</span></span></div>
       <div class="brow">
-        <button class="tog s1" data-g="ses" data-v="10:00-12:00" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-s1')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-s1')}">10–12</button>
-        <button class="tog s2" data-g="ses" data-v="12:00-15:00" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-s1')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-s1')}">12–15</button>
-        <button class="tog s3" data-g="ses" data-v="15:00-19:00" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-s1')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-s1')}">15–19</button>
+        <button class="tog s1" data-g="ses" data-v="10:00-12:00" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-s1&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-s1&#39;)}">10–12</button>
+        <button class="tog s2" data-g="ses" data-v="12:00-15:00" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-s1&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-s1&#39;)}">12–15</button>
+        <button class="tog s3" data-g="ses" data-v="15:00-19:00" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-s1&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-s1&#39;)}">15–19</button>
       </div>
     </div>
     <!-- REZULTAT -->
     <div class="fld">
       <div class="flbl">Rezultat <span><span class="kbd">W</span> <span class="kbd">L</span> <span class="kbd">E</span></span></div>
       <div class="brow">
-        <button class="tog win" data-g="rez" data-v="WIN" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-win')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-win')}">WIN</button>
-        <button class="tog lose" data-g="rez" data-v="LOSE" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-win')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-win')}">LOSE</button>
-        <button class="tog bec" data-g="rez" data-v="BE" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-win')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-win')}">BE</button>
+        <button class="tog win" data-g="rez" data-v="WIN" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-win&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-win&#39;)}">WIN</button>
+        <button class="tog lose" data-g="rez" data-v="LOSE" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-win&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-win&#39;)}">LOSE</button>
+        <button class="tog bec" data-g="rez" data-v="BE" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-win&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-win&#39;)}">BE</button>
       </div>
     </div>
     <!-- LIQ -->
     <div class="fld">
       <div class="flbl">Lichiditate</div>
       <div class="ac-wrap">
-        <input type="text" id="f-liq" autocomplete="off" placeholder="Scrie: loc / maj / hod / lod..." oninput="acFilter('f-liq','ac-liq')" onkeydown="acKey(event,'ac-liq')" onfocus="acFilter('f-liq','ac-liq')" onblur="setTimeout(()=&gt;acClose('ac-liq'),150)" data-selected="Majora">
-        <div id="ac-liq" class="ac-dropdown"><div class="ac-item" data-val="Majora" onmousedown="acSelect('f-liq','ac-liq','Majora')"><mark>Maj</mark>ora</div><div class="ac-item" data-val="Majora A++" onmousedown="acSelect('f-liq','ac-liq','Majora A++')"><mark>Maj</mark>ora A++</div><div class="ac-item" data-val="HOD + Majora" onmousedown="acSelect('f-liq','ac-liq','HOD + Majora')">HOD + <mark>Maj</mark>ora</div><div class="ac-item" data-val="LOD + Majora" onmousedown="acSelect('f-liq','ac-liq','LOD + Majora')">LOD + <mark>Maj</mark>ora</div></div>
+        <input type="text" id="f-liq" autocomplete="off" placeholder="Scrie: loc / maj / hod / lod..." oninput="acFilter(&#39;f-liq&#39;,&#39;ac-liq&#39;)" onkeydown="acKey(event,&#39;ac-liq&#39;)" onfocus="acFilter(&#39;f-liq&#39;,&#39;ac-liq&#39;)" onblur="setTimeout(()=&gt;acClose(&#39;ac-liq&#39;),150)" data-selected="Locala 1">
+        <div id="ac-liq" class="ac-dropdown"><div class="ac-item" data-val="Locala" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Locala&#39;)">Locala</div><div class="ac-item" data-val="Locala 1" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Locala 1&#39;)">Locala 1</div><div class="ac-item" data-val="Locala 2" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Locala 2&#39;)">Locala 2</div><div class="ac-item" data-val="Locala / HOD" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Locala / HOD&#39;)">Locala / HOD</div><div class="ac-item" data-val="Locala / LOD" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Locala / LOD&#39;)">Locala / LOD</div><div class="ac-item" data-val="HOD + Locala" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;HOD + Locala&#39;)">HOD + Locala</div><div class="ac-item" data-val="LOD + Locala" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;LOD + Locala&#39;)">LOD + Locala</div><div class="ac-item" data-val="Majora" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Majora&#39;)">Majora</div><div class="ac-item" data-val="Majora A++" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Majora A++&#39;)">Majora A++</div><div class="ac-item" data-val="HOD + Majora" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;HOD + Majora&#39;)">HOD + Majora</div><div class="ac-item" data-val="LOD + Majora" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;LOD + Majora&#39;)">LOD + Majora</div></div>
       </div>
     </div>
     <!-- SETUP -->
     <div class="fld">
       <div class="flbl">Setup</div>
       <div class="ac-wrap">
-        <input type="text" id="f-setup" autocomplete="off" placeholder="Scrie: osg / tg / tcg / 3g / 3cg..." oninput="acFilterSetup()" onkeydown="acKey(event,'ac-setup')" onfocus="acFilterSetup()" onblur="setTimeout(()=&gt;acClose('ac-setup'),150)" data-selected="OSG">
-        <div id="ac-setup" class="ac-dropdown"><div class="ac-item" data-val="OSG" onmousedown="acSelect('f-setup','ac-setup','OSG')"><mark>OSG</mark></div><div class="ac-item" data-val="OSG+SLG" onmousedown="acSelect('f-setup','ac-setup','OSG+SLG')"><mark>OSG</mark>+SLG</div></div>
+        <input type="text" id="f-setup" autocomplete="off" placeholder="Scrie: osg / tg / tcg / 3g / 3cg..." oninput="acFilterSetup()" onkeydown="acKey(event,&#39;ac-setup&#39;)" onfocus="acFilterSetup()" onblur="setTimeout(()=&gt;acClose(&#39;ac-setup&#39;),150)" data-selected="TG">
+        <div id="ac-setup" class="ac-dropdown"><div class="ac-item" data-val="TG" onmousedown="acSelect(&#39;f-setup&#39;,&#39;ac-setup&#39;,&#39;TG&#39;)"><mark>TG</mark></div><div class="ac-item" data-val="TG+SLG" onmousedown="acSelect(&#39;f-setup&#39;,&#39;ac-setup&#39;,&#39;TG+SLG&#39;)"><mark>TG</mark>+SLG</div></div>
       </div>
     </div>
     <!-- TIP -->
     <div class="fld">
       <div class="flbl">Tip <span><span class="kbd">B</span> BUY · <span class="kbd">S</span> SELL</span></div>
       <div class="brow">
-        <button class="tog buy" data-g="tip" data-v="BUY" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-buy')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-buy')}">BUY</button>
-        <button class="tog sell" data-g="tip" data-v="SELL" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-buy')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-buy')}">SELL</button>
+        <button class="tog buy" data-g="tip" data-v="BUY" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-buy&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-buy&#39;)}">BUY</button>
+        <button class="tog sell on" data-g="tip" data-v="SELL" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-buy&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-buy&#39;)}">SELL</button>
       </div>
     </div>
     <!-- RE -->
     <div class="fld">
       <div class="flbl">Reentry <span><span class="kbd">D</span> Da · <span class="kbd">N</span> Nu</span></div>
       <div class="brow">
-        <button class="tog ry" data-g="re" data-v="Da" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-ry')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-ry')}">Da</button>
-        <button class="tog rn" data-g="re" data-v="Nu" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-ry')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-ry')}">Nu</button>
+        <button class="tog ry" data-g="re" data-v="Da" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-ry&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-ry&#39;)}">Da</button>
+        <button class="tog rn" data-g="re" data-v="Nu" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-ry&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-ry&#39;)}">Nu</button>
       </div>
     </div>
     <!-- POT RR -->
     <div class="fld" id="pot-fld">
       <div class="flbl">Potential RR <span class="kbd">Enter → save</span></div>
-      <input type="number" id="f-pot" step="0.1" min="0" placeholder="ex: 3.5" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('f-pot')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('f-pot')}">
+      <input type="number" id="f-pot" step="0.1" min="0" placeholder="ex: 3.5" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;f-pot&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;f-pot&#39;)}">
     </div>
     <!-- BE TYPE -->
     <div class="fld" id="be-fld" style="display: none;">
@@ -351,40 +411,42 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">High/Low <span style="font-size:8px;color:var(--text3)">(opțional)</span></div>
       <div class="ac-wrap">
-        <input type="text" id="f-hl" autocomplete="off" placeholder="LL / LH / PDL / PDH..." oninput="acFilterHL()" onkeydown="acKey(event,'ac-hl')" onfocus="acFilterHL()" onblur="setTimeout(()=&gt;acClose('ac-hl'),150)" data-selected="LL">
-        <div id="ac-hl" class="ac-dropdown"><div class="ac-item" data-val="LL" onmousedown="acSelect('f-hl','ac-hl','LL')">LL</div><div class="ac-item" data-val="LH" onmousedown="acSelect('f-hl','ac-hl','LH')">LH</div><div class="ac-item" data-val="PDL" onmousedown="acSelect('f-hl','ac-hl','PDL')">PDL</div><div class="ac-item" data-val="PDH" onmousedown="acSelect('f-hl','ac-hl','PDH')">PDH</div><div class="ac-item" data-val="PWL" onmousedown="acSelect('f-hl','ac-hl','PWL')">PWL</div><div class="ac-item" data-val="PWH" onmousedown="acSelect('f-hl','ac-hl','PWH')">PWH</div></div>
+        <input type="text" id="f-hl" autocomplete="off" placeholder="LL / LH / PDL / PDH..." oninput="acFilterHL()" onkeydown="acKey(event,&#39;ac-hl&#39;)" onfocus="acFilterHL()" onblur="setTimeout(()=&gt;acClose(&#39;ac-hl&#39;),150)" data-selected="PDH">
+        <div id="ac-hl" class="ac-dropdown"><div class="ac-item" data-val="PDH" onmousedown="acSelect(&#39;f-hl&#39;,&#39;ac-hl&#39;,&#39;PDH&#39;)"><mark>PDH</mark></div></div>
       </div>
     </div>
     <!-- STIRI -->
     <div class="fld">
       <div class="flbl">Știri <span style="font-size:8px;color:var(--text3)">(opțional)</span></div>
       <div class="ac-wrap">
-        <input type="text" id="f-news-inp" autocomplete="off" placeholder="Fără știri..." oninput="csFilter('f-news')" onkeydown="csKeyInp(event,'f-news')" onfocus="csFilter('f-news')" onblur="setTimeout(()=&gt;csClose('f-news'),150)">
-        <div id="cs-news" class="ac-dropdown"><div class="ac-item active" data-val="NFP" data-label="NFP" onmousedown="csPick('f-news','NFP','NFP'); event.preventDefault()"><mark>NFP</mark></div></div>
+        <input type="text" id="f-news-inp" autocomplete="off" placeholder="Fără știri..." oninput="csFilter(&#39;f-news&#39;)" onkeydown="csKeyInp(event,&#39;f-news&#39;)" onfocus="csFilter(&#39;f-news&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-news&#39;),150)">
+        <div id="cs-news" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="— Fără știri —" onmousedown="csPick(&#39;f-news&#39;,&#39;&#39;,&#39;— Fără știri —&#39;); event.preventDefault()">— Fără știri —</div><div class="ac-item" data-val="FOMC ❌" data-label="FOMC ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;FOMC ❌&#39;,&#39;FOMC ❌&#39;); event.preventDefault()">FOMC ❌</div><div class="ac-item" data-val="FOMC MM" data-label="FOMC MM" onmousedown="csPick(&#39;f-news&#39;,&#39;FOMC MM&#39;,&#39;FOMC MM&#39;); event.preventDefault()">FOMC MM</div><div class="ac-item" data-val="GBP CCC" data-label="GBP CCC" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP CCC&#39;,&#39;GBP CCC&#39;); event.preventDefault()">GBP CCC</div><div class="ac-item" data-val="GBP CPI" data-label="GBP CPI" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP CPI&#39;,&#39;GBP CPI&#39;); event.preventDefault()">GBP CPI</div><div class="ac-item" data-val="GBP GDP ❌" data-label="GBP GDP ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP GDP ❌&#39;,&#39;GBP GDP ❌&#39;); event.preventDefault()">GBP GDP ❌</div><div class="ac-item" data-val="GBP MON PRH ❌" data-label="GBP MON PRH ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP MON PRH ❌&#39;,&#39;GBP MON PRH ❌&#39;); event.preventDefault()">GBP MON PRH ❌</div><div class="ac-item" data-val="GBP AFS ❌" data-label="GBP AFS ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP AFS ❌&#39;,&#39;GBP AFS ❌&#39;); event.preventDefault()">GBP AFS ❌</div><div class="ac-item" data-val="GBP PMI" data-label="GBP PMI" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP PMI&#39;,&#39;GBP PMI&#39;); event.preventDefault()">GBP PMI</div><div class="ac-item" data-val="GBP RETAIL S" data-label="GBP RETAIL S" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP RETAIL S&#39;,&#39;GBP RETAIL S&#39;); event.preventDefault()">GBP RETAIL S</div><div class="ac-item" data-val="USD ISM PMI" data-label="USD ISM PMI" onmousedown="csPick(&#39;f-news&#39;,&#39;USD ISM PMI&#39;,&#39;USD ISM PMI&#39;); event.preventDefault()">USD ISM PMI</div><div class="ac-item" data-val="USD JOLTS JOB" data-label="USD JOLTS JOB" onmousedown="csPick(&#39;f-news&#39;,&#39;USD JOLTS JOB&#39;,&#39;USD JOLTS JOB&#39;); event.preventDefault()">USD JOLTS JOB</div><div class="ac-item" data-val="NFP" data-label="NFP" onmousedown="csPick(&#39;f-news&#39;,&#39;NFP&#39;,&#39;NFP&#39;); event.preventDefault()">NFP</div><div class="ac-item" data-val="UK BH ❌" data-label="UK BH ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;UK BH ❌&#39;,&#39;UK BH ❌&#39;); event.preventDefault()">UK BH ❌</div><div class="ac-item" data-val="UK RATE ❌" data-label="UK RATE ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;UK RATE ❌&#39;,&#39;UK RATE ❌&#39;); event.preventDefault()">UK RATE ❌</div><div class="ac-item" data-val="USD UNEMP. CLAIMS" data-label="USD UNEMP. CLAIMS" onmousedown="csPick(&#39;f-news&#39;,&#39;USD UNEMP. CLAIMS&#39;,&#39;USD UNEMP. CLAIMS&#39;); event.preventDefault()">USD UNEMP. CLAIMS</div><div class="ac-item" data-val="USA BH ❌" data-label="USA BH ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;USA BH ❌&#39;,&#39;USA BH ❌&#39;); event.preventDefault()">USA BH ❌</div><div class="ac-item" data-val="USD CPI" data-label="USD CPI" onmousedown="csPick(&#39;f-news&#39;,&#39;USD CPI&#39;,&#39;USD CPI&#39;); event.preventDefault()">USD CPI</div><div class="ac-item" data-val="USD CORE PCE" data-label="USD CORE PCE" onmousedown="csPick(&#39;f-news&#39;,&#39;USD CORE PCE&#39;,&#39;USD CORE PCE&#39;); event.preventDefault()">USD CORE PCE</div><div class="ac-item" data-val="USD FINAL GDP ❌" data-label="USD FINAL GDP ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;USD FINAL GDP ❌&#39;,&#39;USD FINAL GDP ❌&#39;); event.preventDefault()">USD FINAL GDP ❌</div><div class="ac-item" data-val="USD ADP NFEC" data-label="USD ADP NFEC" onmousedown="csPick(&#39;f-news&#39;,&#39;USD ADP NFEC&#39;,&#39;USD ADP NFEC&#39;); event.preventDefault()">USD ADP NFEC</div><div class="ac-item" data-val="USD ADVANCE GDP" data-label="USD ADVANCE GDP" onmousedown="csPick(&#39;f-news&#39;,&#39;USD ADVANCE GDP&#39;,&#39;USD ADVANCE GDP&#39;); event.preventDefault()">USD ADVANCE GDP</div><div class="ac-item" data-val="USD PMI" data-label="USD PMI" onmousedown="csPick(&#39;f-news&#39;,&#39;USD PMI&#39;,&#39;USD PMI&#39;); event.preventDefault()">USD PMI</div><div class="ac-item" data-val="USD PPI" data-label="USD PPI" onmousedown="csPick(&#39;f-news&#39;,&#39;USD PPI&#39;,&#39;USD PPI&#39;); event.preventDefault()">USD PPI</div><div class="ac-item" data-val="USD RETAIL S ❌" data-label="USD RETAIL S ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;USD RETAIL S ❌&#39;,&#39;USD RETAIL S ❌&#39;); event.preventDefault()">USD RETAIL S ❌</div></div>
         <select id="f-news" style="display:none">
           <option value="">— Fără știri —</option>
-          <option value="FOMC">FOMC</option>
+          <option value="FOMC ❌">FOMC ❌</option>
           <option value="FOMC MM">FOMC MM</option>
           <option value="GBP CCC">GBP CCC</option>
           <option value="GBP CPI">GBP CPI</option>
-          <option value="GBP GDP">GBP GDP</option>
+          <option value="GBP GDP ❌">GBP GDP ❌</option>
+          <option value="GBP MON PRH ❌">GBP MON PRH ❌</option>
+          <option value="GBP AFS ❌">GBP AFS ❌</option>
           <option value="GBP PMI">GBP PMI</option>
           <option value="GBP RETAIL S">GBP RETAIL S</option>
           <option value="USD ISM PMI">USD ISM PMI</option>
           <option value="USD JOLTS JOB">USD JOLTS JOB</option>
           <option value="NFP">NFP</option>
-          <option value="UK BH">UK BH</option>
-          <option value="UK RATE">UK RATE</option>
+          <option value="UK BH ❌">UK BH ❌</option>
+          <option value="UK RATE ❌">UK RATE ❌</option>
           <option value="USD UNEMP. CLAIMS">USD UNEMP. CLAIMS</option>
-          <option value="USA BH">USA BH</option>
+          <option value="USA BH ❌">USA BH ❌</option>
           <option value="USD CPI">USD CPI</option>
           <option value="USD CORE PCE">USD CORE PCE</option>
-          <option value="USD Final GDP">USD Final GDP</option>
+          <option value="USD FINAL GDP ❌">USD FINAL GDP ❌</option>
           <option value="USD ADP NFEC">USD ADP NFEC</option>
-          <option value="USD Advance GDP">USD Advance GDP</option>
+          <option value="USD ADVANCE GDP">USD ADVANCE GDP</option>
           <option value="USD PMI">USD PMI</option>
           <option value="USD PPI">USD PPI</option>
-          <option value="USD RETAIL S">USD RETAIL S</option>
+          <option value="USD RETAIL S ❌">USD RETAIL S ❌</option>
         </select>
       </div>
     </div>
@@ -392,8 +454,8 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">Mișcarea sesiunii <span style="font-size:8px;color:var(--text3)">(opțional)</span></div>
       <div class="ac-wrap">
-        <input type="text" id="f-misc-ses-inp" autocomplete="off" placeholder="Mișcarea sesiunii..." oninput="csFilter('f-misc-ses')" onkeydown="csKeyInp(event,'f-misc-ses')" onfocus="csFilter('f-misc-ses')" onblur="setTimeout(()=&gt;csClose('f-misc-ses'),150)">
-        <div id="cs-misc-ses" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="Neutru" onmousedown="csPick('f-misc-ses','','Neutru'); event.preventDefault()">Neutru</div><div class="ac-item" data-val="Miscarea sesiunii efectuata" data-label="Mișcarea sesiunii efectuată" onmousedown="csPick('f-misc-ses','Miscarea sesiunii efectuata','Mișcarea sesiunii efectuată'); event.preventDefault()">Mișcarea sesiunii efectuată</div><div class="ac-item" data-val="Miscarea sesiunii invalidata" data-label="Mișcarea sesiunii invalidată" onmousedown="csPick('f-misc-ses','Miscarea sesiunii invalidata','Mișcarea sesiunii invalidată'); event.preventDefault()">Mișcarea sesiunii invalidată</div></div>
+        <input type="text" id="f-misc-ses-inp" autocomplete="off" placeholder="Mișcarea sesiunii..." oninput="csFilter(&#39;f-misc-ses&#39;)" onkeydown="csKeyInp(event,&#39;f-misc-ses&#39;)" onfocus="csFilter(&#39;f-misc-ses&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-misc-ses&#39;),150)">
+        <div id="cs-misc-ses" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="Neutru" onmousedown="csPick(&#39;f-misc-ses&#39;,&#39;&#39;,&#39;Neutru&#39;); event.preventDefault()">Neutru</div><div class="ac-item" data-val="Miscarea sesiunii efectuata" data-label="Mișcarea sesiunii efectuată" onmousedown="csPick(&#39;f-misc-ses&#39;,&#39;Miscarea sesiunii efectuata&#39;,&#39;Mișcarea sesiunii efectuată&#39;); event.preventDefault()">Mișcarea sesiunii efectuată</div><div class="ac-item" data-val="Miscarea sesiunii invalidata" data-label="Mișcarea sesiunii invalidată" onmousedown="csPick(&#39;f-misc-ses&#39;,&#39;Miscarea sesiunii invalidata&#39;,&#39;Mișcarea sesiunii invalidată&#39;); event.preventDefault()">Mișcarea sesiunii invalidată</div></div>
         <select id="f-misc-ses" style="display:none">
           <option value="">Neutru</option>
           <option value="Miscarea sesiunii efectuata">Mișcarea sesiunii efectuată</option>
@@ -405,8 +467,8 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">Dist. lichiditate <span style="font-size:8px;color:var(--text3)">(pips)</span></div>
       <div class="ac-wrap">
-        <input type="text" id="f-liq-dist-inp" autocomplete="off" placeholder="Dist. pips..." oninput="csFilter('f-liq-dist')" onkeydown="csKeyInp(event,'f-liq-dist')" onfocus="csFilter('f-liq-dist')" onblur="setTimeout(()=&gt;csClose('f-liq-dist'),150)">
-        <div id="cs-liq-dist" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="—" onmousedown="csPick('f-liq-dist','','—'); event.preventDefault()">—</div><div class="ac-item" data-val="0-1p" data-label="0–1p" onmousedown="csPick('f-liq-dist','0-1p','0–1p'); event.preventDefault()">0–1p</div><div class="ac-item" data-val="1-2p" data-label="1–2p" onmousedown="csPick('f-liq-dist','1-2p','1–2p'); event.preventDefault()">1–2p</div><div class="ac-item" data-val="2-3p" data-label="2–3p" onmousedown="csPick('f-liq-dist','2-3p','2–3p'); event.preventDefault()">2–3p</div><div class="ac-item" data-val="3-4p" data-label="3–4p" onmousedown="csPick('f-liq-dist','3-4p','3–4p'); event.preventDefault()">3–4p</div><div class="ac-item" data-val="4-5p" data-label="4–5p" onmousedown="csPick('f-liq-dist','4-5p','4–5p'); event.preventDefault()">4–5p</div><div class="ac-item" data-val="5-6p" data-label="5–6p" onmousedown="csPick('f-liq-dist','5-6p','5–6p'); event.preventDefault()">5–6p</div><div class="ac-item" data-val="6-7p" data-label="6–7p" onmousedown="csPick('f-liq-dist','6-7p','6–7p'); event.preventDefault()">6–7p</div><div class="ac-item" data-val="7-8p" data-label="7–8p" onmousedown="csPick('f-liq-dist','7-8p','7–8p'); event.preventDefault()">7–8p</div><div class="ac-item" data-val="8-9p" data-label="8–9p" onmousedown="csPick('f-liq-dist','8-9p','8–9p'); event.preventDefault()">8–9p</div><div class="ac-item" data-val="9-10p" data-label="9–10p" onmousedown="csPick('f-liq-dist','9-10p','9–10p'); event.preventDefault()">9–10p</div><div class="ac-item" data-val="10+p" data-label="10+p" onmousedown="csPick('f-liq-dist','10+p','10+p'); event.preventDefault()">10+p</div></div>
+        <input type="text" id="f-liq-dist-inp" autocomplete="off" placeholder="Dist. pips..." oninput="csFilter(&#39;f-liq-dist&#39;)" onkeydown="csKeyInp(event,&#39;f-liq-dist&#39;)" onfocus="csFilter(&#39;f-liq-dist&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-liq-dist&#39;),150)">
+        <div id="cs-liq-dist" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="—" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;&#39;,&#39;—&#39;); event.preventDefault()">—</div><div class="ac-item" data-val="0-1p" data-label="0–1p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;0-1p&#39;,&#39;0–1p&#39;); event.preventDefault()">0–1p</div><div class="ac-item" data-val="1-2p" data-label="1–2p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;1-2p&#39;,&#39;1–2p&#39;); event.preventDefault()">1–2p</div><div class="ac-item" data-val="2-3p" data-label="2–3p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;2-3p&#39;,&#39;2–3p&#39;); event.preventDefault()">2–3p</div><div class="ac-item" data-val="3-4p" data-label="3–4p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;3-4p&#39;,&#39;3–4p&#39;); event.preventDefault()">3–4p</div><div class="ac-item" data-val="4-5p" data-label="4–5p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;4-5p&#39;,&#39;4–5p&#39;); event.preventDefault()">4–5p</div><div class="ac-item" data-val="5-6p" data-label="5–6p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;5-6p&#39;,&#39;5–6p&#39;); event.preventDefault()">5–6p</div><div class="ac-item" data-val="6-7p" data-label="6–7p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;6-7p&#39;,&#39;6–7p&#39;); event.preventDefault()">6–7p</div><div class="ac-item" data-val="7-8p" data-label="7–8p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;7-8p&#39;,&#39;7–8p&#39;); event.preventDefault()">7–8p</div><div class="ac-item" data-val="8-9p" data-label="8–9p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;8-9p&#39;,&#39;8–9p&#39;); event.preventDefault()">8–9p</div><div class="ac-item" data-val="9-10p" data-label="9–10p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;9-10p&#39;,&#39;9–10p&#39;); event.preventDefault()">9–10p</div><div class="ac-item" data-val="10+p" data-label="10+p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;10+p&#39;,&#39;10+p&#39;); event.preventDefault()">10+p</div></div>
         <select id="f-liq-dist" style="display:none">
           <option value="">—</option>
           <option value="0-1p">0–1p</option>
@@ -427,8 +489,8 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">Setup urat <span style="font-size:8px;color:var(--text3)">(opțional)</span></div>
       <div class="ac-wrap">
-        <input type="text" id="f-setup-urat-inp" autocomplete="off" placeholder="Setup urat..." oninput="csFilter('f-setup-urat')" onkeydown="csKeyInp(event,'f-setup-urat')" onfocus="csFilter('f-setup-urat')" onblur="setTimeout(()=&gt;csClose('f-setup-urat'),150)">
-        <div id="cs-setup-urat" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="Fără" onmousedown="csPick('f-setup-urat','','Fără'); event.preventDefault()">Fără</div><div class="ac-item" data-val="Indecizie" data-label="Indecizie" onmousedown="csPick('f-setup-urat','Indecizie','Indecizie'); event.preventDefault()">Indecizie</div><div class="ac-item" data-val="MSS spre agresiv" data-label="MSS spre agresiv" onmousedown="csPick('f-setup-urat','MSS spre agresiv','MSS spre agresiv'); event.preventDefault()">MSS spre agresiv</div><div class="ac-item" data-val="Inghesuit" data-label="Înghesuit" onmousedown="csPick('f-setup-urat','Inghesuit','Înghesuit'); event.preventDefault()">Înghesuit</div><div class="ac-item" data-val="Setup dubios" data-label="Setup dubios" onmousedown="csPick('f-setup-urat','Setup dubios','Setup dubios'); event.preventDefault()">Setup dubios</div><div class="ac-item" data-val="MSS cu wick before FVG" data-label="MSS cu wick before FVG" onmousedown="csPick('f-setup-urat','MSS cu wick before FVG','MSS cu wick before FVG'); event.preventDefault()">MSS cu wick before FVG</div><div class="ac-item" data-val="MSS lung si candela &gt; SL" data-label="MSS lung și candela &gt; SL" onmousedown="csPick('f-setup-urat','MSS lung si candela &gt; SL','MSS lung și candela &gt; SL'); event.preventDefault()">MSS lung și candela &gt; SL</div></div>
+        <input type="text" id="f-setup-urat-inp" autocomplete="off" placeholder="Setup urat..." oninput="csFilter(&#39;f-setup-urat&#39;)" onkeydown="csKeyInp(event,&#39;f-setup-urat&#39;)" onfocus="csFilter(&#39;f-setup-urat&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-setup-urat&#39;),150)">
+        <div id="cs-setup-urat" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="Fără" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;&#39;,&#39;Fără&#39;); event.preventDefault()">Fără</div><div class="ac-item" data-val="Indecizie" data-label="Indecizie" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;Indecizie&#39;,&#39;Indecizie&#39;); event.preventDefault()">Indecizie</div><div class="ac-item" data-val="MSS spre agresiv" data-label="MSS spre agresiv" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;MSS spre agresiv&#39;,&#39;MSS spre agresiv&#39;); event.preventDefault()">MSS spre agresiv</div><div class="ac-item" data-val="Inghesuit" data-label="Înghesuit" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;Inghesuit&#39;,&#39;Înghesuit&#39;); event.preventDefault()">Înghesuit</div><div class="ac-item" data-val="Setup dubios" data-label="Setup dubios" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;Setup dubios&#39;,&#39;Setup dubios&#39;); event.preventDefault()">Setup dubios</div><div class="ac-item" data-val="MSS cu wick before FVG" data-label="MSS cu wick before FVG" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;MSS cu wick before FVG&#39;,&#39;MSS cu wick before FVG&#39;); event.preventDefault()">MSS cu wick before FVG</div><div class="ac-item" data-val="MSS lung si candela &gt; SL" data-label="MSS lung și candela &gt; SL" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;MSS lung si candela &gt; SL&#39;,&#39;MSS lung și candela &gt; SL&#39;); event.preventDefault()">MSS lung și candela &gt; SL</div></div>
         <select id="f-setup-urat" style="display:none">
           <option value="">Fără</option>
           <option value="Indecizie">Indecizie</option>
@@ -444,8 +506,8 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">Risk</div>
       <div class="ac-wrap">
-        <input type="text" id="f-risk-inp" autocomplete="off" placeholder="Mic / Mediu / Mare" oninput="csFilter('f-risk')" onkeydown="csKeyInp(event,'f-risk')" onfocus="csFilter('f-risk')" onblur="setTimeout(()=&gt;csClose('f-risk'),150)">
-        <div id="cs-risk" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="—" onmousedown="csPick('f-risk','','—'); event.preventDefault()">—</div><div class="ac-item" data-val="Mic" data-label="Mic" onmousedown="csPick('f-risk','Mic','Mic'); event.preventDefault()">Mic</div><div class="ac-item" data-val="Mediu" data-label="Mediu" onmousedown="csPick('f-risk','Mediu','Mediu'); event.preventDefault()">Mediu</div><div class="ac-item" data-val="Mare" data-label="Mare" onmousedown="csPick('f-risk','Mare','Mare'); event.preventDefault()">Mare</div></div>
+        <input type="text" id="f-risk-inp" autocomplete="off" placeholder="Mic / Mediu / Mare" oninput="csFilter(&#39;f-risk&#39;)" onkeydown="csKeyInp(event,&#39;f-risk&#39;)" onfocus="csFilter(&#39;f-risk&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-risk&#39;),150)">
+        <div id="cs-risk" class="ac-dropdown"></div>
         <select id="f-risk" style="display:none">
           <option value="">—</option>
           <option value="Mic">Mic</option>
@@ -458,8 +520,8 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">Alocare</div>
       <div class="ac-wrap">
-        <input type="text" id="f-alocare-inp" autocomplete="off" placeholder="0.5% / 1% / 1.5%" oninput="csFilter('f-alocare')" onkeydown="csKeyInp(event,'f-alocare')" onfocus="csFilter('f-alocare')" onblur="setTimeout(()=&gt;csClose('f-alocare'),150)">
-        <div id="cs-alocare" class="ac-dropdown"><div class="ac-item active" data-val="1%" data-label="1%" onmousedown="csPick('f-alocare','1%','1%'); event.preventDefault()"><mark>1</mark>%</div><div class="ac-item" data-val="1.5%" data-label="1.5%" onmousedown="csPick('f-alocare','1.5%','1.5%'); event.preventDefault()"><mark>1</mark>.5%</div></div>
+        <input type="text" id="f-alocare-inp" autocomplete="off" placeholder="0.5% / 1% / 1.5%" oninput="csFilter(&#39;f-alocare&#39;)" onkeydown="csKeyInp(event,&#39;f-alocare&#39;)" onfocus="csFilter(&#39;f-alocare&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-alocare&#39;),150)">
+        <div id="cs-alocare" class="ac-dropdown"></div>
         <select id="f-alocare" style="display:none">
           <option value="">—</option>
           <option value="0.5%">0.5%</option>
@@ -468,20 +530,20 @@ table.bktbl tr:last-child td{border-bottom:none}
         </select>
       </div>
     </div>
-    <!-- TRADE LINK -->
+        <!-- TRADE LINK -->
     <div class="fld">
       <div class="flbl">Trade</div>
       <div class="link-inp-wrap">
-        <input type="url" id="f-trade-link" placeholder="https://www.tradingview.com/..." oninput="updateLinkBtn('f-trade-link','open-trade-link')" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('f-trade-link')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('f-trade-link')}">
-        <a id="open-trade-link" class="link-open disabled" href="#" target="_blank" title="Deschide link">↗</a>
+        <input type="url" id="f-trade-link" placeholder="https://www.tradingview.com/..." oninput="updateLinkBtn(&#39;f-trade-link&#39;,&#39;open-trade-link&#39;)" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;f-trade-link&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;f-trade-link&#39;)}">
+        <a id="open-trade-link" class="link-open disabled" href="file:///Users/mac/Desktop/ULTIMUL%20BUN!!.html#" target="_blank" title="Deschide link">↗</a>
       </div>
     </div>
     <!-- LIQ LINK -->
     <div class="fld">
       <div class="flbl">Lichiditate</div>
       <div class="link-inp-wrap">
-        <input type="url" id="f-liq-link" placeholder="https://www.tradingview.com/..." oninput="updateLinkBtn('f-liq-link','open-liq-link')" onkeydown="if(event.key==='ArrowUp'){event.preventDefault();tabPrev('f-liq-link')}">
-        <a id="open-liq-link" class="link-open disabled" href="#" target="_blank" title="Deschide link">↗</a>
+        <input type="url" id="f-liq-link" placeholder="https://www.tradingview.com/..." oninput="updateLinkBtn(&#39;f-liq-link&#39;,&#39;open-liq-link&#39;)" onkeydown="if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;f-liq-link&#39;)}">
+        <a id="open-liq-link" class="link-open disabled" href="file:///Users/mac/Desktop/ULTIMUL%20BUN!!.html#" target="_blank" title="Deschide link">↗</a>
       </div>
     </div>
     <div class="divider"></div>
@@ -511,7 +573,7 @@ table.bktbl tr:last-child td{border-bottom:none}
       <div class="empty" id="empty-msg" style="display: none;">Niciun trade înregistrat încă.<br>Completează formularul și apasă Enter.</div>
       <table class="ttbl" id="ttbl" style="display: table;">
         <thead><tr>
-          <th>#</th><th>Data</th><th>Ora</th><th>Zi</th><th>Ses.</th><th>Rez.</th><th>Liq.</th><th>Setup</th><th>Tip</th><th>Re</th><th>Pot</th><th>Alocare</th><th>BE</th><th>H/L</th><th>Știri</th><th>Trade</th><th>Liq.</th><th></th>
+          <th>#</th><th>Data</th><th>Ora</th><th>Zi</th><th>Ses.</th><th>Rez.</th><th>Liq.</th><th>Setup</th><th>Tip</th><th>Re</th><th>Pot</th><th>BE</th><th>H/L</th><th>Știri</th><th>Trade</th><th>Liq.</th><th></th>
         </tr></thead>
         <tbody id="tbody">
     <tr>
@@ -525,7 +587,6 @@ table.bktbl tr:last-child td{border-bottom:none}
       <td>OSG</td><td>SELL</td>
       <td>Nu</td>
       <td>—</td>
-      <td>1%</td>
       <td>—</td>
       <td>LL</td>
       <td><span style="font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;background:var(--bg2);color:var(--text2)">NFP</span></td>
@@ -544,7 +605,6 @@ table.bktbl tr:last-child td{border-bottom:none}
       <td>OSG</td><td>BUY</td>
       <td>Nu</td>
       <td>+4.3R</td>
-      <td>1%</td>
       <td>—</td>
       <td>PDL</td>
       <td><span style="font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;background:var(--bg2);color:var(--text2)">USD ISM PMI</span></td>
@@ -563,7 +623,6 @@ table.bktbl tr:last-child td{border-bottom:none}
       <td>OSG</td><td>BUY</td>
       <td>Nu</td>
       <td>—</td>
-      <td>1%</td>
       <td>—</td>
       <td>LL</td>
       <td>—</td>
@@ -582,7 +641,6 @@ table.bktbl tr:last-child td{border-bottom:none}
       <td>TCG</td><td>SELL</td>
       <td>Nu</td>
       <td>—</td>
-      <td>1%</td>
       <td>BE/WIN</td>
       <td>—</td>
       <td><span style="font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;background:var(--bg2);color:var(--text2)">GBP CPI</span></td>
@@ -601,7 +659,6 @@ table.bktbl tr:last-child td{border-bottom:none}
       <td>3G</td><td>BUY</td>
       <td>Nu</td>
       <td>—</td>
-      <td>1%</td>
       <td>—</td>
       <td>LL</td>
       <td><span style="font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;background:var(--bg2);color:var(--text2)">GBP CCC</span></td>
@@ -620,7 +677,6 @@ table.bktbl tr:last-child td{border-bottom:none}
       <td>TCG</td><td>SELL</td>
       <td>Nu</td>
       <td>+5.1R</td>
-      <td>1%</td>
       <td>—</td>
       <td>PWH</td>
       <td>—</td>
@@ -634,10 +690,10 @@ table.bktbl tr:last-child td{border-bottom:none}
 </div>
 
 <!-- ============ STATS TAB ============ -->
-<div id="p-stats" class="panel">
+<div id="p-stats" class="panel active">
   <div class="fbar">
     <span class="fltr-lbl">Filtre:</span>
-    <select class="fsel" id="f-year" onchange="renderStats()"><option value="all">Toți anii</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option></select>
+    <select class="fsel" id="f-year" onchange="renderStats()"><option value="all">An</option><option value="2026">2026</option></select>
     <select class="fsel" id="sf-liq" onchange="renderStats()">
       <option value="all">Lichiditate</option>
       <optgroup label="— Locale —">
@@ -668,7 +724,7 @@ table.bktbl tr:last-child td{border-bottom:none}
       </optgroup>
     </select>
     <select class="fsel" id="f-ziua" onchange="renderStats()">
-      <option value="all">Toată săptămâna</option>
+      <option value="all">Zi</option>
       <option>Luni</option><option>Marti</option><option>Miercuri</option><option>Joi</option><option>Vineri</option>
     </select>
     <select class="fsel" id="f-tip" onchange="renderStats()">
@@ -680,16 +736,16 @@ table.bktbl tr:last-child td{border-bottom:none}
       <option>Da</option><option>Nu</option>
     </select>
     <select class="fsel" id="f-rez" onchange="renderStats()">
-      <option value="all">WIN + LOSE + BE</option>
-      <option value="WIN">Doar WIN</option>
-      <option value="LOSE">Doar LOSE</option>
-      <option value="BE">Doar BE</option>
+      <option value="all">Rezultat</option>
+      <option value="WIN">WIN</option>
+      <option value="LOSE">LOSE</option>
+      <option value="BE">BE</option>
       <option value="BEWIN">BE/WIN</option>
       <option value="BELOSE">BE/LOSE</option>
       <option value="WINLOSE">WIN + LOSE</option>
     </select>
     <select class="fsel" id="sf-hl" onchange="renderStats()">
-      <option value="all">H/L</option>
+      <option value="all">High / Low</option>
       <optgroup label="— Locale —">
         <option>LL</option><option>LH</option>
       </optgroup>
@@ -703,31 +759,33 @@ table.bktbl tr:last-child td{border-bottom:none}
     <select class="fsel" id="f-news-filter" onchange="renderStats()">
       <option value="all">Știri</option>
       <option value="none">Fără știri</option>
-      <option value="FOMC">FOMC</option>
+      <option value="FOMC ❌">FOMC ❌</option>
       <option value="FOMC MM">FOMC MM</option>
       <option value="GBP CCC">GBP CCC</option>
       <option value="GBP CPI">GBP CPI</option>
-      <option value="GBP GDP">GBP GDP</option>
+      <option value="GBP GDP ❌">GBP GDP ❌</option>
+      <option value="GBP MON PRH ❌">GBP MON PRH ❌</option>
+      <option value="GBP AFS ❌">GBP AFS ❌</option>
       <option value="GBP PMI">GBP PMI</option>
       <option value="GBP RETAIL S">GBP RETAIL S</option>
       <option value="USD ISM PMI">USD ISM PMI</option>
       <option value="USD JOLTS JOB">USD JOLTS JOB</option>
       <option value="NFP">NFP</option>
-      <option value="UK BH">UK BH</option>
-      <option value="UK RATE">UK RATE</option>
+      <option value="UK BH ❌">UK BH ❌</option>
+      <option value="UK RATE ❌">UK RATE ❌</option>
       <option value="USD UNEMP. CLAIMS">USD UNEMP. CLAIMS</option>
-      <option value="USA BH">USA BH</option>
+      <option value="USA BH ❌">USA BH ❌</option>
       <option value="USD CPI">USD CPI</option>
       <option value="USD CORE PCE">USD CORE PCE</option>
-      <option value="USD Final GDP">USD Final GDP</option>
+      <option value="USD FINAL GDP ❌">USD FINAL GDP ❌</option>
       <option value="USD ADP NFEC">USD ADP NFEC</option>
-      <option value="USD Advance GDP">USD Advance GDP</option>
+      <option value="USD ADVANCE GDP">USD ADVANCE GDP</option>
       <option value="USD PMI">USD PMI</option>
       <option value="USD PPI">USD PPI</option>
-      <option value="USD RETAIL S">USD RETAIL S</option>
+      <option value="USD RETAIL S ❌">USD RETAIL S ❌</option>
     </select>
     <select class="fsel" id="f-misc-ses-filter" onchange="renderStats()">
-      <option value="all">Mișc. sesiunii</option>
+      <option value="all">Mișcarea sesiunii</option>
       <option value="none">Neutru</option>
       <option value="Miscarea sesiunii efectuata">Efectuată</option>
       <option value="Miscarea sesiunii invalidata">Invalidată</option>
@@ -742,33 +800,35 @@ table.bktbl tr:last-child td{border-bottom:none}
       <option value="MSS cu wick before FVG">Wick before FVG</option>
       <option value="MSS lung si candela &gt; SL">MSS lung &gt; SL</option>
     </select>
-    <select class="fsel" id="f-risk-filter" onchange="renderStats()">
-      <option value="all">Risk</option>
-      <option value="Mic">Mic</option>
-      <option value="Mediu">Mediu</option>
-      <option value="Mare">Mare</option>
-    </select>
-    <select class="fsel" id="f-alocare-filter" onchange="renderStats()">
-      <option value="all">Alocare</option>
-      <option value="0.5%">0.5%</option>
-      <option value="1%">1%</option>
-      <option value="1.5%">1.5%</option>
+    <select class="fsel" id="f-liq-dist-filter" onchange="renderStats()">
+      <option value="all">Dist. liq</option>
+      <option value="none">Fără dist.</option>
+      <option value="0-1p">0–1p</option>
+      <option value="1-2p">1–2p</option>
+      <option value="2-3p">2–3p</option>
+      <option value="3-4p">3–4p</option>
+      <option value="4-5p">4–5p</option>
+      <option value="5-6p">5–6p</option>
+      <option value="6-7p">6–7p</option>
+      <option value="7-8p">7–8p</option>
+      <option value="8-9p">8–9p</option>
+      <option value="9-10p">9–10p</option>
+      <option value="10+p">10+p</option>
     </select>
     <button class="freset" onclick="resetFilters()">✕ Reset</button>
-    <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)" id="filter-info">4 trades</span>
+    <span style="margin-left:auto;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:10px;color:var(--text3)" id="filter-info">6 trades</span>
   </div>
 
 
   <div class="scards">
-    <div class="sc"><div class="sv" id="st-tot">4</div><div class="sl">Total</div></div>
-    <div class="sc"><div class="sv" style="color:var(--win)" id="st-w">1</div><div class="sl">WIN</div></div>
+    <div class="sc"><div class="sv" id="st-tot">6</div><div class="sl">Total</div></div>
+    <div class="sc"><div class="sv" style="color:var(--win)" id="st-w">3</div><div class="sl">WIN</div></div>
     <div class="sc"><div class="sv" style="color:var(--lose)" id="st-l">2</div><div class="sl">LOSE</div></div>
     <div class="sc"><div class="sv" style="color:var(--be)" id="st-be">1</div><div class="sl">BE</div></div>
-    <div class="sc"><div class="sv" id="st-wr" style="color: rgb(248, 113, 113);">33.33%</div><div class="sl">WR %</div></div>
-    <div class="sc"><div class="sv" id="st-net" style="color: var(--text);">+0R</div><div class="sl">NET RR</div></div>
-    <div class="sc"><div class="sv" id="st-exp" style="color: var(--text);">+0.00R</div><div class="sl">E/trade</div></div>
-  <div class="sc"><div class="sv" id="st-pf" style="color: var(--lose);">1.00</div><div class="sl">Profit Factor</div></div>
-  <div class="sc"><div class="sv" id="st-alloc" style="color: var(--text);">+0.00%</div><div class="sl">Procentaj cont</div></div>
+    <div class="sc"><div class="sv" id="st-wr" style="color: rgb(0, 230, 118);">60.00%</div><div class="sl">WR %</div></div>
+    <div class="sc"><div class="sv" id="st-net" style="color: var(--win);">+4R</div><div class="sl">NET RR</div></div>
+    <div class="sc"><div class="sv" id="st-exp" style="color: var(--win);">+0.80R</div><div class="sl">E/trade</div></div>
+  <div class="sc"><div class="sv" id="st-pf" style="color: var(--win);">3.00</div><div class="sl">Profit Factor</div></div>
   <div class="sc" id="edge-score-card" title="Prea puțin date">
     <div class="sv" id="st-edge" style="font-size: 14px; color: var(--lose);">—</div>
     <div class="sl">Edge Score</div>
@@ -776,119 +836,167 @@ table.bktbl tr:last-child td{border-bottom:none}
   </div>
 </div>
 
-  <div class="charts-grid">
-    <div class="cbox"><div class="ctitle">Equity Curve</div><div class="cwrap"><canvas id="ch-equity" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div></div>
-    <div class="cbox"><div class="ctitle">WR Sesiune</div><div class="cwrap"><canvas id="ch-ses" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div></div>
-    <div class="cbox"><div class="ctitle">WR Setup</div><div class="cwrap"><canvas id="ch-setup" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div></div>
-    <div class="cbox"><div class="ctitle">WR Zi</div><div class="cwrap"><canvas id="ch-day" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div></div>
-  </div>
-
-  <!-- STREAK TRACKER + DRAWDOWN -->
-  <div class="ep-row">
+  <!-- ROW: STREAK + WR CHARTS -->
+  <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:10px">
     <div class="cbox">
       <div class="ctitle">Streak Tracker</div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px" id="streak-cards"><div class="streak-sc"><div class="streak-val" style="color:var(--win)">1</div><div class="streak-lbl">Max WIN streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--lose)">2</div><div class="streak-lbl">Max LOSE streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--lose)">2</div><div class="streak-lbl">Streak LOSE curent</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--text2)">3</div><div class="streak-lbl">Total W/L trades</div></div></div>
-      <div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace" id="current-streak-label">↓ 2 LOSE consecutive la curent</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px" id="streak-cards"><div class="streak-sc"><div class="streak-val" style="color:var(--win)">2</div><div class="streak-lbl">Max WIN streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--lose)">2</div><div class="streak-lbl">Max LOSE streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--win)">2</div><div class="streak-lbl">Streak WIN curent</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--text2)">5</div><div class="streak-lbl">Total W/L trades</div></div></div>
+      <div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace" id="current-streak-label">↑ 2 WIN consecutive la curent</div>
     </div>
-    <div class="cbox">
-      <div class="ctitle">Drawdown din peak (RR)</div>
-      <div class="cwrap"><canvas id="ch-dd" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div>
-    </div>
+    <div class="cbox"><div class="ctitle">WR Sesiune</div><div class="cwrap"><canvas id="ch-ses" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div>
+    <div class="cbox"><div class="ctitle">WR Setup</div><div class="cwrap"><canvas id="ch-setup" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div>
+    <div class="cbox"><div class="ctitle">WR Zi</div><div class="cwrap"><canvas id="ch-day" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div>
   </div>
 
   <!-- ZI × SESIUNE HEATMAP -->
   <div class="cbox">
     <div class="ctitle">Heatmap WR% — Zi × Sesiune</div>
-    <div id="hm-day-ses" style="margin-top:6px"><table class="hm-table"><thead><tr><th></th><th>10-12</th><th>12-15</th><th>15-19</th><th>Zi total</th></tr></thead><tbody><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Luni</th><td style="background:var(--bg3);color:var(--text3)" title="Luni × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Luni × 12:00-15:00: 0 trades, —">—</td><td style="background:rgba(0,230,118,.35);color:#00e676" title="Luni × 15:00-19:00: 1 trades, 100.0%">100%
-n=1</td><td style="background:rgba(0,230,118,.35);color:#00e676;font-weight:800">100%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Marti</th><td style="background:var(--bg3);color:var(--text3)" title="Marti × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Marti × 12:00-15:00: 0 trades, —">—</td><td style="background:rgba(255,64,64,.3);color:#ff4040" title="Marti × 15:00-19:00: 2 trades, 0.0%">0%
-n=2</td><td style="background:rgba(255,64,64,.3);color:#ff4040;font-weight:800">0%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Miercuri</th><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 12:00-15:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 15:00-19:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Joi</th><td style="background:var(--bg3);color:var(--text3)" title="Joi × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Joi × 12:00-15:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Joi × 15:00-19:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Vineri</th><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 12:00-15:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 15:00-19:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td></tr><tr style="border-top:1px solid var(--border2)"><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Total</th><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td><td style="background:rgba(248,113,113,.18);color:#f87171;font-weight:800">33%</td><td></td></tr></tbody></table></div>
+    <div id="hm-day-ses" style="margin-top:6px"><table class="hm-table"><thead><tr><th></th><th>10-12</th><th>12-15</th><th>15-19</th><th>Zi total</th></tr></thead><tbody><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Luni</th><td style="background:var(--bg3);color:var(--text3)" title="Luni × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Luni × 12:00-15:00: 0 trades, —">—</td><td style="background:rgba(0,230,118,.35);color:#00e676" title="Luni × 15:00-19:00: 2 trades, 100.0%">100%
+n=2</td><td style="background:rgba(0,230,118,.35);color:#00e676;font-weight:800">100%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Marti</th><td style="background:var(--bg3);color:var(--text3)" title="Marti × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Marti × 12:00-15:00: 0 trades, —">—</td><td style="background:rgba(255,64,64,.3);color:#ff4040" title="Marti × 15:00-19:00: 2 trades, 0.0%">0%
+n=2</td><td style="background:rgba(255,64,64,.3);color:#ff4040;font-weight:800">0%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Miercuri</th><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 12:00-15:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 15:00-19:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Joi</th><td style="background:var(--bg3);color:var(--text3)" title="Joi × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Joi × 12:00-15:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Joi × 15:00-19:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Vineri</th><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 10:00-12:00: 0 trades, —">—</td><td style="background:rgba(0,230,118,.35);color:#00e676" title="Vineri × 12:00-15:00: 1 trades, 100.0%">100%
+n=1</td><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 15:00-19:00: 0 trades, —">—</td><td style="background:rgba(0,230,118,.35);color:#00e676;font-weight:800">100%</td></tr><tr style="border-top:1px solid var(--border2)"><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Total</th><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td><td style="background:rgba(0,230,118,.35);color:#00e676;font-weight:800">100%</td><td style="background:rgba(74,222,128,.2);color:#4ade80;font-weight:800">50%</td><td></td></tr></tbody></table></div>
   </div>
 
   <!-- BE ANALYSIS CARD -->
   <div class="cbox" id="be-analysis-card">
     <div class="ctitle">⚖️ Breakeven Analysis</div>
     <div id="be-analysis-content">
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px">
-      <div style="background:var(--bg3);border-radius:8px;padding:10px;text-align:center">
-        <div style="font-size:22px;font-weight:800;color:var(--win)">1</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1.2fr;gap:8px;margin-bottom:10px">
+      <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--win)">1</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">BE/WIN</div>
         <div style="font-size:11px;font-weight:700;color:var(--win);margin-top:2px">100%</div>
       </div>
-      <div style="background:var(--bg3);border-radius:8px;padding:10px;text-align:center">
-        <div style="font-size:22px;font-weight:800;color:var(--win)">0</div>
+      <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--win)">0</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">BE/LOSE</div>
         <div style="font-size:11px;font-weight:700;color:var(--win);margin-top:2px">0%</div>
       </div>
-      <div style="background:var(--bg3);border-radius:8px;padding:10px;text-align:center">
-        <div style="font-size:22px;font-weight:800;color:var(--text)">1</div>
+      <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--text)">1</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">Total BE</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:2px">1 înregistrate</div>
+        <div style="font-size:11px;color:var(--text3);margin-top:2px">1 înreg.</div>
+      </div>
+      <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--win)">+2.0R</div>
+        <div style="font-size:10px;color:var(--text2);margin-top:2px">Net BE în R</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">1×2.0R − 0×1R</div>
       </div>
     </div>
-    <div style="margin-bottom:12px">
+    <div>
       <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-bottom:4px">
         <span style="color:var(--win)">BE/WIN 100%</span>
         <span style="color:var(--win)">BE/LOSE 0%</span>
       </div>
-      <div style="background:var(--bg3);border-radius:4px;height:8px;overflow:hidden">
+      <div style="background:var(--bg3);border-radius:4px;height:6px;overflow:hidden">
         <div style="height:100%;width:100%;background:var(--win);border-radius:4px;transition:width .3s"></div>
       </div>
-    </div>
-    <div style="background:var(--bg3);border-radius:8px;padding:12px;text-align:center">
-      <div style="font-size:10px;color:var(--text2);margin-bottom:6px">Rezultat net BE în R</div>
-      <div style="font-size:11px;color:var(--text3);margin-bottom:4px">1 × 2.0R − 0 × 1R</div>
-      <div style="font-size:24px;font-weight:800;color:var(--win)">
-        +2.0R
+      <div style="margin-top:8px;font-size:10px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace">Dacă toate BE/WIN → WIN: WR ar fi <strong style="color:var(--win)">66.7%</strong> <span style="color:var(--win)">+6.7%</span></div>
+    </div></div>
+  </div>
+
+  <!-- RR DISTRIBUTION CARD -->
+  <div class="cbox" id="rr-dist-card">
+    <div class="ctitle">📊 Distribuție RR</div>
+    <div id="rr-dist-content"><div style="font-size:10px;color:var(--text2);margin-bottom:10px">Din <b style="color:var(--text)">2 WIN-uri</b> filtrate</div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥2R</div>
+      <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
+        <div style="height:100%;width:100%;background:var(--win);border-radius:3px;transition:width .3s"></div>
       </div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--win);text-align:right;flex-shrink:0">2 (100%)</div>
+    </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥2.2R</div>
+      <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
+        <div style="height:100%;width:100%;background:var(--win);border-radius:3px;transition:width .3s"></div>
+      </div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--win);text-align:right;flex-shrink:0">2 (100%)</div>
+    </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥2.5R</div>
+      <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
+        <div style="height:100%;width:100%;background:var(--win);border-radius:3px;transition:width .3s"></div>
+      </div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--win);text-align:right;flex-shrink:0">2 (100%)</div>
+    </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥3R</div>
+      <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
+        <div style="height:100%;width:100%;background:var(--win);border-radius:3px;transition:width .3s"></div>
+      </div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--win);text-align:right;flex-shrink:0">2 (100%)</div>
+    </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥4R</div>
+      <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
+        <div style="height:100%;width:100%;background:var(--win);border-radius:3px;transition:width .3s"></div>
+      </div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--win);text-align:right;flex-shrink:0">2 (100%)</div>
+    </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥5R</div>
+      <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
+        <div style="height:100%;width:50%;background:var(--be);border-radius:3px;transition:width .3s"></div>
+      </div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--be);text-align:right;flex-shrink:0">1 (50%)</div>
+    </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥10R</div>
+      <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
+        <div style="height:100%;width:0%;background:var(--lose);border-radius:3px;transition:width .3s"></div>
+      </div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--lose);text-align:right;flex-shrink:0">0 (0%)</div>
     </div></div>
   </div>
 
   <!-- ACTIONABLE INSIGHTS -->
   <div class="insight-card">
     <div class="ctitle">Actionable Insights</div>
-    <div id="insights-list"><div style="color:var(--text3);font-size:11px;font-family:monospace">Ai nevoie de cel puțin 20 trade-uri pentru insights.</div></div>
+    <div id="insights-list"><div style="color:var(--text3);font-size:11px">Date insuficiente pentru insights (minim 20 trade-uri WIN/LOSE).</div></div>
   </div>
 
-  <!-- MONTE CARLO + FTMO SIMULATOR -->
-  <div class="mc-box">
-    <div class="ctitle">Monte Carlo — Simulator FTMO</div>
-    <div class="mc-controls">
-      <div class="mc-field"><label>WR % (auto)</label><input type="number" id="mc-wr" value="52" min="1" max="99" step="1"></div>
-      <div class="mc-field"><label>Risk / trade %</label><input type="number" id="mc-risk" value="1" min="0.1" max="5" step="0.1"></div>
-      <div class="mc-field"><label>Target profit %</label><input type="number" id="mc-target" value="8" min="1" max="20" step="0.5"></div>
-      <div class="mc-field"><label>Max drawdown %</label><input type="number" id="mc-dd" value="10" min="1" max="20" step="0.5"></div>
-      <div class="mc-field"><label>Nr. trade-uri</label><input type="number" id="mc-trades" value="40" min="5" max="200" step="1"></div>
-      <div class="mc-field"><label>Simulări</label><input type="number" id="mc-sims" value="2000" min="100" max="5000" step="100"></div>
-      <button class="mc-run" onclick="runMonteCarlo()">▶ Simulează</button>
+  <!-- STREAK WR CARD -->
+  <div class="cbox" id="streak-wr-card">
+    <div class="ctitle">📈 Streak WR</div>
+    <div id="streak-wr-content"><table class="bktbl"><thead><tr><th style="text-align:left">Streak</th><th>Cazuri</th><th>WIN</th><th>LOSE</th><th>WR%</th><th>Diferență</th></tr></thead><tbody><tr style="border-bottom:1px solid var(--border2)"><td style="color:var(--text2);font-size:10px">Baseline general</td><td style="color:var(--text2)">5</td><td style="color:var(--win)">3</td><td style="color:var(--lose)">2</td><td style="font-weight:700;color:#fbbf24">60%</td><td>—</td></tr><tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA LOSING STREAK</td></tr><tr><td>Dupa 1 LOSE</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">0</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#ff4040">0%</td><td><span style="color:#f87171">-60%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 2 LOSE</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="font-weight:700;color:#00e676">100%</td><td><span style="color:#4ade80">+40%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA WINNING STREAK</td></tr><tr><td>Dupa 1 WIN</td><td style="color:var(--text2)">2</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#4ade80">50%</td><td><span style="color:#f87171">-10%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr></tbody></table><div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:monospace;padding:8px;background:var(--bg3);border-radius:6px">BE-urile sunt excluse din calcul (nu rup și nu extind streak-ul). ⚠ = sub 10 cazuri, interpretare cu precauție.</div></div>
+  </div>
+
+  <!-- DRAWDOWN + EQUITY CURVE side by side -->
+  <div style="display:flex;gap:12px">
+    <div class="cbox" style="flex:1;min-width:0">
+      <div class="ctitle">Drawdown din peak (RR)</div>
+      <div class="cwrap"><canvas id="ch-dd" style="box-sizing: border-box; display: block; height: 150px; width: 700px;" width="1400" height="300"></canvas></div>
     </div>
-    <div class="mc-results" id="mc-results" style="display:none">
-      <div class="mc-stat"><div class="mc-sv" id="mc-pass" style="color:var(--win)">—</div><div class="mc-sl">Pass %</div></div>
-      <div class="mc-stat"><div class="mc-sv" id="mc-fail" style="color:var(--lose)">—</div><div class="mc-sl">Fail %</div></div>
-      <div class="mc-stat"><div class="mc-sv" id="mc-ruin" style="color:var(--lose)">—</div><div class="mc-sl">Ruin risk %</div></div>
-      <div class="mc-stat"><div class="mc-sv" id="mc-median">—</div><div class="mc-sl">Median final %</div></div>
+    <div class="cbox" style="flex:1;min-width:0">
+      <div class="ctitle">Equity Curve</div>
+      <div class="cwrap"><canvas id="ch-equity" style="box-sizing: border-box; display: block; height: 150px; width: 700px;" width="1400" height="300"></canvas></div>
     </div>
-    <div style="position:relative;height:160px;display:none" id="mc-chart-wrap">
-      <canvas id="ch-mc"></canvas>
-    </div>
-    <div style="font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-top:6px" id="mc-caption"></div>
   </div>
 
   <div class="bk-nav">
-    <button class="bktab" onclick="setBkTab(this,'session')">Sesiune</button>
-    <button class="bktab" onclick="setBkTab(this,'setup')">Setup</button>
-    <button class="bktab" onclick="setBkTab(this,'liq')">Lichiditate</button>
-    <button class="bktab" onclick="setBkTab(this,'day')">Zi săptămână</button>
-    <button class="bktab" onclick="setBkTab(this,'year')">An</button>
-    <button class="bktab" onclick="setBkTab(this,'tip')">BUY / SELL</button>
-    <button class="bktab" onclick="setBkTab(this,'combo_ses_setup')">Sesiune × Setup</button>
-    <button class="bktab" onclick="setBkTab(this,'combo_day_ses')">Zi × Sesiune</button>
-    <button class="bktab" onclick="setBkTab(this,'rr_lunar')">RR Lunar</button>
-    <button class="bktab" onclick="setBkTab(this,'calendar')">Calendar</button>
-    <button class="bktab on" onclick="setBkTab(this,'be_dir')">BE Direction</button>
-    <button class="bktab" onclick="setBkTab(this,'re_impact')">RE Impact</button>
-    <button class="bktab" onclick="setBkTab(this,'streak_wr')">Streak WR</button>
+    <button class="bktab" onclick="setBkTab(this,&#39;year&#39;)">An</button>
+    <button class="bktab" onclick="setBkTab(this,&#39;liq&#39;)">Lichiditate</button>
+    <button class="bktab" onclick="setBkTab(this,&#39;session&#39;)">Sesiune</button>
+    <button class="bktab" onclick="setBkTab(this,&#39;setup&#39;)">Setup</button>
+    <button class="bktab" onclick="setBkTab(this,&#39;day&#39;)">Zi săptămână</button>
+    <button class="bktab" onclick="setBkTab(this,&#39;tip&#39;)">BUY / SELL</button>
+    <button class="bktab" onclick="setBkTab(this,&#39;re_impact&#39;)">Reentry</button>
+    <button class="bktab" onclick="setBkTab(this,&#39;hl&#39;)">H/L</button>
+    <button class="bktab" onclick="setBkTab(this,&#39;news&#39;)">Știri</button>
+    <button class="bktab on" onclick="setBkTab(this,&#39;combo_day_ses&#39;)">Zi × Sesiune</button>
+    <button class="bktab" onclick="setBkTab(this,&#39;rr_lunar&#39;)">RR Lunar</button>
   </div>
   <div class="bkbox"><div id="bk-content"><table class="bktbl"><thead><tr><th style="text-align:left">Grup</th><th style="">Total</th><th style="">W</th><th style="">L</th><th style="">BE</th><th style="">WR%</th><th style="">CI 95%</th><th style="">NET RR</th><th style="">E/trade</th></tr></thead><tbody><tr>
+      <td>12:00-15:00</td>
+      <td style="color:var(--text2)">2</td>
+      <td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="color:var(--be)">1</td>
+      <td style="color:#00e676;font-weight:700">100.0%</td>
+      <td class="n-small">[21–100%]</td>
+      <td class="rp">+2R</td>
+      <td class="rp">+2.00R</td>
+    </tr><tr>
+      <td>15:00-19:00</td>
+      <td style="color:var(--text2)">4</td>
+      <td style="color:var(--win)">2</td><td style="color:var(--lose)">2</td><td style="color:var(--be)">0</td>
+      <td style="color:#4ade80;font-weight:700">50.0%</td>
+      <td class="n-small">[15–85%]</td>
+      <td class="rp">+2R</td>
+      <td class="rp">+0.50R</td>
+    </tr><tr>
       <td>10:00-12:00</td>
       <td style="color:var(--text2)">0</td>
       <td style="color:var(--win)">0</td><td style="color:var(--lose)">0</td><td style="color:var(--be)">0</td>
@@ -896,24 +1004,297 @@ n=2</td><td style="background:rgba(255,64,64,.3);color:#ff4040;font-weight:800">
       <td class="n-small">[0–100%]</td>
       <td class="rp">+0R</td>
       <td class="rp">—</td>
-    </tr><tr>
-      <td>12:00-15:00</td>
-      <td style="color:var(--text2)">1</td>
-      <td style="color:var(--win)">0</td><td style="color:var(--lose)">0</td><td style="color:var(--be)">1</td>
-      <td style="color:#9090a8;font-weight:700">—</td>
-      <td class="n-small">[0–100%]</td>
-      <td class="rp">+0R</td>
-      <td class="rp">—</td>
-    </tr><tr>
-      <td>15:00-19:00</td>
-      <td style="color:var(--text2)">3</td>
-      <td style="color:var(--win)">1</td><td style="color:var(--lose)">2</td><td style="color:var(--be)">0</td>
-      <td style="color:#f87171;font-weight:700">33.3%</td>
-      <td class="n-small">[6–79%]</td>
-      <td class="rp">+0R</td>
-      <td class="rp">+0.00R</td>
     </tr></tbody></table></div></div>
+
+  <!-- MONTE CARLO + FTMO SIMULATOR -->
+
+  <!-- SD & STREAK ANALYSIS -->
+  <div id="sd-streak-wrap" style="margin-top: 18px; padding: 0px 14px 14px;">
+    <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;display:flex;align-items:center;gap:8px;margin-bottom:12px">Standard Deviation &amp; Losing Streaks<span style="height:1px;flex:1;background:var(--border)"></span></div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px">
+      <div class="bkbox" style="padding:10px 12px">
+        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:&#39;JetBrains Mono&#39;,monospace">WR REAL</div>
+        <div id="sd-wr" style="font-size: 18px; font-weight: 700; color: var(--win);">60.0%</div>
+        <div id="sd-wl" style="font-size:10px;color:var(--text3);margin-top:2px">3W / 2L</div>
+      </div>
+      <div class="bkbox" style="padding:10px 12px">
+        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:&#39;JetBrains Mono&#39;,monospace">STANDARD DEVIATION</div>
+        <div id="sd-val" style="font-size:18px;font-weight:700;color:var(--text)">1.64 R</div>
+        <div id="sd-sub" style="font-size:10px;color:var(--text3);margin-top:2px">pe WIN/LOSE</div>
+      </div>
+      <div class="bkbox" style="padding:10px 12px">
+        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:&#39;JetBrains Mono&#39;,monospace">MAX STREAK ACTUAL</div>
+        <div id="sd-maxstreak" style="font-size:18px;font-weight:700;color:var(--lose)">2× LOSE</div>
+        <div id="sd-maxexp" style="font-size:10px;color:var(--text3);margin-top:2px">așteptat teoretic 1.8</div>
+      </div>
+      <div class="bkbox" style="padding:10px 12px">
+        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:&#39;JetBrains Mono&#39;,monospace">MEDIE STREAK</div>
+        <div id="sd-avgstreak" style="font-size:18px;font-weight:700;color:var(--text)">2.0×</div>
+        <div id="sd-nstreaks" style="font-size:10px;color:var(--text3);margin-top:2px">1 streaks</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
+      <div class="bkbox" style="padding:10px 12px">
+        <div style="font-size:9px;color:var(--text3);margin-bottom:8px;font-family:&#39;JetBrains Mono&#39;,monospace">DISTRIBUȚIE STREAKS OBSERVATE</div>
+        <div style="position:relative;height:160px"><canvas id="ch-streak-dist" role="img" aria-label="Distribuție losing streaks observate" style="box-sizing: border-box; display: block; height: 160px; width: 690px;" width="1380" height="320"></canvas></div>
+      </div>
+      <div class="bkbox" style="padding:10px 12px">
+        <div style="font-size:9px;color:var(--text3);margin-bottom:8px;font-family:&#39;JetBrains Mono&#39;,monospace">P(CEL PUȚIN UN STREAK ≥ N) ÎN SAMPLE</div>
+        <div style="position:relative;height:160px"><canvas id="ch-streak-prob" role="img" aria-label="Probabilitate cel puțin un streak de N în sample" style="box-sizing: border-box; display: block; height: 160px; width: 690px;" width="1380" height="320"></canvas></div>
+      </div>
+    </div>
+    <div class="bkbox" style="padding:10px 12px">
+      <div style="font-size:9px;color:var(--text3);margin-bottom:8px;font-family:&#39;JetBrains Mono&#39;,monospace">TABEL PROBABILITĂȚI — CE ÎNSEAMNĂ ÎN PRACTICĂ</div>
+      <div id="sd-streak-table" style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse">
+      <thead><tr style="border-bottom:1px solid var(--border2)">
+        <th style="text-align:left;padding:5px 8px;font-size:9px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;font-weight:600">STREAK</th>
+        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;font-weight:600">P(1 ocurență)</th>
+        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;font-weight:600">1 la N</th>
+        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;font-weight:600">P(≥1 în sample)</th>
+        <th style="text-align:left;padding:5px 8px;font-size:9px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;font-weight:600">CONCLUZIE</th>
+      </tr></thead>
+      <tbody><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">3× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">6.40%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 16</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">28.2%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">4× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">2.56%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 39</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">12.2%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">5× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">1.02%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 98</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">5.0%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">6× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.41%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 244</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">2.0%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">7× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.16%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 610</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.8%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">8× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.07%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 1,526</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.3%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">9× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.03%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 3,815</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.1%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">10× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.01%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 9,537</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.1%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">11× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.00%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 23,842</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.0%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">12× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.00%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 59,605</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.0%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
+    </tr></tbody>
+    </table></div>
+    </div>
+  </div>
+
 </div>
+
+<!-- ============ NOTES TAB ============ -->
+<div id="p-notes" class="panel" style="flex-direction:column;padding:24px;gap:16px;overflow-y:auto;align-items:center;">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-shrink:0;width:860px;max-width:100%;">
+    <span style="font-size:13px;font-weight:700;color:var(--text2);">📝 NOTE PERSONALE</span>
+    <div style="display:flex;gap:8px;">
+      <button id="notes-add-btn" style="padding:7px 16px;background:var(--bg3);border:1px dashed var(--border2);border-radius:8px;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;">＋ Notă nouă</button>
+      <button onclick="saveHTML()" style="padding:7px 16px;background:#1e8449;border:1px solid #1e8449;border-radius:8px;color:#fff;font-size:12px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;">💾 Salvează</button>
+    </div>
+  </div>
+  <div id="notes-list" style="display:grid;grid-template-columns:repeat(2,420px);gap:14px;align-items:stretch;"><div class="note-card"><input class="note-title-inp" type="text" placeholder="Titlu notă..." value="Edge bun!"><div class="note-sep"></div><textarea class="note-body-ta" placeholder="Scrie aici..." rows="5" style="height: 469px;">Lichiditate: 
+- Majora, Majora A++
+- Locala / LOD, Locala / HOD
+- Locala 2
+
+Sesiune: 
+- 12-15
+
+ Setup: 
+- 3G, 3CG
+
+Combo: 
+- Locala 12-15
+- Miercuri 12-15
+
+Ziua: 
+- Joi SELL
+
+Stiri:
+- FOMC MM, USD ADVANCE GDP
+
+Potential 3 RR:
+- Majora</textarea><div class="note-footer"><span class="note-date">23.06.2026</span><button class="note-del">✕ Șterge</button></div></div><div class="note-card"><input class="note-title-inp" type="text" placeholder="Titlu notă..." value="Atentie!!!"><div class="note-sep"></div><textarea class="note-body-ta" placeholder="Scrie aici..." rows="5" style="height: 306px;">Lichiditate: 
+- HOD + Locala
+- LOD + Locala
+
+Combo:
+- Locala 15-19 Buy
+- 15-19 OSG Buy
+- Marti 10-12 LOD + Locala
+
+Ziua:
+- Joi 15-19
+- Joi Buy
+- Joi OSG
+- Joi PDL
+- Marti 10-12</textarea><div class="note-footer"><span class="note-date">23.06.2026</span><button class="note-del">✕ Șterge</button></div></div><div class="note-card"><input class="note-title-inp" type="text" placeholder="Titlu notă..." value="Breakeven"><div class="note-sep"></div><textarea class="note-body-ta" placeholder="Scrie aici..." rows="5" style="height: 143px;">Sesiune:
+- 10-12 - DA
+- 12-15 - NU
+- 15-19 - DA
+
+Lichiditate:
+- Majora - NU</textarea><div class="note-footer"><span class="note-date">23.06.2026</span><button class="note-del">✕ Șterge</button></div></div><div class="note-card"><input class="note-title-inp" type="text" placeholder="Titlu notă..." value="No trade!"><div class="note-sep"></div><textarea class="note-body-ta" placeholder="Scrie aici..." rows="5" style="height: 265px;">- USA Bank Holiday
+- UK Bank Holiday
+- FOMC 
+- BoE Official Bank Rate
+- UK Autumn Forecast Statement
+- BoE Monetary Policy Report Hearings
+- GBP GDP 
+- USD Final GDP
+- USD PPI
+- USD Retail Sales 
+- Londra Low
+- HOD/LOD slab
+- Setup urat (vezi backtesting)</textarea><div class="note-footer"><span class="note-date">23.06.2026</span><button class="note-del">✕ Șterge</button></div></div></div>
+</div>
+
+<style>
+.note-card { background:var(--bg3); border:1px solid var(--border2); border-radius:10px; padding:16px; display:flex; flex-direction:column; gap:8px; height:100%; box-sizing:border-box; }
+.note-card:focus-within { border-color:#3a3a4a; }
+.note-title-inp { font-size:13px; font-weight:700; color:var(--text); background:transparent; border:none; outline:none; width:100%; font-family:Inter,sans-serif; }
+.note-title-inp::placeholder { color:var(--text3); }
+.note-sep { height:1px; background:var(--border2); }
+.note-body-ta { font-size:12px; color:var(--text2); background:transparent; border:none; outline:none; width:100%; resize:none; font-family:Inter,sans-serif; line-height:1.7; min-height:100px; overflow:hidden; }
+.note-body-ta::placeholder { color:var(--text3); }
+.note-footer { display:flex; align-items:center; justify-content:space-between; margin-top:4px; }
+.note-date { font-size:9px; color:var(--text3); font-family:'JetBrains Mono',monospace; }
+.note-del { background:none; border:none; color:var(--text3); cursor:pointer; font-size:12px; padding:2px 6px; border-radius:4px; font-family:Inter,sans-serif; }
+.note-del:hover { color:var(--lose); background:rgba(248,113,113,.1); }
+</style>
+
+<script>
+(function(){
+  // Event delegation pentru butoanele de ștergere din notele statice
+  var notesList = document.getElementById('notes-list');
+  if(notesList){
+    notesList.addEventListener('click', function(e){
+      if(e.target && e.target.classList.contains('note-del')){
+        var card = e.target.closest('.note-card');
+        if(card) card.parentNode.removeChild(card);
+      }
+    });
+  }
+
+  var btn = document.getElementById('notes-add-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var list = document.getElementById('notes-list');
+    var now = new Date();
+    var dateStr = now.toLocaleDateString('ro-RO',{day:'2-digit',month:'2-digit',year:'numeric'});
+
+    var card = document.createElement('div');
+    card.className = 'note-card';
+
+    var titleInp = document.createElement('input');
+    titleInp.className = 'note-title-inp';
+    titleInp.type = 'text';
+    titleInp.placeholder = 'Titlu notă...';
+
+    var sep = document.createElement('div');
+    sep.className = 'note-sep';
+
+    var bodyTA = document.createElement('textarea');
+    bodyTA.className = 'note-body-ta';
+    bodyTA.placeholder = 'Scrie aici...';
+    bodyTA.rows = 5;
+    // Tab key inserts newline instead of focusing next element
+    bodyTA.addEventListener('keydown', function(e){
+      if(e.key === 'Tab'){
+        e.preventDefault();
+        var s = this.selectionStart, en = this.selectionEnd;
+        this.value = this.value.substring(0,s) + '\n' + this.value.substring(en);
+        this.selectionStart = this.selectionEnd = s + 1;
+        this.dispatchEvent(new Event('input'));
+      }
+    });
+    // Auto-resize
+    bodyTA.addEventListener('input', function(){
+      this.style.height = 'auto';
+      this.style.height = this.scrollHeight + 'px';
+    });
+
+    // Apply Tab handler + auto-resize to existing notes on load
+    document.querySelectorAll('.note-body-ta').forEach(function(ta){
+      ta.addEventListener('keydown', function(e){
+        if(e.key==='Tab'){
+          e.preventDefault();
+          var s=this.selectionStart,en=this.selectionEnd;
+          this.value=this.value.substring(0,s)+'\n'+this.value.substring(en);
+          this.selectionStart=this.selectionEnd=s+1;
+        }
+      });
+      ta.addEventListener('input', function(){
+        this.style.height='auto';
+        this.style.height=this.scrollHeight+'px';
+      });
+      // Resize on load
+      ta.style.height='auto';
+      ta.style.height=ta.scrollHeight+'px';
+    });
+
+    var footer = document.createElement('div');
+    footer.className = 'note-footer';
+
+    var dateSpan = document.createElement('span');
+    dateSpan.className = 'note-date';
+    dateSpan.textContent = dateStr;
+
+    var delBtn = document.createElement('button');
+    delBtn.className = 'note-del';
+    delBtn.textContent = '✕ Șterge';
+    delBtn.addEventListener('click', function(){ list.removeChild(card); });
+
+    footer.appendChild(dateSpan);
+    footer.appendChild(delBtn);
+
+    card.appendChild(titleInp);
+    card.appendChild(sep);
+    card.appendChild(bodyTA);
+    card.appendChild(footer);
+    list.appendChild(card);
+    titleInp.focus();
+  });
+})();
+</script>
 
 <!-- ============ IO TAB ============ -->
 <div id="p-io" class="panel">
@@ -949,8 +1330,171 @@ n=2</td><td style="background:rgba(255,64,64,.3);color:#ff4040;font-weight:800">
   </div>
 </div>
 
+
+<!-- ============ CALCULATOR TAB ============ -->
+<div id="p-calc" class="panel">
+<div class="calc-wrap">
+
+
+  <!-- INPUTS -->
+  <div class="calc-section calc-params">
+    <div class="calc-section-title">Parametri <span></span></div>
+
+    <div class="calc-row">
+      <div class="calc-fld">
+        <div class="calc-lbl">SL (pips)</div>
+        <input id="c-sl" class="calc-input" type="number" min="1" max="999" placeholder="20" oninput="renderCalc()">
+      </div>
+      <div class="calc-fld">
+        <div class="calc-lbl">Risc %</div>
+        <div style="display:flex;gap:6px;align-items:center">
+          <div class="risk-presets">
+            <button class="rp-btn" data-v="0.5" onclick="setRiskPreset(&#39;0.5&#39;)">0.5%</button>
+            <button class="rp-btn active" data-v="1" onclick="setRiskPreset(&#39;1&#39;)">1%</button>
+            <button class="rp-btn" data-v="1.5" onclick="setRiskPreset(&#39;1.5&#39;)">1.5%</button>
+            <button class="rp-btn" data-v="2" onclick="setRiskPreset(&#39;2&#39;)">2%</button>
+          </div>
+          <input id="c-risk" class="calc-input" type="number" min="0.01" max="100" step="0.1" value="1" placeholder="1" oninput="document.querySelectorAll(&#39;.rp-btn&#39;).forEach(b=&gt;b.classList.remove(&#39;active&#39;));renderCalc()" style="width:80px">
+        </div>
+      </div>
+      <div class="calc-fld">
+        <div class="calc-lbl">Spread (pips)</div>
+        <input id="c-spread" class="calc-input" type="number" min="0" max="20" step="0.1" value="0.2" placeholder="1" oninput="renderCalc()">
+      </div>
+      <div class="calc-fld">
+        <div class="calc-lbl">Comision RT ($/lot)</div>
+        <input id="c-comm" class="calc-input" type="number" min="0" max="50" step="0.1" value="3" placeholder="7" oninput="renderCalc()">
+      </div>
+      <div class="calc-fld" style="margin-left:auto;flex-direction:column;align-items:flex-start">
+        <div class="calc-lbl">EUR/USD rate <span id="eurusd-status" style="font-weight: 400; letter-spacing: 0px; color: var(--be);">● live (er-api)</span></div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <input id="c-eurusd" class="calc-input" type="number" min="0.5" max="2" step="0.0001" value="1.09" placeholder="1.09" oninput="renderCalc()" style="width:110px">
+          <button id="eurusd-refresh-btn" onclick="fetchEurUsd()" style="padding:6px 9px;background:var(--bg3);border:1.5px solid var(--border2);border-radius:7px;color:var(--text2);cursor:pointer;font-size:13px;font-family:monospace" title="Fetch rata live BCE">↺</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIFIED ACCOUNTS -->
+  <div class="calc-section" style="grid-column:1/-1">
+    <div class="calc-section-title">Lot size <span></span></div>
+    <div class="calc-accounts">
+      <div class="calc-card inst" id="cc-inst">
+        <div class="calc-card-accent"></div>
+        <div class="calc-card-header">
+          <div>
+            <div class="calc-card-name">Institutional Funding</div>
+            <div class="calc-card-balance">$50,000</div>
+          </div>
+          <div class="calc-card-meta">Risc <b style="color:var(--text)">1%</b> → <b style="color:var(--be)">$500.00</b></div>
+        </div>
+        <div class="calc-card-body">
+          <div class="calc-card-col">
+            <div class="calc-col-label">Fără costuri</div>
+            <div class="calc-card-lot">5.00</div>
+            <div class="calc-card-sub">loturi · SL 10 pips</div>
+          </div>
+          <div class="calc-card-col-divider"></div>
+          <div class="calc-card-col">
+            <div class="calc-col-label">Cu costuri</div>
+            <div class="calc-card-lot-net">4.76</div>
+            <div class="calc-card-sub">loturi · efective</div>
+            <div class="calc-card-costs">
+              <div class="calc-cost-row"><span>Spread (0.2 pips)</span><span>−$9.52</span></div>
+              <div class="calc-cost-row"><span>Comision RT</span><span>−$14.29</span></div>
+              <div class="calc-cost-total"><span>Total</span><span>−$23.81</span></div>
+            </div>
+            <div class="calc-diff-pill">▼ −0.24 lot</div>
+          </div>
+        </div></div>
+      <div class="calc-card ftmo80" id="cc-ftmo80">
+        <div class="calc-card-accent"></div>
+        <div class="calc-card-header">
+          <div>
+            <div class="calc-card-name">FTMO</div>
+            <div class="calc-card-balance">€80,000</div>
+          </div>
+          <div class="calc-card-meta">Risc <b style="color:var(--text)">1%</b> → <b style="color:var(--be)">€800.00 ≈ $914.88</b></div>
+        </div>
+        <div class="calc-card-body">
+          <div class="calc-card-col">
+            <div class="calc-col-label">Fără costuri</div>
+            <div class="calc-card-lot">9.15</div>
+            <div class="calc-card-sub">loturi · SL 10 pips</div>
+          </div>
+          <div class="calc-card-col-divider"></div>
+          <div class="calc-card-col">
+            <div class="calc-col-label">Cu costuri</div>
+            <div class="calc-card-lot-net">8.71</div>
+            <div class="calc-card-sub">loturi · efective</div>
+            <div class="calc-card-costs">
+              <div class="calc-cost-row"><span>Spread (0.2 pips)</span><span>−€15.24</span></div>
+              <div class="calc-cost-row"><span>Comision RT</span><span>−€22.86</span></div>
+              <div class="calc-cost-total"><span>Total</span><span>−€38.10</span></div>
+            </div>
+            <div class="calc-diff-pill">▼ −0.44 lot</div>
+          </div>
+        </div></div>
+      <div class="calc-card ftmo10" id="cc-ftmo10">
+        <div class="calc-card-accent"></div>
+        <div class="calc-card-header">
+          <div>
+            <div class="calc-card-name">FTMO</div>
+            <div class="calc-card-balance">€10,000</div>
+          </div>
+          <div class="calc-card-meta">Risc <b style="color:var(--text)">1%</b> → <b style="color:var(--be)">€100.00 ≈ $114.36</b></div>
+        </div>
+        <div class="calc-card-body">
+          <div class="calc-card-col">
+            <div class="calc-col-label">Fără costuri</div>
+            <div class="calc-card-lot">1.14</div>
+            <div class="calc-card-sub">loturi · SL 10 pips</div>
+          </div>
+          <div class="calc-card-col-divider"></div>
+          <div class="calc-card-col">
+            <div class="calc-col-label">Cu costuri</div>
+            <div class="calc-card-lot-net">1.09</div>
+            <div class="calc-card-sub">loturi · efective</div>
+            <div class="calc-card-costs">
+              <div class="calc-cost-row"><span>Spread (0.2 pips)</span><span>−€1.90</span></div>
+              <div class="calc-cost-row"><span>Comision RT</span><span>−€2.86</span></div>
+              <div class="calc-cost-total"><span>Total</span><span>−€4.76</span></div>
+            </div>
+            <div class="calc-diff-pill">▼ −0.05 lot</div>
+          </div>
+        </div></div>
+    </div>
+    <div class="calc-note" style="margin-top:10px">📌 GBPUSD: 1 pip = $10 / lot standard. Pip value este mereu în USD indiferent de moneda contului.</div>
+  </div>
+<div class="calc-section" style="grid-column:1/-1">
+    <div class="calc-section-title">Monte Carlo — Simulator FTMO <span></span></div>
+    <div class="mc-controls">
+      <div class="mc-field"><label>WR % (auto)</label><input type="number" id="mc-wr" value="52" min="1" max="99" step="1"></div>
+      <div class="mc-field"><label>Risk / trade %</label><input type="number" id="mc-risk" value="1" min="0.1" max="5" step="0.1"></div>
+      <div class="mc-field"><label>Target profit %</label><input type="number" id="mc-target" value="8" min="1" max="20" step="0.5"></div>
+      <div class="mc-field"><label>Max drawdown %</label><input type="number" id="mc-dd" value="10" min="1" max="20" step="0.5"></div>
+      <div class="mc-field"><label>Nr. trade-uri</label><input type="number" id="mc-trades" value="40" min="5" max="200" step="1"></div>
+      <div class="mc-field"><label>Simulări</label><input type="number" id="mc-sims" value="2000" min="100" max="5000" step="100"></div>
+      <button class="mc-run" onclick="runMonteCarlo()">▶ Simulează</button>
+    </div>
+    <div class="mc-results" id="mc-results" style="display:none">
+      <div class="mc-stat"><div class="mc-sv" id="mc-pass" style="color:var(--win)">—</div><div class="mc-sl">Pass %</div></div>
+      <div class="mc-stat"><div class="mc-sv" id="mc-fail" style="color:var(--lose)">—</div><div class="mc-sl">Fail %</div></div>
+      <div class="mc-stat"><div class="mc-sv" id="mc-ruin" style="color:var(--lose)">—</div><div class="mc-sl">Ruin risk %</div></div>
+      <div class="mc-stat"><div class="mc-sv" id="mc-median">—</div><div class="mc-sl">Median final %</div></div>
+    </div>
+    <div style="position:relative;height:160px;display:none" id="mc-chart-wrap">
+      <canvas id="ch-mc"></canvas>
+    </div>
+    <div style="font-size:10px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;margin-top:6px" id="mc-caption"></div>
+  </div>
+  </div>
+</div>
+
+
+
 </main>
-<div class="toast ok" id="toast">✓ 05.06.2026 · WIN · OSG</div>
+<div class="toast err" id="toast">⚠ Selectează sesiunea (1/2/3)</div>
 
 <script src="file:///Users/mac/Downloads/GUUUUUUUU_files/xlsx.full.min.js"></script>
 <script>/*!
@@ -975,7 +1519,7 @@ let pendingImport = null;
 let bkView = 'session';
 let charts = {};
 
-const STORE_KEY = 'gu_if_v1';
+const STORE_KEY = 'gu_logger_v3';
 const ZILE_RO = ['Duminica','Luni','Marti','Miercuri','Joi','Vineri','Sambata'];
 const LUNI_RO = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 const form = { ses:'', rez:'', tip:'', re:'', bet:'' };
@@ -991,9 +1535,10 @@ function switchTab(id) {
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('p-'+id).classList.add('active');
-  document.querySelectorAll('.tab-btn').forEach(b=>{ if(b.textContent.toLowerCase().includes(id==='entry'?'entry':id==='stats'?'stats':'import')) b.classList.add('active'); });
+  document.querySelectorAll('.tab-btn').forEach(b=>{ if(b.textContent.toLowerCase().includes(id==='entry'?'trades':id==='stats'?'stats':id==='notes'?'notes':id==='calc'?'lot':'import')) b.classList.add('active'); });
   event.currentTarget.classList.add('active');
   if(id==='stats') { updateYearFilter(); renderStats(); }
+  if(id==='calc') { fetchEurUsd(); }
 }
 
 
@@ -1054,9 +1599,9 @@ function saveTrade() {
     news: document.getElementById('f-news').value||'',
     misc_ses: document.getElementById('f-misc-ses').value||'',
     setup_urat: document.getElementById('f-setup-urat').value||'',
+    liq_dist: document.getElementById('f-liq-dist').value||'',
     risk: document.getElementById('f-risk').value||'',
-    alocare: document.getElementById('f-alocare').value||'',
-    liq_dist: document.getElementById('f-liq-dist').value||''
+    alocare: document.getElementById('f-alocare').value||''
   };
   if(editId !== null) {
     // Edit mode: preserve original ID, replace in array
@@ -1092,6 +1637,8 @@ function resetForm() {
   document.getElementById('f-misc-ses').value='';
   document.getElementById('f-setup-urat').value='';
   document.getElementById('f-liq-dist').value='';
+  document.getElementById('f-risk').value='';
+  document.getElementById('f-alocare').value='';
   csReset('f-news'); csReset('f-misc-ses'); csReset('f-setup-urat'); csReset('f-liq-dist'); csReset('f-risk'); csReset('f-alocare');
   updateLinkBtn('f-trade-link','open-trade-link');
   updateLinkBtn('f-liq-link','open-liq-link');
@@ -1237,7 +1784,6 @@ function renderList() {
       <td>${t.setup}</td><td>${t.tip}</td>
       <td>${t.re}</td>
       <td>${t.pot!=='-'?'+'+t.pot+'R':'—'}</td>
-      <td>${t.alocare||'—'}</td>
       <td>${t.be_type||'—'}</td>
       <td>${t.hl||'—'}</td>
       <td>${t.news?`<span style="font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;background:var(--bg2);color:var(--text2)">${t.news}</span>`:'—'}</td>
@@ -1284,6 +1830,7 @@ function getFiltered() {
   const news=document.getElementById('f-news-filter')?.value||'all';
   const miscSes=document.getElementById('f-misc-ses-filter')?.value||'all';
   const setupUrat=document.getElementById('f-setup-urat-filter')?.value||'all';
+  const liqDist=document.getElementById('f-liq-dist-filter')?.value||'all';
   return trades.filter(t=>{
     if(yr!=='all'&&getYear(t)!==yr) return false;
     if(liq==='__toate_localele__'){if(!/locala/i.test(t.liq||'')) return false;}
@@ -1305,10 +1852,8 @@ function getFiltered() {
     else if(miscSes!=='all'){if((t.misc_ses||'')!==miscSes) return false;}
     if(setupUrat==='none'){if(t.setup_urat&&t.setup_urat!=='') return false;}
     else if(setupUrat!=='all'){if((t.setup_urat||'')!==setupUrat) return false;}
-    const risk=document.getElementById('f-risk-filter')?.value||'all';
-    if(risk!=='all'){if((t.risk||'')!==risk) return false;}
-    const alocare=document.getElementById('f-alocare-filter')?.value||'all';
-    if(alocare!=='all'){if((t.alocare||'')!==alocare) return false;}
+    if(liqDist==='none'){if(t.liq_dist&&t.liq_dist!=='') return false;}
+    else if(liqDist!=='all'){if((t.liq_dist||'')!==liqDist) return false;}
     return true;
   });
 }
@@ -1324,12 +1869,12 @@ function updateYearFilter() {
   const sel=document.getElementById('f-year'); if(!sel) return;
   const cur=sel.value;
   const years=[...new Set(trades.map(getYear))].filter(Boolean).sort();
-  sel.innerHTML='<option value="all">Toți anii</option>'+years.map(y=>`<option value="${y}">${y}</option>`).join('');
+  sel.innerHTML='<option value="all">An</option>'+years.map(y=>`<option value="${y}">${y}</option>`).join('');
   if(years.includes(cur)) sel.value=cur;
 }
 
 function resetFilters() {
-  ['f-year','sf-liq','f-ses','sf-setup','f-ziua','f-tip','f-re','f-rez','sf-hl','f-news-filter','f-misc-ses-filter','f-setup-urat-filter','f-risk-filter','f-alocare-filter'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value='all'; });
+  ['f-year','sf-liq','f-ses','sf-setup','f-ziua','f-tip','f-re','f-rez','sf-hl','f-news-filter','f-misc-ses-filter','f-setup-urat-filter','f-liq-dist-filter'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value='all'; });
   renderStats();
 }
 
@@ -1358,21 +1903,6 @@ function renderStats() {
   document.getElementById('st-w').textContent=w;
   document.getElementById('st-l').textContent=l;
   document.getElementById('st-be').textContent=be;
-  const allocEl = document.getElementById('st-alloc');
-  if (allocEl) {
-    const allocTrades = arr.filter(t => t.alocare && t.alocare !== '');
-    if (allocTrades.length > 0) {
-      let totalPct = 0;
-      allocTrades.forEach(t => {
-        const pct = parseFloat(t.alocare);
-        if (t.rezultat === 'WIN') totalPct += pct * 2;
-        else if (t.rezultat === 'LOSE') totalPct -= pct * 1;
-      });
-      const totalPctRound = parseFloat(totalPct.toFixed(2));
-      allocEl.textContent = (totalPctRound >= 0 ? '+' : '') + totalPctRound.toFixed(2) + '%';
-      allocEl.style.color = totalPctRound > 0 ? 'var(--win)' : totalPctRound < 0 ? 'var(--lose)' : 'var(--text)';
-    } else { allocEl.textContent = '—'; allocEl.style.color = 'var(--text)'; }
-  }
   const wrEl=document.getElementById('st-wr');
   wrEl.textContent=rate!==null?rate.toFixed(2)+'%':'—';
   wrEl.style.color=wrColor(rate);
@@ -1391,6 +1921,8 @@ function renderStats() {
   renderDaySeHeatmap(arr);
   renderStreakTracker(arr);
   renderBECard(arr);
+  renderRRDist(arr);
+  renderStreakWRCard(arr);
   renderInsights(arr);
   // Profit Factor
   const pfEl=document.getElementById('st-pf');
@@ -1415,6 +1947,7 @@ function renderStats() {
   if(edgeBar) edgeBar.style.width=es.score+'%';
   if(edgeCard) edgeCard.title=es.detail+(es.gradeLabel?' — '+es.gradeLabel:'');
   renderBkTable(arr);
+  renderStreakSection(arr);
 }
 
 function renderCharts(arr) {
@@ -1438,8 +1971,8 @@ function renderCharts(arr) {
   });
 
   // By setup
-  const setupKeys=['OSG','TG','TCG','3G','3CG'];
-  const setupStats=setupKeys.map(k=>wrStats(arr.filter(t=>setupBase(t.setup)===k)));
+  const setupKeys=['OSG','OSG+SLG','TG','TG+SLG','TCG','TCG+SLG','3G','3G+SLG','3CG','3CG+SLG'];
+  const setupStats=setupKeys.map(k=>wrStats(arr.filter(t=>t.setup===k)));
   renderChart('ch-setup','setup',{
     type:'bar',
     data:{labels:setupKeys,datasets:[{data:setupStats.map(s=>s.rate||0),backgroundColor:setupStats.map(s=>wrColor(s.rate)),borderRadius:4}]},
@@ -1563,7 +2096,137 @@ function renderChart(canvasId, key, config) {
   charts[key]=new Chart(canvas.getContext('2d'), config);
 }
 
-// ============ BREAKDOWN TABLE ============
+// ============ SD & STREAK ANALYSIS ============
+function renderStreakSection(arr) {
+  const wrap = document.getElementById('sd-streak-wrap');
+  if (!wrap) return;
+
+  const wins = arr.filter(t => t.rezultat === 'WIN');
+  const losses = arr.filter(t => t.rezultat === 'LOSE');
+  const N_wl = wins.length + losses.length;
+  if (N_wl < 5) {
+    wrap.style.display = 'none'; return;
+  }
+  wrap.style.display = '';
+
+  const wr = wins.length / N_wl;
+  const pLose = 1 - wr;
+
+  // SD on WIN/LOSE only
+  const rResults = arr.filter(t => t.rezultat === 'WIN' || t.rezultat === 'LOSE')
+                      .map(t => t.rezultat === 'WIN' ? 2.0 : -1.0);
+  const mean = rResults.reduce((a,b) => a+b, 0) / rResults.length;
+  const variance = rResults.reduce((s,v) => s + (v-mean)**2, 0) / (rResults.length - 1);
+  const sd = Math.sqrt(variance);
+
+  // Find losing streaks (BE is neutral — doesn't break or extend)
+  const sorted = [...arr].sort((a,b) => parseDate(a.data) - parseDate(b.data));
+  let curStreak = 0, maxStreak = 0;
+  const streakCounts = {};
+  sorted.forEach(t => {
+    if (t.rezultat === 'LOSE') {
+      curStreak++;
+      if (curStreak > maxStreak) maxStreak = curStreak;
+    } else if (t.rezultat === 'WIN') {
+      if (curStreak > 0) { streakCounts[curStreak] = (streakCounts[curStreak]||0)+1; }
+      curStreak = 0;
+    }
+  });
+  if (curStreak > 0) { streakCounts[curStreak] = (streakCounts[curStreak]||0)+1; }
+
+  const allStreaks = Object.entries(streakCounts).flatMap(([k,v]) => Array(v).fill(+k));
+  const nStreaks = allStreaks.length;
+  const avgStreak = nStreaks > 0 ? allStreaks.reduce((a,b)=>a+b,0)/nStreaks : 0;
+  const expectedMax = N_wl > 1 ? Math.log(N_wl) / Math.log(1/pLose) : 0;
+
+  // Update metric cards
+  const g = id => document.getElementById(id);
+  g('sd-wr').textContent = (wr*100).toFixed(1) + '%';
+  g('sd-wr').style.color = wr >= 0.52 ? 'var(--win)' : wr >= 0.48 ? 'var(--be)' : 'var(--lose)';
+  g('sd-wl').textContent = `${wins.length}W / ${losses.length}L`;
+  g('sd-val').textContent = sd.toFixed(2) + ' R';
+  g('sd-maxstreak').textContent = maxStreak + '× LOSE';
+  g('sd-maxexp').textContent = 'așteptat teoretic ' + expectedMax.toFixed(1);
+  g('sd-avgstreak').textContent = avgStreak.toFixed(1) + '×';
+  g('sd-nstreaks').textContent = nStreaks + ' streaks';
+
+  // Build chart data
+  const allKeys = Object.keys(streakCounts).map(Number).sort((a,b)=>a-b);
+  const distLabels = allKeys.map(k => k + '×');
+  const distData = allKeys.map(k => streakCounts[k]);
+  const distColors = allKeys.map(k => {
+    const p = 1 - (1 - pLose**k)**N_wl;
+    return p > 0.85 ? '#4ade80' : p > 0.45 ? '#fbbf24' : '#f87171';
+  });
+
+  const probNs = [];
+  for (let n = Math.max(3, maxStreak-4); n <= Math.min(maxStreak+4, 15); n++) probNs.push(n);
+  const probLabels = probNs.map(n => n + '×');
+  const probData = probNs.map(n => {
+    const p = 1 - (1 - pLose**n)**N_wl;
+    return +(p*100).toFixed(1);
+  });
+  const probColors = probData.map(p => p > 85 ? '#4ade8066' : p > 45 ? '#fbbf2466' : '#f8717166');
+  const probBorders = probData.map(p => p > 85 ? '#4ade80' : p > 45 ? '#fbbf24' : '#f87171');
+
+  const gc = '#1e1e1e', tc = '#505068';
+  const baseChartOpts = {responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx => ctx.parsed.y + (ctx.chart.config.type==='bar'&&ctx.dataset.yAxisID!=='prob' ? ' ori' : '%')}}},
+    scales:{
+      x:{grid:{color:gc}, ticks:{color:tc, font:{size:9, family:"'JetBrains Mono',monospace"}}},
+      y:{grid:{color:gc}, ticks:{color:tc, font:{size:9, family:"'JetBrains Mono',monospace"}}, beginAtZero:true}
+    }
+  };
+
+  renderChart('ch-streak-dist', 'streak-dist', {
+    type:'bar',
+    data:{labels:distLabels, datasets:[{data:distData, backgroundColor:distColors, borderRadius:3, borderSkipped:false}]},
+    options:{...baseChartOpts}
+  });
+
+  renderChart('ch-streak-prob', 'streak-prob', {
+    type:'bar',
+    data:{labels:probLabels, datasets:[{data:probData, backgroundColor:probColors, borderColor:probBorders, borderWidth:1, borderRadius:3, borderSkipped:false}]},
+    options:{...baseChartOpts, scales:{...baseChartOpts.scales, y:{...baseChartOpts.scales.y, max:105, ticks:{...baseChartOpts.scales.y.ticks, callback:v=>v+'%'}}}}
+  });
+
+  // Probability table
+  const tableNs = [];
+  const startN = Math.max(3, maxStreak - 4);
+  for (let n = startN; n <= Math.min(startN + 9, 18); n++) tableNs.push(n);
+
+  let rows = tableNs.map(n => {
+    const pOne = pLose**n;
+    const oneIn = Math.round(1/pOne);
+    const pSample = 1 - (1-pOne)**N_wl;
+    const badgeColor = pSample > 0.85 ? '#4ade80' : pSample > 0.45 ? '#fbbf24' : '#f87171';
+    const isMax = n === maxStreak;
+    const label = pSample > 0.99 ? 'Normal, garantat în sample' :
+                  pSample > 0.85 ? 'Normal' :
+                  pSample > 0.65 ? 'Probabil' :
+                  pSample > 0.40 ? 'La limita normalului' :
+                  pSample > 0.20 ? 'Rar' : 'Foarte rar';
+    return `<tr style="border-bottom:1px solid var(--border);${isMax?'background:rgba(251,191,36,.05)':''}">
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">${n}× LOSE${isMax?' <span style="color:var(--be);font-size:10px">← tu</span>':''}</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">${(pOne*100).toFixed(2)}%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la ${oneIn.toLocaleString()}</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:${badgeColor}22;color:${badgeColor};padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">${(pSample*100).toFixed(1)}%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">${label}</td>
+    </tr>`;
+  }).join('');
+
+  g('sd-streak-table').innerHTML = `
+    <table style="width:100%;border-collapse:collapse">
+      <thead><tr style="border-bottom:1px solid var(--border2)">
+        <th style="text-align:left;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">STREAK</th>
+        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">P(1 ocurență)</th>
+        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">1 la N</th>
+        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">P(≥1 în sample)</th>
+        <th style="text-align:left;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">CONCLUZIE</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+}
 function setBkTab(btn, view) {
   document.querySelectorAll('.bktab').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on'); bkView=view;
@@ -1593,28 +2256,38 @@ function renderBkTable(arr) {
   const hCols=['Grup','Total','W','L','BE','WR%','CI 95%','NET RR','E/trade'];
 
   if(bkView==='session'){
-    const keys=['10:00-12:00','12:00-15:00','15:00-19:00'];
-    el.innerHTML=tblHdr(hCols)+keys.map(k=>mkRow(k,wrStats(arr.filter(t=>t.sesiune===k)))).join('')+tblFtr;
+    const sesData=['10:00-12:00','12:00-15:00','15:00-19:00'].map(k=>({k,s:wrStats(arr.filter(t=>t.sesiune===k))}));
+    sesData.sort((a,b)=>(b.s.rate??-1)-(a.s.rate??-1));
+    el.innerHTML=tblHdr(hCols)+sesData.map(({k,s})=>mkRow(k,s)).join('')+tblFtr;
   } else if(bkView==='setup'){
-    const keys=['OSG','OSG+SLG','TG','TG+SLG','TCG','TCG+SLG','3G','3G+SLG','3CG','3CG+SLG'];
-    el.innerHTML=tblHdr(hCols)+keys.map(k=>mkRow(k,wrStats(arr.filter(t=>t.setup===k)),3)).join('')+tblFtr;
+    const setupData=['OSG','OSG+SLG','TG','TG+SLG','TCG','TCG+SLG','3G','3G+SLG','3CG','3CG+SLG'].map(k=>({k,s:wrStats(arr.filter(t=>t.setup===k))}));
+    setupData.sort((a,b)=>(b.s.rate??-1)-(a.s.rate??-1));
+    el.innerHTML=tblHdr(hCols)+setupData.map(({k,s})=>mkRow(k,s)).join('')+tblFtr;
   } else if(bkView==='liq'){
-    const keys=[...new Set(arr.map(t=>t.liq).filter(Boolean))].sort();
-    el.innerHTML=tblHdr(hCols)+keys.map(k=>mkRow(k,wrStats(arr.filter(t=>t.liq===k)),3)).join('')+tblFtr;
+    const liqData=[...new Set(arr.map(t=>t.liq).filter(Boolean))].map(k=>({k,s:wrStats(arr.filter(t=>t.liq===k))}));
+    const isMajora=t=>t.liq&&t.liq.includes('Majora');
+    const isLocala=t=>t.liq&&t.liq.includes('Locala');
+    liqData.push({k:'Toate Majorele',s:wrStats(arr.filter(isMajora))});
+    liqData.push({k:'Toate Localele',s:wrStats(arr.filter(isLocala))});
+    liqData.sort((a,b)=>(b.s.rate??-1)-(a.s.rate??-1));
+    el.innerHTML=tblHdr(hCols)+liqData.map(({k,s})=>mkRow(k,s,3)).join('')+tblFtr;
   } else if(bkView==='day'){
-    const keys=['Luni','Marti','Miercuri','Joi','Vineri'];
-    el.innerHTML=tblHdr(hCols)+keys.map(k=>mkRow(k,wrStats(arr.filter(t=>t.ziua===k)))).join('')+tblFtr;
+    const dayData=['Luni','Marti','Miercuri','Joi','Vineri'].map(k=>({k,s:wrStats(arr.filter(t=>t.ziua===k))}));
+    dayData.sort((a,b)=>(b.s.rate??-1)-(a.s.rate??-1));
+    el.innerHTML=tblHdr(hCols)+dayData.map(({k,s})=>mkRow(k,s)).join('')+tblFtr;
   } else if(bkView==='year'){
     const keys=[...new Set(arr.map(getYear))].filter(Boolean).sort();
     el.innerHTML=tblHdr(hCols)+keys.map(k=>mkRow(k,wrStats(arr.filter(t=>getYear(t)===k)))).join('')+tblFtr;
   } else if(bkView==='tip'){
-    el.innerHTML=tblHdr(hCols)+['BUY','SELL'].map(k=>mkRow(k,wrStats(arr.filter(t=>t.tip===k)))).join('')+tblFtr;
+    const tipData=['BUY','SELL'].map(k=>({k,s:wrStats(arr.filter(t=>t.tip===k))}));
+    tipData.sort((a,b)=>(b.s.rate??-1)-(a.s.rate??-1));
+    el.innerHTML=tblHdr(hCols)+tipData.map(({k,s})=>mkRow(k,s)).join('')+tblFtr;
   } else if(bkView==='combo_ses_setup'){
     const sesKeys=['10:00-12:00','12:00-15:00','15:00-19:00'];
-    const setupKeys=['OSG','TG','TCG','3G','3CG'];
+    const setupKeys=['OSG','OSG+SLG','TG','TG+SLG','TCG','TCG+SLG','3G','3G+SLG','3CG','3CG+SLG'];
     let rows='';
     sesKeys.forEach(s=>setupKeys.forEach(su=>{
-      const sub=arr.filter(t=>t.sesiune===s&&setupBase(t.setup)===su);
+      const sub=arr.filter(t=>t.sesiune===s&&t.setup===su);
       const st=wrStats(sub);
       if(st.n>=5) rows+=mkRow(`${s} × ${su}`,st);
     }));
@@ -1622,13 +2295,21 @@ function renderBkTable(arr) {
   } else if(bkView==='combo_day_ses'){
     const dayKeys=['Luni','Marti','Miercuri','Joi','Vineri'];
     const sesKeys=['10:00-12:00','12:00-15:00','15:00-19:00'];
-    let rows='';
+    const comboData=[];
     dayKeys.forEach(d=>sesKeys.forEach(s=>{
       const sub=arr.filter(t=>t.ziua===d&&t.sesiune===s);
       const st=wrStats(sub);
-      if(st.n>=8) rows+=mkRow(`${d} × ${s}`,st);
+      if(st.n>=8) comboData.push({label:`${d} × ${s}`,st});
     }));
-    el.innerHTML=tblHdr(hCols)+rows+tblFtr;
+    comboData.sort((a,b)=>(b.st.rate??-1)-(a.st.rate??-1));
+    el.innerHTML=tblHdr(hCols)+comboData.map(({label,st})=>mkRow(label,st)).join('')+tblFtr;
+  } else if(bkView==='news'){
+    const fixedNews=['GBP MON PRH ❌','GBP AFS ❌'];
+    const dynNews=[...new Set(arr.map(t=>t.news).filter(Boolean))];
+    const allNewsKeys=[...new Set([...fixedNews,...dynNews])];
+    const newsData=allNewsKeys.map(k=>({k,s:wrStats(arr.filter(t=>t.news===k))}));
+    newsData.sort((a,b)=>(b.s.rate??-1)-(a.s.rate??-1));
+    el.innerHTML=tblHdr(hCols)+newsData.map(({k,s})=>mkRow(k,s,3)).join('')+tblFtr;
   } else if(bkView==='rr_lunar'){
     const months=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
     const years=[...new Set(arr.map(getYear))].filter(Boolean).sort();
@@ -1748,19 +2429,13 @@ function renderBkTable(arr) {
       </div>`;
 
   } else if(bkView==='re_impact'){
-    const reDa=arr.filter(t=>t.re==='Da'&&['WIN','LOSE'].includes(t.rezultat));
-    const reNu=arr.filter(t=>t.re==='Nu'&&['WIN','LOSE'].includes(t.rezultat));
-    const sDa=wrStats(reDa);const sNu=wrStats(reNu);
-    const [ci1l,ci1h]=wilsonCI(sDa.w,sDa.n);const [ci2l,ci2h]=wilsonCI(sNu.w,sNu.n);
-    const hCols=['Grup','Total','W','L','BE','WR%','CI 95%','NET RR','E/trade'];
-    const tblHdr=(cols)=>`<table class="bktbl"><thead><tr>${cols.map((c,i)=>`<th style="${i===0?'text-align:left':''}">${c}</th>`).join('')}</tr></thead><tbody>`;
-    const tblFtr=`</tbody></table>`;
-    function mkRow2(name,s){
-      const [cl,ch]=wilsonCI(s.w,s.n);
-      return `<tr><td>${name}</td><td style="color:var(--text2)">${s.n+s.be}</td><td style="color:var(--win)">${s.w}</td><td style="color:var(--lose)">${s.l}</td><td style="color:var(--be)">${s.be}</td><td class="${wrClass(s.rate)}">${s.rate!==null?s.rate.toFixed(1)+'%':'—'}</td><td class="n-small">[${cl.toFixed(0)}–${ch.toFixed(0)}%]</td><td class="${s.net>=0?'rp':'rn'}">${s.net>=0?'+':''}${s.net}R</td><td class="${s.exp>=0?'rp':'rn'}">${s.exp!==null?(s.exp>=0?'+':'')+s.exp.toFixed(2)+'R':'—'}</td></tr>`;
-    }
-    const allRe=arr.filter(t=>['WIN','LOSE'].includes(t.rezultat));
-    el.innerHTML=tblHdr(hCols)+mkRow2('Re = Da',sDa)+mkRow2('Re = Nu',sNu)+mkRow2('TOTAL',wrStats(allRe))+tblFtr+`<div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:monospace;padding:8px;background:var(--bg3);border-radius:6px">Re (Retestare): DA = ai luat trade-ul cu retestare. Dacă WR-ul Re=Da e semnificativ mai mare, setupurile cu retestare merită prioritizate.</div>`;
+    const reData=['Da','Nu'].map(k=>({k,s:wrStats(arr.filter(t=>t.re===k))}));
+    reData.sort((a,b)=>(b.s.rate??-1)-(a.s.rate??-1));
+    el.innerHTML=tblHdr(hCols)+reData.map(({k,s})=>mkRow(k,s)).join('')+tblFtr;
+  } else if(bkView==='hl'){
+    const hlData=[...new Set(arr.map(t=>t.hl).filter(Boolean))].map(k=>({k,s:wrStats(arr.filter(t=>t.hl===k))}));
+    hlData.sort((a,b)=>(b.s.rate??-1)-(a.s.rate??-1));
+    el.innerHTML=tblHdr(hCols)+hlData.map(({k,s})=>mkRow(k,s,3)).join('')+tblFtr;
   } else if(bkView==='streak_wr'){
     // Sort trades by date chronologically
     function parseD(s){const p=(s||'').split('.');return p.length===3?new Date(+p[2],+p[1]-1,+p[0]):new Date(0);}
@@ -1881,15 +2556,15 @@ function exportXLSX() {
 }
 
 function saveHTML() {
-  const src = document.currentScript || Array.from(document.scripts).pop();
+  document.querySelectorAll('.note-title-inp').forEach(function(el){ el.setAttribute('value', el.value); });
+  document.querySelectorAll('.note-body-ta').forEach(function(el){ el.textContent = el.value; });
   let html = document.documentElement.outerHTML;
-  // Înlocuiește array-ul de trades cu cel curent
   const tradesJson = JSON.stringify(trades, null, 0);
   html = html.replace(/let trades = \[[\s\S]*?\];/, 'let trades = ' + tradesJson + ';');
   const blob = new Blob([html], {type: 'text/html;charset=utf-8'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'GBP_USD_IF_APP.html';
+  a.download = 'GBP_USD_BT.html';
   a.click();
   URL.revokeObjectURL(a.href);
   toast(`💾 Salvat cu ${trades.length} trade-uri`, 'ok');
@@ -1940,7 +2615,7 @@ function renderBECard(arr) {
   const hypWL = [...wl, ...beAll.filter(t => t.be_type === 'BE/WIN').map(t => ({...t, rezultat:'WIN'}))];
   const hypStats = wrStats(hypWL);
 
-  const delta = curStats.wr !== null && hypStats.wr !== null ? (hypStats.wr - curStats.wr) : null;
+  const delta = curStats.rate !== null && hypStats.rate !== null ? (hypStats.rate - curStats.rate) : null;
 
   const winCol = winPct >= 55 ? 'var(--win)' : winPct >= 45 ? 'var(--be)' : 'var(--lose)';
   const loseCol = losePct >= 55 ? 'var(--lose)' : losePct >= 45 ? 'var(--be)' : 'var(--win)';
@@ -1953,38 +2628,37 @@ function renderBECard(arr) {
   const netRR = parseFloat(avgWinRR) * beW - beL;
 
   el.innerHTML = `
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px">
-      <div style="background:var(--bg3);border-radius:8px;padding:10px;text-align:center">
-        <div style="font-size:22px;font-weight:800;color:${winCol}">${beW}</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1.2fr;gap:8px;margin-bottom:10px">
+      <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:${winCol}">${beW}</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">BE/WIN</div>
         <div style="font-size:11px;font-weight:700;color:${winCol};margin-top:2px">${winPct}%</div>
       </div>
-      <div style="background:var(--bg3);border-radius:8px;padding:10px;text-align:center">
-        <div style="font-size:22px;font-weight:800;color:${loseCol}">${beL}</div>
+      <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:${loseCol}">${beL}</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">BE/LOSE</div>
         <div style="font-size:11px;font-weight:700;color:${loseCol};margin-top:2px">${losePct}%</div>
       </div>
-      <div style="background:var(--bg3);border-radius:8px;padding:10px;text-align:center">
-        <div style="font-size:22px;font-weight:800;color:var(--text)">${beTotal}</div>
+      <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--text)">${beTotal}</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">Total BE</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:2px">${beAll.length} înregistrate</div>
+        <div style="font-size:11px;color:var(--text3);margin-top:2px">${beAll.length} înreg.</div>
+      </div>
+      <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:${netRR >= 0 ? 'var(--win)' : 'var(--lose)'}">${netRR >= 0 ? '+' : ''}${netRR.toFixed(1)}R</div>
+        <div style="font-size:10px;color:var(--text2);margin-top:2px">Net BE în R</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">${beW}×${avgWinRR}R − ${beL}×1R</div>
       </div>
     </div>
-    <div style="margin-bottom:12px">
+    <div>
       <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-bottom:4px">
         <span style="color:${winCol}">BE/WIN ${winPct}%</span>
         <span style="color:${loseCol}">BE/LOSE ${losePct}%</span>
       </div>
-      <div style="background:var(--bg3);border-radius:4px;height:8px;overflow:hidden">
+      <div style="background:var(--bg3);border-radius:4px;height:6px;overflow:hidden">
         <div style="height:100%;width:${barW}%;background:var(--win);border-radius:4px;transition:width .3s"></div>
       </div>
-    </div>
-    <div style="background:var(--bg3);border-radius:8px;padding:12px;text-align:center">
-      <div style="font-size:10px;color:var(--text2);margin-bottom:6px">Rezultat net BE în R</div>
-      <div style="font-size:11px;color:var(--text3);margin-bottom:4px">${beW} × ${avgWinRR}R − ${beL} × 1R</div>
-      <div style="font-size:24px;font-weight:800;color:${netRR >= 0 ? 'var(--win)' : 'var(--lose)'}">
-        ${netRR >= 0 ? '+' : ''}${netRR.toFixed(1)}R
-      </div>
+      ${delta !== null ? `<div style="margin-top:8px;font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace">Dacă toate BE/WIN → WIN: WR ar fi <strong style="color:${curStats.rate + delta >= 50 ? 'var(--win)' : 'var(--be)'}">${(curStats.rate + delta).toFixed(1)}%</strong> <span style="color:var(--win)">+${delta.toFixed(1)}%</span></div>` : ''}
     </div>`;
 }
 
@@ -1998,107 +2672,230 @@ function calcProfitFactor(arr) {
 }
 
 // ============ ACTIONABLE INSIGHTS ============
+// ============ RR DISTRIBUTION CARD ============
+function renderStreakWRCard(arr) {
+  const el = document.getElementById('streak-wr-content'); if(!el) return;
+  function parseD(s){const p=(s||'').split('.');return p.length===3?new Date(+p[2],+p[1]-1,+p[0]):new Date(0);}
+  const sorted=[...arr].sort((a,b)=>parseD(a.data)-parseD(b.data));
+  const wl=sorted.filter(t=>t.rezultat==='WIN'||t.rezultat==='LOSE');
+  const baseW=wl.filter(t=>t.rezultat==='WIN').length;
+  const baseN=wl.length;
+  const baseWR=baseN>0?Math.round(baseW/baseN*100):0;
+  const afterLose={};
+  const afterWin={};
+  for(let i=1;i<wl.length;i++){
+    let ls=0,j=i-1;
+    while(j>=0&&wl[j].rezultat==='LOSE'){ls++;j--;}
+    let ws=0;j=i-1;
+    while(j>=0&&wl[j].rezultat==='WIN'){ws++;j--;}
+    const rez=wl[i].rezultat;
+    if(ls>=1){if(!afterLose[ls])afterLose[ls]=[];afterLose[ls].push(rez);}
+    if(ws>=1){if(!afterWin[ws])afterWin[ws]=[];afterWin[ws].push(rez);}
+  }
+  function streakRow2(n,results,type){
+    const w=results.filter(r=>r==='WIN').length;
+    const l=results.filter(r=>r==='LOSE').length;
+    const tot=w+l;
+    const wr=tot>0?Math.round(w/tot*100):0;
+    const diff=wr-baseWR;
+    const wrCol=wr>=60?'#00e676':wr>=50?'#4ade80':wr>=40?'#fbbf24':wr>=33?'#f87171':'#ff4040';
+    const diffStr=diff>=0?`<span style="color:#4ade80">+${diff}%</span>`:`<span style="color:#f87171">${diff}%</span>`;
+    const warn=tot<10?`<span style="color:var(--text3);font-size:9px"> ⚠ n mic</span>`:'';
+    return `<tr><td>Dupa ${n} ${type}</td><td style="color:var(--text2)">${tot}</td><td style="color:var(--win)">${w}</td><td style="color:var(--lose)">${l}</td><td style="font-weight:700;color:${wrCol}">${wr}%</td><td>${diffStr}${warn}</td></tr>`;
+  }
+  const hdr=`<table class="bktbl"><thead><tr><th style="text-align:left">Streak</th><th>Cazuri</th><th>WIN</th><th>LOSE</th><th>WR%</th><th>Diferență</th></tr></thead><tbody>`;
+  const baseRow=`<tr style="border-bottom:1px solid var(--border2)"><td style="color:var(--text2);font-size:10px">Baseline general</td><td style="color:var(--text2)">${baseN}</td><td style="color:var(--win)">${baseW}</td><td style="color:var(--lose)">${baseN-baseW}</td><td style="font-weight:700;color:#fbbf24">${baseWR}%</td><td>—</td></tr>`;
+  let loseRows='',winRows='';
+  for(const n of Object.keys(afterLose).map(Number).sort((a,b)=>a-b)) loseRows+=streakRow2(n,afterLose[n],'LOSE');
+  for(const n of Object.keys(afterWin).map(Number).sort((a,b)=>a-b)) winRows+=streakRow2(n,afterWin[n],'WIN');
+  const sep=`<tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA WINNING STREAK</td></tr>`;
+  const sep2=`<tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA LOSING STREAK</td></tr>`;
+  el.innerHTML=hdr+baseRow+sep2+loseRows+sep+winRows+`</tbody></table><div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:monospace;padding:8px;background:var(--bg3);border-radius:6px">BE-urile sunt excluse din calcul (nu rup și nu extind streak-ul). ⚠ = sub 10 cazuri, interpretare cu precauție.</div>`;
+}
+
+function renderRRDist(arr) {
+  const el = document.getElementById('rr-dist-content'); if(!el) return;
+  const wins = arr.filter(t => t.rezultat === 'WIN' && t.pot && t.pot !== '-');
+  const total = wins.length;
+  if(total === 0) { el.innerHTML = '<div style="color:var(--text3);font-size:11px">Niciun WIN cu pot specificat.</div>'; return; }
+  const thresholds = [2, 2.2, 2.5, 3, 4, 5, 10];
+  let html = `<div style="font-size:10px;color:var(--text2);margin-bottom:10px">Din <b style="color:var(--text)">${total} WIN-uri</b> filtrate</div>`;
+  thresholds.forEach(thr => {
+    const count = wins.filter(t => (parseFloat(t.pot)||0) >= thr).length;
+    const pct = Math.round(count / total * 100);
+    const col = pct >= 70 ? 'var(--win)' : pct >= 40 ? 'var(--be)' : 'var(--lose)';
+    html += `<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥${thr}R</div>
+      <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
+        <div style="height:100%;width:${pct}%;background:${col};border-radius:3px;transition:width .3s"></div>
+      </div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:${col};text-align:right;flex-shrink:0">${count} (${pct}%)</div>
+    </div>`;
+  });
+  el.innerHTML = html;
+}
+
 function renderInsights(arr) {
   const el=document.getElementById('insights-list'); if(!el) return;
+
+  // Detecteaza filtrele active
+  const gv=id=>{const e=document.getElementById(id);return e?e.value:'all';};
+  const fSes=gv('f-ses'), fLiq=gv('sf-liq'), fSetup=gv('sf-setup'), fDay=gv('f-ziua');
+  const fNews=gv('f-news-filter'), fYear=gv('f-year'), fTip=gv('f-tip'), fRez=gv('f-rez');
+  const fHL=gv('sf-hl'), fRe=gv('f-re'), fMiscSes=gv('f-misc-ses-filter'), fSetupUrat=gv('f-setup-urat-filter'), fLiqDist=gv('f-liq-dist-filter');
+  const hasFilter=[fSes,fLiq,fSetup,fDay,fNews,fYear,fTip,fRez,fHL,fRe,fMiscSes,fSetupUrat,fLiqDist].some(v=>v&&v!=='all');
+  const minN=hasFilter?5:8;
+
   const wl=arr.filter(t=>['WIN','LOSE'].includes(t.rezultat));
-  if(wl.length<20){el.innerHTML='<div style="color:var(--text3);font-size:11px;font-family:monospace">Ai nevoie de cel puțin 20 trade-uri pentru insights.</div>';return;}
-  
-  const insights=[];
+  const minTotal=hasFilter?8:20;
+  if(wl.length<minTotal){el.innerHTML=`<div style="color:var(--text3);font-size:11px">Date insuficiente pentru insights (minim ${minTotal} trade-uri WIN/LOSE).</div>`;return;}
+
+  const pos=[], neg=[];
   const s=wrStats(wl);
-  
-  // Setup analysis
-  const setupKeys=['OSG','TG','TCG','3G','3CG'];
-  setupKeys.forEach(k=>{
-    const sub=wl.filter(t=>setupBase(t.setup)===k);
-    const st=wrStats(sub);
-    if(st.n>=8){
-      if(st.exp!==null&&st.exp<-0.1){
-        insights.push({type:'neg',icon:'⚠️',text:`<strong>${k}</strong> are expectancy negativă (${st.exp.toFixed(2)}R avg pe trade). Elimină acest setup sau îmbunătățește selecția — te costă bani. (${st.n} trades, WR ${st.rate!==null?st.rate.toFixed(0)+'%':'—'})`});
-      } else if(st.rate!==null&&st.rate>=58&&st.n>=10){
-        insights.push({type:'pos',icon:'✅',text:`<strong>${k}</strong> este cel mai bun setup al tău: ${st.rate.toFixed(0)}% WR, ${st.exp!==null?(st.exp>=0?'+':'')+st.exp.toFixed(2)+'R':''} expectancy. Prioritizează-l. (${st.n} trades)`});
-      }
-    }
-  });
-  
-  // Session analysis
-  const sesKeys=['10:00-12:00','12:00-15:00','15:00-19:00'];
-  const sesLbl={'10:00-12:00':'10-12','12:00-15:00':'12-15','15:00-19:00':'15-19'};
-  sesKeys.forEach(k=>{
-    const sub=wl.filter(t=>t.sesiune===k);
-    const st=wrStats(sub);
-    if(st.n>=8){
-      if(st.rate!==null&&st.rate<42){
-        insights.push({type:'neg',icon:'🕐',text:`Sesiunea <strong>${sesLbl[k]}</strong> are WR de doar ${st.rate.toFixed(0)}% pe ${st.n} trade-uri. Considera să reduci nr. de trades sau să filtrezi mai strict în această fereastră.`});
-      } else if(st.rate!==null&&st.rate>=55){
-        insights.push({type:'pos',icon:'🕐',text:`Sesiunea <strong>${sesLbl[k]}</strong> îți aduce cel mai bun WR: ${st.rate.toFixed(0)}% pe ${st.n} trade-uri. Concentrează-ți energia pe această sesiune.`});
-      }
-    }
-  });
-  
-  // Day of week
-  const dayKeys=['Luni','Marti','Miercuri','Joi','Vineri'];
-  let worstDay=null,bestDay=null;
-  dayKeys.forEach(d=>{
-    const sub=wl.filter(t=>t.ziua===d);
-    const st=wrStats(sub);
-    if(st.n>=8){
-      if(!worstDay||st.rate<worstDay.rate) worstDay={day:d,...st};
-      if(!bestDay||st.rate>bestDay.rate) bestDay={day:d,...st};
-    }
-  });
-  if(worstDay&&worstDay.rate!==null&&worstDay.rate<42) insights.push({type:'neg',icon:'📅',text:`<strong>${worstDay.day}</strong> este cea mai slabă zi: ${worstDay.rate.toFixed(0)}% WR pe ${worstDay.n} trade-uri. Consideră să nu tranzacționezi această zi.`});
-  if(bestDay&&bestDay.rate!==null&&bestDay.rate>=55) insights.push({type:'pos',icon:'📅',text:`<strong>${bestDay.day}</strong> este cea mai bună zi: ${bestDay.rate.toFixed(0)}% WR pe ${bestDay.n} trade-uri.`});
-  
-  // BUY vs SELL
-  const buyS=wrStats(wl.filter(t=>t.tip==='BUY'));
-  const sellS=wrStats(wl.filter(t=>t.tip==='SELL'));
-  if(buyS.n>=10&&sellS.n>=10){
-    const diff=Math.abs((buyS.rate||0)-(sellS.rate||0));
-    if(diff>=8){
-      const better=buyS.rate>sellS.rate?'BUY':'SELL';
-      const worse=better==='BUY'?'SELL':'BUY';
-      const betterSt=better==='BUY'?buyS:sellS;
-      const worseSt=better==='BUY'?sellS:buyS;
-      insights.push({type:'neu',icon:'↕️',text:`Există o diferență de ${diff.toFixed(0)}% WR între <strong>${better}</strong> (${betterSt.rate!==null?betterSt.rate.toFixed(0)+'%':'—'}) și <strong>${worse}</strong> (${worseSt.rate!==null?worseSt.rate.toFixed(0)+'%':'—'}). Verifică dacă ai bias de direcție.`});
-    }
+
+  // Header context daca e filtru activ
+  let ctxHtml='';
+  if(hasFilter){
+    const parts=[];
+    if(fSes!=='all') parts.push(fSes);
+    if(fLiq!=='all') parts.push(fLiq);
+    if(fSetup!=='all') parts.push(fSetup);
+    if(fDay!=='all') parts.push(fDay);
+    if(fNews!=='all') parts.push(fNews);
+    if(fYear!=='all') parts.push(fYear);
+    if(fTip!=='all') parts.push(fTip);
+    ctxHtml=`<div style="font-size:9px;color:var(--text3);letter-spacing:.6px;margin-bottom:8px;text-transform:uppercase">Insights pentru: <strong style="color:var(--text2)">${parts.join(' · ')}</strong> — ${wl.length} trade-uri WIN/LOSE</div>`;
   }
-  
-  // RE impact
-  const reDaSt=wrStats(wl.filter(t=>t.re==='Da'));
-  const reNuSt=wrStats(wl.filter(t=>t.re==='Nu'));
-  if(reDaSt.n>=8&&reNuSt.n>=8){
-    const diff=(reDaSt.rate||0)-(reNuSt.rate||0);
-    if(diff>=8) insights.push({type:'pos',icon:'🔁',text:`Trades cu <strong>Retestare=Da</strong> au WR mai bun cu ${diff.toFixed(0)}% (${reDaSt.rate!==null?reDaSt.rate.toFixed(0)+'%':'—'} vs ${reNuSt.rate!==null?reNuSt.rate.toFixed(0)+'%':'—'}). Prioritizează retestările.`});
-    else if(diff<=-8) insights.push({type:'neu',icon:'🔁',text:`Trades <strong>fără retestare</strong> performează mai bine cu ${Math.abs(diff).toFixed(0)}% WR diferență. Poate retestarea ta nu adaugă edge real.`});
-  }
-  
-  // BE direction
-  const beW=arr.filter(t=>t.be_type==='BE/WIN').length;
-  const beL=arr.filter(t=>t.be_type==='BE/LOSE').length;
-  const beTotal=beW+beL;
-  if(beTotal>=5){
-    const beWinPct=Math.round(beW/beTotal*100);
-    if(beWinPct>=65) insights.push({type:'pos',icon:'⚖️',text:`<strong>${beWinPct}%</strong> din BE-urile tale merg spre WIN — gestionezi bine BE-urile. (${beW} BE/WIN din ${beTotal} total BE)`});
-    else if(beWinPct<=35) insights.push({type:'neg',icon:'⚖️',text:`Doar <strong>${beWinPct}%</strong> din BE-urile tale merg spre WIN (${beW} din ${beTotal}). Revizuiește criteriile de BE — poate lași prea devreme trades câștigătoare.`});
-  }
-  
-  // Overall summary
+
+  // Summary general WR
   if(s.rate!==null){
-    if(s.rate>=52&&s.exp!==null&&s.exp>0.3) insights.unshift({type:'pos',icon:'🏆',text:`Edge confirmat: WR ${s.rate.toFixed(1)}%, expectancy ${s.exp>=0?'+':''}${s.exp.toFixed(2)}R/trade pe ${s.n} trade-uri. Continuă să urmezi sistemul.`});
-    else if(s.rate<46) insights.unshift({type:'neg',icon:'🚨',text:`WR de ${s.rate.toFixed(1)}% este sub pragul de breakeven pentru 2R target. Cu ${s.n} trade-uri analizate, sistemul actual nu are edge suficient.`});
+    if(!hasFilter){
+      if(s.rate>=52&&s.exp!==null&&s.exp>0.3) pos.push({icon:'🏆',text:`Edge confirmat: WR <strong>${s.rate.toFixed(1)}%</strong>, expectancy <strong>${s.exp>=0?'+':''}${s.exp.toFixed(2)}R</strong>/trade pe ${s.n} trade-uri.`});
+      else if(s.rate<46) neg.push({icon:'🚨',text:`WR de <strong>${s.rate.toFixed(1)}%</strong> este sub pragul de breakeven. Sistemul actual nu are edge suficient pe ${s.n} trade-uri.`});
+    } else {
+      if(s.rate>=52) pos.push({icon:'🏆',text:`WR <strong>${s.rate.toFixed(1)}%</strong>${s.exp!==null?', exp <strong>'+(s.exp>=0?'+':'')+s.exp.toFixed(2)+'R</strong>':''} pe ${s.n} trade-uri în această selecție.`});
+      else if(s.rate<46) neg.push({icon:'🚨',text:`WR de <strong>${s.rate.toFixed(1)}%</strong> sub breakeven în această selecție (${s.n} trades).`});
+    }
   }
-  
-  if(!insights.length){
-    el.innerHTML='<div style="color:var(--text3);font-size:11px;font-family:monospace">Niciun insight critic detectat — sistemul tău pare echilibrat. Adaugă mai multe trade-uri pentru analiză mai detaliată.</div>';
-    return;
+
+  // === SETUP ===
+  if(fSetup==='all'){
+    const allSetups=[...new Set(wl.map(t=>t.setup).filter(Boolean))];
+    const ss=allSetups.map(k=>({k,st:wrStats(wl.filter(t=>t.setup===k))})).filter(x=>x.st.n>=minN&&x.st.rate!==null).sort((a,b)=>b.st.rate-a.st.rate);
+    if(!hasFilter){
+      if(ss.length>=1){const top=ss[0];pos.push({icon:'✅',text:`Execută <strong>${top.k}</strong> — cel mai bun setup: WR <strong>${top.st.rate.toFixed(0)}%</strong>, ${top.st.exp!==null?(top.st.exp>=0?'+':'')+top.st.exp.toFixed(2)+'R exp.':''} (${top.st.n} trades)`});}
+      if(ss.length>=2){const sec=ss[1];pos.push({icon:'✅',text:`<strong>${sec.k}</strong> pe locul 2: WR <strong>${sec.st.rate.toFixed(0)}%</strong>, ${sec.st.exp!==null?(sec.st.exp>=0?'+':'')+sec.st.exp.toFixed(2)+'R exp.':''} (${sec.st.n} trades)`});}
+      const worst=ss[ss.length-1];
+      if(worst&&worst.st.rate<38&&worst!==ss[0]) neg.push({icon:'⛔',text:`Evită <strong>${worst.k}</strong> — WR de <strong>${worst.st.rate.toFixed(0)}%</strong> pe ${worst.st.n} trade-uri. Sub break-even.`});
+    } else {
+      if(ss.length>=1){const top=ss[0];pos.push({icon:'✅',text:`Setup top: <strong>${top.k}</strong> — WR <strong>${top.st.rate.toFixed(0)}%</strong>${top.st.exp!==null?', '+(top.st.exp>=0?'+':'')+top.st.exp.toFixed(2)+'R':''} (${top.st.n} trades)`});}
+      if(ss.length>=2){const bot=ss[ss.length-1];if(bot!==ss[0]) neg.push({icon:'⛔',text:`Setup slab: <strong>${bot.k}</strong> — WR <strong>${bot.st.rate.toFixed(0)}%</strong> (${bot.st.n} trades)`});}
+    }
   }
-  
-  el.innerHTML=insights.slice(0,8).map(i=>`
-    <div class="insight-item insight-${i.type}">
-      <span class="insight-icon">${i.icon}</span>
-      <span class="insight-text">${i.text}</span>
-    </div>`).join('');
+
+  // === SESIUNE ===
+  if(fSes==='all'){
+    const sesKeys=['10:00-12:00','12:00-15:00','15:00-19:00'];
+    const sesLbl={'10:00-12:00':'10-12','12:00-15:00':'12-15','15:00-19:00':'15-19'};
+    const sss=sesKeys.map(k=>({k,lbl:sesLbl[k],st:wrStats(wl.filter(t=>t.sesiune===k))})).filter(x=>x.st.n>=minN&&x.st.rate!==null).sort((a,b)=>b.st.rate-a.st.rate);
+    if(!hasFilter){
+      if(sss.length>=1&&sss[0].st.rate>=54) pos.push({icon:'🕐',text:`Tranzacționează sesiunea <strong>${sss[0].lbl}</strong> — WR <strong>${sss[0].st.rate.toFixed(0)}%</strong> pe ${sss[0].st.n} trades.`});
+      if(sss.length>=1&&sss[sss.length-1].st.rate<44) neg.push({icon:'🕐',text:`Evită sesiunea <strong>${sss[sss.length-1].lbl}</strong> — WR de <strong>${sss[sss.length-1].st.rate.toFixed(0)}%</strong> pe ${sss[sss.length-1].st.n} trades.`});
+    } else {
+      if(sss.length>=1){const top=sss[0];pos.push({icon:'🕐',text:`Sesiunea <strong>${top.lbl}</strong> — WR <strong>${top.st.rate.toFixed(0)}%</strong> (${top.st.n} trades)`});}
+      if(sss.length>=2){const bot=sss[sss.length-1];neg.push({icon:'🕐',text:`Sesiunea <strong>${bot.lbl}</strong> — WR <strong>${bot.st.rate.toFixed(0)}%</strong> (${bot.st.n} trades)`});}
+    }
+  }
+
+  // === ZI ===
+  if(fDay==='all'){
+    const dayKeys=['Luni','Marti','Miercuri','Joi','Vineri'];
+    const ds=dayKeys.map(d=>({d,st:wrStats(wl.filter(t=>t.ziua===d))})).filter(x=>x.st.n>=minN&&x.st.rate!==null).sort((a,b)=>b.st.rate-a.st.rate);
+    if(!hasFilter){
+      if(ds.length>=1&&ds[0].st.rate>=55) pos.push({icon:'📅',text:`<strong>${ds[0].d}</strong> — cea mai bună zi: WR <strong>${ds[0].st.rate.toFixed(0)}%</strong> pe ${ds[0].st.n} trades.`});
+      if(ds.length>=1&&ds[ds.length-1].st.rate<42) neg.push({icon:'📅',text:`<strong>${ds[ds.length-1].d}</strong> — cea mai slabă zi: WR <strong>${ds[ds.length-1].st.rate.toFixed(0)}%</strong>. Consideră să nu tranzacționezi.`});
+    } else {
+      if(ds.length>=1){const top=ds[0];pos.push({icon:'📅',text:`Zi top: <strong>${top.d}</strong> — WR <strong>${top.st.rate.toFixed(0)}%</strong> (${top.st.n} trades)`});}
+      if(ds.length>=2){const bot=ds[ds.length-1];neg.push({icon:'📅',text:`Zi slabă: <strong>${bot.d}</strong> — WR <strong>${bot.st.rate.toFixed(0)}%</strong> (${bot.st.n} trades)`});}
+    }
+  }
+
+  // === LICHIDITATE ===
+  if(fLiq==='all'){
+    const liqKeys=['Majora','Majora A++','Locala','Locala / HOD','Locala / LOD','HOD + Majora','LOD + Majora','HOD + Locala','LOD + Locala'];
+    const ls=liqKeys.map(k=>({k,st:wrStats(wl.filter(t=>t.liq===k))})).filter(x=>x.st.n>=minN&&x.st.rate!==null).sort((a,b)=>b.st.rate-a.st.rate);
+    if(!hasFilter){
+      if(ls.length>=1&&ls[0].st.rate>=56) pos.push({icon:'💧',text:`Lichiditate top: <strong>${ls[0].k}</strong> — WR <strong>${ls[0].st.rate.toFixed(0)}%</strong> pe ${ls[0].st.n} trades.`});
+      if(ls.length>=1&&ls[ls.length-1].st.rate<40&&ls.length>1) neg.push({icon:'💧',text:`Evită <strong>${ls[ls.length-1].k}</strong> — WR <strong>${ls[ls.length-1].st.rate.toFixed(0)}%</strong> pe ${ls[ls.length-1].st.n} trades.`});
+    } else {
+      if(ls.length>=1){const top=ls[0];pos.push({icon:'💧',text:`Lichiditate top: <strong>${top.k}</strong> — WR <strong>${top.st.rate.toFixed(0)}%</strong> (${top.st.n} trades)`});}
+      if(ls.length>=2){const bot=ls[ls.length-1];neg.push({icon:'💧',text:`Lichiditate slabă: <strong>${bot.k}</strong> — WR <strong>${bot.st.rate.toFixed(0)}%</strong> (${bot.st.n} trades)`});}
+    }
+  }
+
+  // === NEWS ===
+  if(fNews==='all'){
+    const allNews=[...new Set(wl.filter(t=>t.news&&t.news!=='').map(t=>t.news))];
+    const ns=allNews.map(n=>({n,st:wrStats(wl.filter(t=>t.news===n))})).filter(x=>x.st.n>=4&&x.st.rate!==null).sort((a,b)=>a.st.rate-b.st.rate);
+    if(!hasFilter){
+      if(ns.length>=1&&ns[0].st.rate<42) neg.push({icon:'📰',text:`Evită zilele cu <strong>${ns[0].n}</strong> — WR <strong>${ns[0].st.rate.toFixed(0)}%</strong> pe ${ns[0].st.n} trades.`});
+      if(ns.length>=2&&ns[1].st.rate<42) neg.push({icon:'📰',text:`Evită zilele cu <strong>${ns[1].n}</strong> — WR <strong>${ns[1].st.rate.toFixed(0)}%</strong> pe ${ns[1].st.n} trades.`});
+      const bestN=ns.length>=1?[...ns].sort((a,b)=>b.st.rate-a.st.rate)[0]:null;
+      if(bestN&&bestN.st.rate>=58) pos.push({icon:'📰',text:`Zilele cu <strong>${bestN.n}</strong> sunt favorabile: WR <strong>${bestN.st.rate.toFixed(0)}%</strong> pe ${bestN.st.n} trades.`});
+      const withNews=wl.filter(t=>t.news&&t.news!==''); const noNews=wl.filter(t=>!t.news||t.news==='');
+      if(withNews.length>=10&&noNews.length>=10){const nwS=wrStats(withNews);const nnS=wrStats(noNews);if(nwS.rate!==null&&nnS.rate!==null){const diff=nwS.rate-nnS.rate;if(diff<=-8) neg.push({icon:'📰',text:`Zile cu știri: WR <strong>${nwS.rate.toFixed(0)}%</strong> vs fără știri <strong>${nnS.rate.toFixed(0)}%</strong>. Fii mai selectiv în zile de news.`});else if(diff>=8) pos.push({icon:'📰',text:`Zile cu știri au WR mai mare: <strong>${nwS.rate.toFixed(0)}%</strong> vs <strong>${nnS.rate.toFixed(0)}%</strong> fără news.`});}}
+    } else {
+      const nsSorted=[...ns].sort((a,b)=>b.st.rate-a.st.rate);
+      if(nsSorted.length>=1){const top=nsSorted[0];pos.push({icon:'📰',text:`Știre top: <strong>${top.n}</strong> — WR <strong>${top.st.rate.toFixed(0)}%</strong> (${top.st.n} trades)`});}
+      if(ns.length>=1){const bot=ns[0];neg.push({icon:'📰',text:`Știre slabă: <strong>${bot.n}</strong> — WR <strong>${bot.st.rate.toFixed(0)}%</strong> (${bot.st.n} trades)`});}
+    }
+  }
+
+  // === BE direction (ambele moduri) ===
+  const beWn=arr.filter(t=>t.be_type==='BE/WIN').length;
+  const beLn=arr.filter(t=>['BE/LOSE','BE/LOSS'].includes(t.be_type)).length;
+  const beTot=beWn+beLn;
+  if(beTot>=5){const pct=Math.round(beWn/beTot*100);if(pct>=65) pos.push({icon:'⚖️',text:`<strong>${pct}%</strong> din BE-uri merg spre WIN — gestionezi bine breakeven-ul.`});else if(pct<=35) neg.push({icon:'⚖️',text:`Doar <strong>${pct}%</strong> din BE-uri merg spre WIN. Lași prea devreme trades câștigătoare.`});}
+
+  // === H/L (ambele moduri) ===
+  const hlKeys=['LL','LH','PDL','PDH','PWL','PWH'];
+  const hlStats=hlKeys.map(k=>({k,st:wrStats(wl.filter(t=>t.hl===k))})).filter(x=>x.st.n>=(hasFilter?3:5)&&x.st.rate!==null).sort((a,b)=>a.st.rate-b.st.rate);
+  if(!hasFilter){
+    if(hlStats.length>=1&&hlStats[0].st.rate<42) neg.push({icon:'📍',text:`Evită trades cu H/L <strong>${hlStats[0].k}</strong> — WR <strong>${hlStats[0].st.rate.toFixed(0)}%</strong> pe ${hlStats[0].st.n} trades.`});
+    const bestHL=[...hlStats].sort((a,b)=>b.st.rate-a.st.rate)[0];
+    if(bestHL&&bestHL.st.rate>=58) pos.push({icon:'📍',text:`H/L <strong>${bestHL.k}</strong> performează bine: WR <strong>${bestHL.st.rate.toFixed(0)}%</strong> pe ${bestHL.st.n} trades.`});
+  } else {
+    if(hlStats.length>=1){const bot=hlStats[0];neg.push({icon:'📍',text:`H/L slab: <strong>${bot.k}</strong> — WR <strong>${bot.st.rate.toFixed(0)}%</strong> (${bot.st.n} trades)`});}
+    const bestHL=[...hlStats].sort((a,b)=>b.st.rate-a.st.rate)[0];
+    if(bestHL&&bestHL!==hlStats[0]) pos.push({icon:'📍',text:`H/L top: <strong>${bestHL.k}</strong> — WR <strong>${bestHL.st.rate.toFixed(0)}%</strong> (${bestHL.st.n} trades)`});
+  }
+
+  // === Losing streak (fara filtre) ===
+  if(!hasFilter){
+    const sorted=[...wl].sort((a,b)=>parseDate(a.data)-parseDate(b.data));
+    let maxLS=0,tmpLS=0;
+    sorted.forEach(t=>{if(t.rezultat==='LOSE'){tmpLS++;if(tmpLS>maxLS)maxLS=tmpLS;}else tmpLS=0;});
+    if(maxLS>=5) neg.push({icon:'📉',text:`Max losing streak: <strong>${maxLS}</strong> LOSE consecutive. Definește o regulă de pauză după ${Math.min(maxLS-1,4)} lose-uri.`});
+  }
+
+  if(!pos.length&&!neg.length){el.innerHTML=ctxHtml+'<div style="color:var(--text3);font-size:11px">Niciun insight detectat pentru această selecție.</div>';return;}
+
+  const maxItems=5;
+  const posHtml=pos.slice(0,maxItems).map(i=>`<div class="insight-item insight-pos"><span class="insight-icon">${i.icon}</span><span class="insight-text">${i.text}</span></div>`).join('');
+  const negHtml=neg.slice(0,maxItems).map(i=>`<div class="insight-item insight-neg"><span class="insight-icon">${i.icon}</span><span class="insight-text">${i.text}</span></div>`).join('');
+
+  el.innerHTML=ctxHtml+`<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div>
+      <div style="font-size:9px;font-weight:700;color:var(--win);letter-spacing:.8px;margin-bottom:8px">EXECUTĂ</div>
+      ${posHtml||'<div style="color:var(--text3);font-size:11px">—</div>'}
+    </div>
+    <div>
+      <div style="font-size:9px;font-weight:700;color:var(--lose);letter-spacing:.8px;margin-bottom:8px">EVITĂ</div>
+      ${negHtml||'<div style="color:var(--text3);font-size:11px">—</div>'}
+    </div>
+  </div>`;
 }
+
 
 // ============ MONTE CARLO ============
 function runMonteCarlo() {
@@ -2202,7 +2999,7 @@ function updateLinkBtn(inputId, btnId) {
 // ============ CUSTOM SELECT (csel) ============
 // ============ CUSTOM SELECT (input-based) ============
 const CS_OPTS = {
-  'f-news':[{v:'',l:'— Fără știri —'},{v:'FOMC',l:'FOMC'},{v:'FOMC MM',l:'FOMC MM'},{v:'GBP CCC',l:'GBP CCC'},{v:'GBP CPI',l:'GBP CPI'},{v:'GBP GDP',l:'GBP GDP'},{v:'GBP PMI',l:'GBP PMI'},{v:'GBP RETAIL S',l:'GBP RETAIL S'},{v:'USD ISM PMI',l:'USD ISM PMI'},{v:'USD JOLTS JOB',l:'USD JOLTS JOB'},{v:'NFP',l:'NFP'},{v:'UK BH',l:'UK BH'},{v:'UK RATE',l:'UK RATE'},{v:'USD UNEMP. CLAIMS',l:'USD UNEMP. CLAIMS'},{v:'USA BH',l:'USA BH'},{v:'USD CPI',l:'USD CPI'},{v:'USD CORE PCE',l:'USD CORE PCE'},{v:'USD Final GDP',l:'USD Final GDP'},{v:'USD ADP NFEC',l:'USD ADP NFEC'},{v:'USD Advance GDP',l:'USD Advance GDP'},{v:'USD PMI',l:'USD PMI'},{v:'USD PPI',l:'USD PPI'},{v:'USD RETAIL S',l:'USD RETAIL S'}],
+  'f-news':[{v:'',l:'— Fără știri —'},{v:'FOMC ❌',l:'FOMC ❌'},{v:'FOMC MM',l:'FOMC MM'},{v:'GBP CCC',l:'GBP CCC'},{v:'GBP CPI',l:'GBP CPI'},{v:'GBP GDP ❌',l:'GBP GDP ❌'},{v:'GBP MON PRH ❌',l:'GBP MON PRH ❌'},{v:'GBP AFS ❌',l:'GBP AFS ❌'},{v:'GBP PMI',l:'GBP PMI'},{v:'GBP RETAIL S',l:'GBP RETAIL S'},{v:'USD ISM PMI',l:'USD ISM PMI'},{v:'USD JOLTS JOB',l:'USD JOLTS JOB'},{v:'NFP',l:'NFP'},{v:'UK BH ❌',l:'UK BH ❌'},{v:'UK RATE ❌',l:'UK RATE ❌'},{v:'USD UNEMP. CLAIMS',l:'USD UNEMP. CLAIMS'},{v:'USA BH ❌',l:'USA BH ❌'},{v:'USD CPI',l:'USD CPI'},{v:'USD CORE PCE',l:'USD CORE PCE'},{v:'USD FINAL GDP ❌',l:'USD FINAL GDP ❌'},{v:'USD ADP NFEC',l:'USD ADP NFEC'},{v:'USD ADVANCE GDP',l:'USD ADVANCE GDP'},{v:'USD PMI',l:'USD PMI'},{v:'USD PPI',l:'USD PPI'},{v:'USD RETAIL S ❌',l:'USD RETAIL S ❌'}],
   'f-misc-ses':[{v:'',l:'Neutru'},{v:'Miscarea sesiunii efectuata',l:'Mișcarea sesiunii efectuată'},{v:'Miscarea sesiunii invalidata',l:'Mișcarea sesiunii invalidată'}],
   'f-liq-dist':[{v:'',l:'—'},{v:'0-1p',l:'0–1p'},{v:'1-2p',l:'1–2p'},{v:'2-3p',l:'2–3p'},{v:'3-4p',l:'3–4p'},{v:'4-5p',l:'4–5p'},{v:'5-6p',l:'5–6p'},{v:'6-7p',l:'6–7p'},{v:'7-8p',l:'7–8p'},{v:'8-9p',l:'8–9p'},{v:'9-10p',l:'9–10p'},{v:'10+p',l:'10+p'}],
   'f-risk':[{v:'',l:'—'},{v:'Mic',l:'Mic'},{v:'Mediu',l:'Mediu'},{v:'Mare',l:'Mare'}],
@@ -2265,7 +3062,7 @@ function getTabOrder() {
   const base=['f-data','f-ora','tog-s1','tog-win','f-liq','f-setup','tog-buy','tog-ry','f-pot'];
   const beFld=document.getElementById('be-fld');
   if(beFld&&beFld.style.display!=='none') base.push('tog-bet');
-  return base.concat(['f-hl','f-news','f-misc-ses','f-liq-dist','f-setup-urat','f-risk','f-alocare','f-trade-link','f-liq-link']);
+  return base.concat(['f-hl','f-news','f-misc-ses','f-liq-dist','f-setup-urat','f-trade-link','f-liq-link']);
 }
 function focusField(el) {
   if(!el) return;
@@ -2407,7 +3204,174 @@ function updateLinkBtn(inputId, btnId) {
 // ============ INIT ============
 document.getElementById('f-data').value=new Date().toISOString().split('T')[0];
 renderList(); renderStats();
+
+// ============ CALCULATOR ============
+(function(){
+  // --- state ---
+  const ACCOUNTS = [
+    { id:'inst',   label:'Institutional Funding', balance:50000, currency:'USD', cls:'inst' },
+    { id:'ftmo80', label:'FTMO',                  balance:80000, currency:'EUR', cls:'ftmo80' },
+    { id:'ftmo10', label:'FTMO',                  balance:10000, currency:'EUR', cls:'ftmo10' },
+  ];
+
+  function getEurUsd(){ return parseFloat(document.getElementById('c-eurusd').value)||1.09; }
+  function getSL(){     return parseFloat(document.getElementById('c-sl').value)||0; }
+  function getRisk(){   return parseFloat(document.getElementById('c-risk').value)||0; }
+  function getSpread(){ return parseFloat(document.getElementById('c-spread').value)||0; }
+  function getComm(){   return parseFloat(document.getElementById('c-comm').value)||0; }
+
+  // Pip value for GBPUSD = $10 per standard lot (always USD)
+  const PIP_USD = 10;
+
+  function riskUSD(acc){
+    const eurusd = getEurUsd();
+    const balUSD = acc.currency==='USD' ? acc.balance : acc.balance * eurusd;
+    return balUSD * (getRisk()/100);
+  }
+
+  function calcLot(acc, withCosts){
+    const sl = getSL();
+    if(sl<=0) return null;
+    const risk = riskUSD(acc);
+    if(risk<=0) return null;
+    if(!withCosts){
+      return risk / (sl * PIP_USD);
+    } else {
+      const spread = getSpread();
+      const comm = getComm(); // $/lot RT
+      // total cost per lot = (sl + spread) * pip_value + comm
+      const costPerLot = (sl + spread) * PIP_USD + comm;
+      if(costPerLot<=0) return null;
+      return risk / costPerLot;
+    }
+  }
+
+  function fmtLot(v){
+    if(v===null||isNaN(v)) return '—';
+    return v.toFixed(2);
+  }
+
+  function fmtMoney(v, currency){
+    if(v===null||isNaN(v)) return '—';
+    const sym = currency==='EUR' ? '€' : '$';
+    return sym + v.toFixed(2);
+  }
+
+  function costBreakdown(acc, lots){
+    if(lots===null) return null;
+    const spread = getSpread();
+    const comm = getComm();
+    const spreadCost = spread * PIP_USD * lots; // in USD
+    const commCost = comm * lots;               // in USD
+    const eurusd = getEurUsd();
+    const toAcc = acc.currency==='EUR' ? (1/eurusd) : 1;
+    return {
+      spread: spreadCost * toAcc,
+      comm:   commCost * toAcc,
+      total:  (spreadCost + commCost) * toAcc,
+      currency: acc.currency
+    };
+  }
+
+  function renderCalc(){
+    const sl = getSL();
+    const risk = getRisk();
+    const eurusd = getEurUsd();
+
+    ACCOUNTS.forEach(acc=>{
+      const lotsBrut = calcLot(acc, false);
+      const lotsNet  = calcLot(acc, true);
+      const bd = costBreakdown(acc, lotsNet);
+      const el = document.getElementById('cc-'+acc.id);
+      if(!el) return;
+      const balUSD = acc.currency==='USD' ? acc.balance : acc.balance * eurusd;
+      const riskAmt = balUSD * (risk/100);
+      const balStr  = acc.currency==='USD' ? '$'+acc.balance.toLocaleString() : '€'+acc.balance.toLocaleString();
+      const riskStr = acc.currency==='USD'
+        ? '$'+riskAmt.toFixed(2)
+        : '€'+(riskAmt/eurusd).toFixed(2)+' ≈ $'+riskAmt.toFixed(2);
+      const sym = acc.currency==='EUR' ? '€' : '$';
+      const diffVal = (lotsBrut!==null && lotsNet!==null) ? (lotsBrut - lotsNet) : null;
+      const diffStr = diffVal!==null ? '−'+diffVal.toFixed(2)+' lot' : '—';
+      el.innerHTML = `
+        <div class="calc-card-accent"></div>
+        <div class="calc-card-header">
+          <div>
+            <div class="calc-card-name">${acc.label}</div>
+            <div class="calc-card-balance">${balStr}</div>
+          </div>
+          <div class="calc-card-meta">Risc <b style="color:var(--text)">${risk||0}%</b> → <b style="color:var(--be)">${riskStr}</b></div>
+        </div>
+        <div class="calc-card-body">
+          <div class="calc-card-col">
+            <div class="calc-col-label">Fără costuri</div>
+            <div class="calc-card-lot">${fmtLot(lotsBrut)}</div>
+            <div class="calc-card-sub">loturi · SL ${sl||0} pips</div>
+          </div>
+          <div class="calc-card-col-divider"></div>
+          <div class="calc-card-col">
+            <div class="calc-col-label">Cu costuri</div>
+            <div class="calc-card-lot-net">${fmtLot(lotsNet)}</div>
+            <div class="calc-card-sub">loturi · efective</div>
+            <div class="calc-card-costs">
+              <div class="calc-cost-row"><span>Spread (${getSpread()} pips)</span><span>−${bd?sym+bd.spread.toFixed(2):'—'}</span></div>
+              <div class="calc-cost-row"><span>Comision RT</span><span>−${bd?sym+bd.comm.toFixed(2):'—'}</span></div>
+              <div class="calc-cost-total"><span>Total</span><span>−${bd?sym+bd.total.toFixed(2):'—'}</span></div>
+            </div>
+            <div class="calc-diff-pill">▼ ${diffStr}</div>
+          </div>
+        </div>`;
+    });
+  }
+
+  // --- risk preset buttons ---
+  window.setRiskPreset = function(val){
+    document.getElementById('c-risk').value = val;
+    document.querySelectorAll('.rp-btn').forEach(b=>b.classList.toggle('active', b.dataset.v==val));
+    renderCalc();
+  };
+
+  // --- expose render ---
+  // ---- Live EUR/USD rate ----
+  function fetchEurUsd() {
+    const inp = document.getElementById('c-eurusd');
+    const status = document.getElementById('eurusd-status');
+    const btn = document.getElementById('eurusd-refresh-btn');
+    if(status){ status.style.color='var(--text3)'; status.textContent='⟳ loading...'; }
+    if(btn) btn.disabled = true;
+
+    // Try frankfurter.app (ECB data)
+    fetch('https://api.frankfurter.app/latest?from=EUR&to=USD')
+      .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+      .then(data => {
+        const rate = data.rates && data.rates.USD;
+        if(!rate || rate < 0.5 || rate > 3) throw new Error('invalid rate');
+        inp.value = rate.toFixed(4);
+        if(status){ status.style.color='var(--win)'; status.textContent='● BCE ' + (data.date||''); }
+        if(btn){ btn.disabled=false; btn.textContent='↺'; }
+        renderCalc();
+      })
+      .catch(() => {
+        // Fallback: exchangerate-api open endpoint
+        fetch('https://open.er-api.com/v6/latest/EUR')
+          .then(r => r.json())
+          .then(data => {
+            const rate = data.rates && data.rates.USD;
+            if(!rate || rate < 0.5 || rate > 3) throw new Error('invalid');
+            inp.value = rate.toFixed(4);
+            if(status){ status.style.color='var(--be)'; status.textContent='● live (er-api)'; }
+            if(btn){ btn.disabled=false; btn.textContent='↺'; }
+            renderCalc();
+          })
+          .catch(() => {
+            if(status){ status.style.color='var(--lose)'; status.textContent='⚠ offline – editează manual'; }
+            if(btn){ btn.disabled=false; btn.textContent='↺ retry'; }
+          });
+      });
+  }
+  window.fetchEurUsd = fetchEurUsd;
+  window.renderCalc = renderCalc;
+})();
+
 </script>
-
-
 </body></html>
