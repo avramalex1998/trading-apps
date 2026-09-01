@@ -1,5 +1,3 @@
-
-<!-- saved from url=(0044)file:///Users/mac/Downloads/IF_App_v2_4.html -->
 <html lang="ro"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -123,8 +121,7 @@ table.ttbl tr:hover td{background:var(--bg3)}
 .calc-card{background:var(--bg3);border:1px solid var(--border2);border-radius:10px;overflow:hidden;position:relative}
 .calc-card-accent{height:2px;width:100%}
 .calc-card.inst .calc-card-accent{background:linear-gradient(90deg,var(--win),transparent)}
-.calc-card.ftmo80 .calc-card-accent{background:linear-gradient(90deg,var(--blue),transparent)}
-.calc-card.ftmo10 .calc-card-accent{background:linear-gradient(90deg,var(--blue),transparent)}
+
 .calc-card-header{display:flex;align-items:center;justify-content:space-between;padding:6px 12px 5px;border-bottom:1px solid var(--border)}
 .calc-card-name{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3);font-family:'JetBrains Mono',monospace}
 .calc-card-balance{font-size:10px;color:var(--text2);font-family:'JetBrains Mono',monospace}
@@ -135,8 +132,7 @@ table.ttbl tr:hover td{background:var(--bg3)}
 .calc-col-label{font-size:8px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-bottom:1px}
 .calc-card-lot{font-size:24px;font-weight:800;font-family:'JetBrains Mono',monospace;letter-spacing:-1px;line-height:1}
 .calc-card.inst .calc-card-lot{color:var(--win)}
-.calc-card.ftmo80 .calc-card-lot{color:var(--blue)}
-.calc-card.ftmo10 .calc-card-lot{color:var(--blue)}
+
 .calc-card-lot-net{font-size:24px;font-weight:800;font-family:'JetBrains Mono',monospace;letter-spacing:-1px;line-height:1;color:var(--text)}
 .calc-card-sub{font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-top:0}
 .calc-divider{height:1px;background:var(--border);margin:3px 0}
@@ -317,87 +313,87 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="logo-text">GBP/USD IF APP</div>
   </div>
   <nav>
-    <button class="tab-btn" onclick="switchTab(&#39;entry&#39;)">📈 Trades</button>
-    <button class="tab-btn active" onclick="switchTab(&#39;stats&#39;)">📊 Stats</button>
-    <button class="tab-btn" onclick="switchTab(&#39;notes&#39;)">📝 Notes</button>
-    <button class="tab-btn" onclick="switchTab(&#39;calc&#39;)">⚖️ Lot size</button>
-    <button class="tab-btn" onclick="switchTab(&#39;io&#39;)"> Import / Export</button>
+    <button class="tab-btn active" onclick="switchTab('entry')">📈 Trades</button>
+    <button class="tab-btn" onclick="switchTab('stats')">📊 Stats</button>
+    <button class="tab-btn" onclick="switchTab('notes')">📝 Notes</button>
+    <button class="tab-btn" onclick="switchTab('calc')">⚖️ Lot size</button>
+    <button class="tab-btn" onclick="switchTab('io')"> Import / Export</button>
   </nav>
   <div class="hdr-right">
-    <span class="ctr"><b id="hdr-count">6</b> trades</span>
+    <span class="ctr"><b id="hdr-count">10</b> trades</span>
   </div>
 </header>
 
 <main>
 
 <!-- ============ ENTRY TAB ============ -->
-<div id="p-entry" class="panel">
+<div id="p-entry" class="panel active">
   <div class="eform">
     <!-- DATA + ORA -->
     <div style="display:flex;gap:8px">
       <div class="fld" style="flex:2">
         <div class="flbl">Data <span class="kbd">Tab</span></div>
-        <input type="date" id="f-data" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;f-data&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;f-data&#39;)}">
+        <input type="date" id="f-data" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('f-data')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('f-data')}">
       </div>
       <div class="fld" style="flex:1">
         <div class="flbl">Ora</div>
-        <input type="time" id="f-ora" placeholder="HH:MM" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;f-ora&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;f-ora&#39;)}">
+        <input type="time" id="f-ora" placeholder="HH:MM" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('f-ora')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('f-ora')}">
       </div>
     </div>
     <!-- SESIUNE -->
     <div class="fld">
       <div class="flbl">Sesiune <span><span class="kbd">1</span> <span class="kbd">2</span> <span class="kbd">3</span></span></div>
       <div class="brow">
-        <button class="tog s1" data-g="ses" data-v="10:00-12:00" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-s1&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-s1&#39;)}">10–12</button>
-        <button class="tog s2" data-g="ses" data-v="12:00-15:00" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-s1&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-s1&#39;)}">12–15</button>
-        <button class="tog s3" data-g="ses" data-v="15:00-19:00" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-s1&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-s1&#39;)}">15–19</button>
+        <button class="tog s1" data-g="ses" data-v="10:00-12:00" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-s1')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-s1')}">10–12</button>
+        <button class="tog s2" data-g="ses" data-v="12:00-15:00" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-s1')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-s1')}">12–15</button>
+        <button class="tog s3" data-g="ses" data-v="15:00-19:00" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-s1')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-s1')}">15–19</button>
       </div>
     </div>
     <!-- REZULTAT -->
     <div class="fld">
       <div class="flbl">Rezultat <span><span class="kbd">W</span> <span class="kbd">L</span> <span class="kbd">E</span></span></div>
       <div class="brow">
-        <button class="tog win" data-g="rez" data-v="WIN" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-win&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-win&#39;)}">WIN</button>
-        <button class="tog lose" data-g="rez" data-v="LOSE" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-win&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-win&#39;)}">LOSE</button>
-        <button class="tog bec" data-g="rez" data-v="BE" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-win&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-win&#39;)}">BE</button>
+        <button class="tog win" data-g="rez" data-v="WIN" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-win')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-win')}">WIN</button>
+        <button class="tog lose" data-g="rez" data-v="LOSE" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-win')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-win')}">LOSE</button>
+        <button class="tog bec" data-g="rez" data-v="BE" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-win')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-win')}">BE</button>
       </div>
     </div>
     <!-- LIQ -->
     <div class="fld">
       <div class="flbl">Lichiditate</div>
       <div class="ac-wrap">
-        <input type="text" id="f-liq" autocomplete="off" placeholder="Scrie: loc / maj / hod / lod..." oninput="acFilter(&#39;f-liq&#39;,&#39;ac-liq&#39;)" onkeydown="acKey(event,&#39;ac-liq&#39;)" onfocus="acFilter(&#39;f-liq&#39;,&#39;ac-liq&#39;)" onblur="setTimeout(()=&gt;acClose(&#39;ac-liq&#39;),150)" data-selected="Locala 1">
-        <div id="ac-liq" class="ac-dropdown"><div class="ac-item" data-val="Locala" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Locala&#39;)">Locala</div><div class="ac-item" data-val="Locala 1" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Locala 1&#39;)">Locala 1</div><div class="ac-item" data-val="Locala 2" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Locala 2&#39;)">Locala 2</div><div class="ac-item" data-val="Locala / HOD" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Locala / HOD&#39;)">Locala / HOD</div><div class="ac-item" data-val="Locala / LOD" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Locala / LOD&#39;)">Locala / LOD</div><div class="ac-item" data-val="HOD + Locala" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;HOD + Locala&#39;)">HOD + Locala</div><div class="ac-item" data-val="LOD + Locala" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;LOD + Locala&#39;)">LOD + Locala</div><div class="ac-item" data-val="Majora" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Majora&#39;)">Majora</div><div class="ac-item" data-val="Majora A++" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;Majora A++&#39;)">Majora A++</div><div class="ac-item" data-val="HOD + Majora" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;HOD + Majora&#39;)">HOD + Majora</div><div class="ac-item" data-val="LOD + Majora" onmousedown="acSelect(&#39;f-liq&#39;,&#39;ac-liq&#39;,&#39;LOD + Majora&#39;)">LOD + Majora</div></div>
+        <input type="text" id="f-liq" autocomplete="off" placeholder="Scrie: loc / maj / hod / lod..." oninput="acFilter('f-liq','ac-liq')" onkeydown="acKey(event,'ac-liq')" onfocus="acFilter('f-liq','ac-liq')" onblur="setTimeout(()=&gt;acClose('ac-liq'),150)" data-selected="Locala 1">
+        <div id="ac-liq" class="ac-dropdown"><div class="ac-item" data-val="Locala" onmousedown="acSelect('f-liq','ac-liq','Locala')"><mark>Loc</mark>ala</div><div class="ac-item" data-val="Locala 1" onmousedown="acSelect('f-liq','ac-liq','Locala 1')"><mark>Loc</mark>ala 1</div><div class="ac-item" data-val="Locala 2" onmousedown="acSelect('f-liq','ac-liq','Locala 2')"><mark>Loc</mark>ala 2</div><div class="ac-item" data-val="Locala / HOD" onmousedown="acSelect('f-liq','ac-liq','Locala / HOD')"><mark>Loc</mark>ala / HOD</div><div class="ac-item" data-val="Locala / LOD" onmousedown="acSelect('f-liq','ac-liq','Locala / LOD')"><mark>Loc</mark>ala / LOD</div><div class="ac-item" data-val="HOD + Locala" onmousedown="acSelect('f-liq','ac-liq','HOD + Locala')">HOD + <mark>Loc</mark>ala</div><div class="ac-item" data-val="LOD + Locala" onmousedown="acSelect('f-liq','ac-liq','LOD + Locala')">LOD + <mark>Loc</mark>ala</div></div>
       </div>
     </div>
     <!-- SETUP -->
     <div class="fld">
       <div class="flbl">Setup</div>
       <div class="ac-wrap">
-        <input type="text" id="f-setup" autocomplete="off" placeholder="Scrie: osg / tg / tcg / 3g / 3cg..." oninput="acFilterSetup()" onkeydown="acKey(event,&#39;ac-setup&#39;)" onfocus="acFilterSetup()" onblur="setTimeout(()=&gt;acClose(&#39;ac-setup&#39;),150)" data-selected="TG">
-        <div id="ac-setup" class="ac-dropdown"><div class="ac-item" data-val="TG" onmousedown="acSelect(&#39;f-setup&#39;,&#39;ac-setup&#39;,&#39;TG&#39;)"><mark>TG</mark></div><div class="ac-item" data-val="TG+SLG" onmousedown="acSelect(&#39;f-setup&#39;,&#39;ac-setup&#39;,&#39;TG+SLG&#39;)"><mark>TG</mark>+SLG</div></div>
+        <input type="text" id="f-setup" autocomplete="off" placeholder="Scrie: osg / tg / tcg / 3g / 3cg..." oninput="acFilterSetup()" onkeydown="acKey(event,'ac-setup')" onfocus="acFilterSetup()" onblur="setTimeout(()=&gt;acClose('ac-setup'),150)" data-selected="3G">
+        <div id="ac-setup" class="ac-dropdown"><div class="ac-item" data-val="3G" onmousedown="acSelect('f-setup','ac-setup','3G')"><mark>3G</mark></div><div class="ac-item" data-val="3G+SLG" onmousedown="acSelect('f-setup','ac-setup','3G+SLG')"><mark>3G</mark>+SLG</div></div>
       </div>
     </div>
     <!-- TIP -->
     <div class="fld">
       <div class="flbl">Tip <span><span class="kbd">B</span> BUY · <span class="kbd">S</span> SELL</span></div>
       <div class="brow">
-        <button class="tog buy" data-g="tip" data-v="BUY" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-buy&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-buy&#39;)}">BUY</button>
-        <button class="tog sell on" data-g="tip" data-v="SELL" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-buy&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-buy&#39;)}">SELL</button>
+        <button class="tog buy" data-g="tip" data-v="BUY" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-buy')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-buy')}">BUY</button>
+        <button class="tog sell" data-g="tip" data-v="SELL" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-buy')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-buy')}">SELL</button>
       </div>
     </div>
     <!-- RE -->
     <div class="fld">
       <div class="flbl">Reentry <span><span class="kbd">D</span> Da · <span class="kbd">N</span> Nu</span></div>
       <div class="brow">
-        <button class="tog ry" data-g="re" data-v="Da" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-ry&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-ry&#39;)}">Da</button>
-        <button class="tog rn" data-g="re" data-v="Nu" tabindex="0" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;tog-ry&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;tog-ry&#39;)}">Nu</button>
+        <button class="tog ry" data-g="re" data-v="Da" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-ry')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-ry')}">Da</button>
+        <button class="tog rn" data-g="re" data-v="Nu" tabindex="0" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('tog-ry')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('tog-ry')}">Nu</button>
       </div>
     </div>
     <!-- POT RR -->
     <div class="fld" id="pot-fld">
       <div class="flbl">Potential RR <span class="kbd">Enter → save</span></div>
-      <input type="number" id="f-pot" step="0.1" min="0" placeholder="ex: 3.5" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;f-pot&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;f-pot&#39;)}">
+      <input type="number" id="f-pot" step="0.1" min="0" placeholder="ex: 3.5" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('f-pot')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('f-pot')}">
     </div>
     <!-- BE TYPE -->
     <div class="fld" id="be-fld" style="display: none;">
@@ -411,16 +407,16 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">High/Low <span style="font-size:8px;color:var(--text3)">(opțional)</span></div>
       <div class="ac-wrap">
-        <input type="text" id="f-hl" autocomplete="off" placeholder="LL / LH / PDL / PDH..." oninput="acFilterHL()" onkeydown="acKey(event,&#39;ac-hl&#39;)" onfocus="acFilterHL()" onblur="setTimeout(()=&gt;acClose(&#39;ac-hl&#39;),150)" data-selected="PDH">
-        <div id="ac-hl" class="ac-dropdown"><div class="ac-item" data-val="PDH" onmousedown="acSelect(&#39;f-hl&#39;,&#39;ac-hl&#39;,&#39;PDH&#39;)"><mark>PDH</mark></div></div>
+        <input type="text" id="f-hl" autocomplete="off" placeholder="LL / LH / PDL / PDH..." oninput="acFilterHL()" onkeydown="acKey(event,'ac-hl')" onfocus="acFilterHL()" onblur="setTimeout(()=&gt;acClose('ac-hl'),150)" data-selected="PDH">
+        <div id="ac-hl" class="ac-dropdown"><div class="ac-item" data-val="PDH" onmousedown="acSelect('f-hl','ac-hl','PDH')"><mark>PDH</mark></div></div>
       </div>
     </div>
     <!-- STIRI -->
     <div class="fld">
       <div class="flbl">Știri <span style="font-size:8px;color:var(--text3)">(opțional)</span></div>
       <div class="ac-wrap">
-        <input type="text" id="f-news-inp" autocomplete="off" placeholder="Fără știri..." oninput="csFilter(&#39;f-news&#39;)" onkeydown="csKeyInp(event,&#39;f-news&#39;)" onfocus="csFilter(&#39;f-news&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-news&#39;),150)">
-        <div id="cs-news" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="— Fără știri —" onmousedown="csPick(&#39;f-news&#39;,&#39;&#39;,&#39;— Fără știri —&#39;); event.preventDefault()">— Fără știri —</div><div class="ac-item" data-val="FOMC ❌" data-label="FOMC ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;FOMC ❌&#39;,&#39;FOMC ❌&#39;); event.preventDefault()">FOMC ❌</div><div class="ac-item" data-val="FOMC MM" data-label="FOMC MM" onmousedown="csPick(&#39;f-news&#39;,&#39;FOMC MM&#39;,&#39;FOMC MM&#39;); event.preventDefault()">FOMC MM</div><div class="ac-item" data-val="GBP CCC" data-label="GBP CCC" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP CCC&#39;,&#39;GBP CCC&#39;); event.preventDefault()">GBP CCC</div><div class="ac-item" data-val="GBP CPI" data-label="GBP CPI" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP CPI&#39;,&#39;GBP CPI&#39;); event.preventDefault()">GBP CPI</div><div class="ac-item" data-val="GBP GDP ❌" data-label="GBP GDP ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP GDP ❌&#39;,&#39;GBP GDP ❌&#39;); event.preventDefault()">GBP GDP ❌</div><div class="ac-item" data-val="GBP MON PRH ❌" data-label="GBP MON PRH ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP MON PRH ❌&#39;,&#39;GBP MON PRH ❌&#39;); event.preventDefault()">GBP MON PRH ❌</div><div class="ac-item" data-val="GBP AFS ❌" data-label="GBP AFS ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP AFS ❌&#39;,&#39;GBP AFS ❌&#39;); event.preventDefault()">GBP AFS ❌</div><div class="ac-item" data-val="GBP PMI" data-label="GBP PMI" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP PMI&#39;,&#39;GBP PMI&#39;); event.preventDefault()">GBP PMI</div><div class="ac-item" data-val="GBP RETAIL S" data-label="GBP RETAIL S" onmousedown="csPick(&#39;f-news&#39;,&#39;GBP RETAIL S&#39;,&#39;GBP RETAIL S&#39;); event.preventDefault()">GBP RETAIL S</div><div class="ac-item" data-val="USD ISM PMI" data-label="USD ISM PMI" onmousedown="csPick(&#39;f-news&#39;,&#39;USD ISM PMI&#39;,&#39;USD ISM PMI&#39;); event.preventDefault()">USD ISM PMI</div><div class="ac-item" data-val="USD JOLTS JOB" data-label="USD JOLTS JOB" onmousedown="csPick(&#39;f-news&#39;,&#39;USD JOLTS JOB&#39;,&#39;USD JOLTS JOB&#39;); event.preventDefault()">USD JOLTS JOB</div><div class="ac-item" data-val="NFP" data-label="NFP" onmousedown="csPick(&#39;f-news&#39;,&#39;NFP&#39;,&#39;NFP&#39;); event.preventDefault()">NFP</div><div class="ac-item" data-val="UK BH ❌" data-label="UK BH ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;UK BH ❌&#39;,&#39;UK BH ❌&#39;); event.preventDefault()">UK BH ❌</div><div class="ac-item" data-val="UK RATE ❌" data-label="UK RATE ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;UK RATE ❌&#39;,&#39;UK RATE ❌&#39;); event.preventDefault()">UK RATE ❌</div><div class="ac-item" data-val="USD UNEMP. CLAIMS" data-label="USD UNEMP. CLAIMS" onmousedown="csPick(&#39;f-news&#39;,&#39;USD UNEMP. CLAIMS&#39;,&#39;USD UNEMP. CLAIMS&#39;); event.preventDefault()">USD UNEMP. CLAIMS</div><div class="ac-item" data-val="USA BH ❌" data-label="USA BH ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;USA BH ❌&#39;,&#39;USA BH ❌&#39;); event.preventDefault()">USA BH ❌</div><div class="ac-item" data-val="USD CPI" data-label="USD CPI" onmousedown="csPick(&#39;f-news&#39;,&#39;USD CPI&#39;,&#39;USD CPI&#39;); event.preventDefault()">USD CPI</div><div class="ac-item" data-val="USD CORE PCE" data-label="USD CORE PCE" onmousedown="csPick(&#39;f-news&#39;,&#39;USD CORE PCE&#39;,&#39;USD CORE PCE&#39;); event.preventDefault()">USD CORE PCE</div><div class="ac-item" data-val="USD FINAL GDP ❌" data-label="USD FINAL GDP ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;USD FINAL GDP ❌&#39;,&#39;USD FINAL GDP ❌&#39;); event.preventDefault()">USD FINAL GDP ❌</div><div class="ac-item" data-val="USD ADP NFEC" data-label="USD ADP NFEC" onmousedown="csPick(&#39;f-news&#39;,&#39;USD ADP NFEC&#39;,&#39;USD ADP NFEC&#39;); event.preventDefault()">USD ADP NFEC</div><div class="ac-item" data-val="USD ADVANCE GDP" data-label="USD ADVANCE GDP" onmousedown="csPick(&#39;f-news&#39;,&#39;USD ADVANCE GDP&#39;,&#39;USD ADVANCE GDP&#39;); event.preventDefault()">USD ADVANCE GDP</div><div class="ac-item" data-val="USD PMI" data-label="USD PMI" onmousedown="csPick(&#39;f-news&#39;,&#39;USD PMI&#39;,&#39;USD PMI&#39;); event.preventDefault()">USD PMI</div><div class="ac-item" data-val="USD PPI" data-label="USD PPI" onmousedown="csPick(&#39;f-news&#39;,&#39;USD PPI&#39;,&#39;USD PPI&#39;); event.preventDefault()">USD PPI</div><div class="ac-item" data-val="USD RETAIL S ❌" data-label="USD RETAIL S ❌" onmousedown="csPick(&#39;f-news&#39;,&#39;USD RETAIL S ❌&#39;,&#39;USD RETAIL S ❌&#39;); event.preventDefault()">USD RETAIL S ❌</div></div>
+        <input type="text" id="f-news-inp" autocomplete="off" placeholder="Fără știri..." oninput="csFilter('f-news')" onkeydown="csKeyInp(event,'f-news')" onfocus="csFilter('f-news')" onblur="setTimeout(()=&gt;csClose('f-news'),150)">
+        <div id="cs-news" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="— Fără știri —" onmousedown="csPick('f-news','','— Fără știri —'); event.preventDefault()">— Fără știri —</div><div class="ac-item" data-val="FOMC ❌" data-label="FOMC ❌" onmousedown="csPick('f-news','FOMC ❌','FOMC ❌'); event.preventDefault()">FOMC ❌</div><div class="ac-item" data-val="FOMC MM" data-label="FOMC MM" onmousedown="csPick('f-news','FOMC MM','FOMC MM'); event.preventDefault()">FOMC MM</div><div class="ac-item" data-val="GBP CCC" data-label="GBP CCC" onmousedown="csPick('f-news','GBP CCC','GBP CCC'); event.preventDefault()">GBP CCC</div><div class="ac-item" data-val="GBP CPI" data-label="GBP CPI" onmousedown="csPick('f-news','GBP CPI','GBP CPI'); event.preventDefault()">GBP CPI</div><div class="ac-item" data-val="GBP GDP ❌" data-label="GBP GDP ❌" onmousedown="csPick('f-news','GBP GDP ❌','GBP GDP ❌'); event.preventDefault()">GBP GDP ❌</div><div class="ac-item" data-val="GBP MON PRH ❌" data-label="GBP MON PRH ❌" onmousedown="csPick('f-news','GBP MON PRH ❌','GBP MON PRH ❌'); event.preventDefault()">GBP MON PRH ❌</div><div class="ac-item" data-val="GBP AFS ❌" data-label="GBP AFS ❌" onmousedown="csPick('f-news','GBP AFS ❌','GBP AFS ❌'); event.preventDefault()">GBP AFS ❌</div><div class="ac-item" data-val="GBP PMI" data-label="GBP PMI" onmousedown="csPick('f-news','GBP PMI','GBP PMI'); event.preventDefault()">GBP PMI</div><div class="ac-item" data-val="GBP RETAIL S" data-label="GBP RETAIL S" onmousedown="csPick('f-news','GBP RETAIL S','GBP RETAIL S'); event.preventDefault()">GBP RETAIL S</div><div class="ac-item" data-val="USD ISM PMI" data-label="USD ISM PMI" onmousedown="csPick('f-news','USD ISM PMI','USD ISM PMI'); event.preventDefault()">USD ISM PMI</div><div class="ac-item" data-val="USD JOLTS JOB" data-label="USD JOLTS JOB" onmousedown="csPick('f-news','USD JOLTS JOB','USD JOLTS JOB'); event.preventDefault()">USD JOLTS JOB</div><div class="ac-item" data-val="NFP" data-label="NFP" onmousedown="csPick('f-news','NFP','NFP'); event.preventDefault()">NFP</div><div class="ac-item" data-val="UK BH ❌" data-label="UK BH ❌" onmousedown="csPick('f-news','UK BH ❌','UK BH ❌'); event.preventDefault()">UK BH ❌</div><div class="ac-item" data-val="UK RATE ❌" data-label="UK RATE ❌" onmousedown="csPick('f-news','UK RATE ❌','UK RATE ❌'); event.preventDefault()">UK RATE ❌</div><div class="ac-item" data-val="USD UNEMP. CLAIMS" data-label="USD UNEMP. CLAIMS" onmousedown="csPick('f-news','USD UNEMP. CLAIMS','USD UNEMP. CLAIMS'); event.preventDefault()">USD UNEMP. CLAIMS</div><div class="ac-item" data-val="USA BH ❌" data-label="USA BH ❌" onmousedown="csPick('f-news','USA BH ❌','USA BH ❌'); event.preventDefault()">USA BH ❌</div><div class="ac-item" data-val="USD CPI" data-label="USD CPI" onmousedown="csPick('f-news','USD CPI','USD CPI'); event.preventDefault()">USD CPI</div><div class="ac-item" data-val="USD CORE PCE" data-label="USD CORE PCE" onmousedown="csPick('f-news','USD CORE PCE','USD CORE PCE'); event.preventDefault()">USD CORE PCE</div><div class="ac-item" data-val="USD FINAL GDP ❌" data-label="USD FINAL GDP ❌" onmousedown="csPick('f-news','USD FINAL GDP ❌','USD FINAL GDP ❌'); event.preventDefault()">USD FINAL GDP ❌</div><div class="ac-item" data-val="USD ADP NFEC" data-label="USD ADP NFEC" onmousedown="csPick('f-news','USD ADP NFEC','USD ADP NFEC'); event.preventDefault()">USD ADP NFEC</div><div class="ac-item" data-val="USD ADVANCE GDP" data-label="USD ADVANCE GDP" onmousedown="csPick('f-news','USD ADVANCE GDP','USD ADVANCE GDP'); event.preventDefault()">USD ADVANCE GDP</div><div class="ac-item" data-val="USD PMI" data-label="USD PMI" onmousedown="csPick('f-news','USD PMI','USD PMI'); event.preventDefault()">USD PMI</div><div class="ac-item" data-val="USD PPI" data-label="USD PPI" onmousedown="csPick('f-news','USD PPI','USD PPI'); event.preventDefault()">USD PPI</div><div class="ac-item" data-val="USD RETAIL S ❌" data-label="USD RETAIL S ❌" onmousedown="csPick('f-news','USD RETAIL S ❌','USD RETAIL S ❌'); event.preventDefault()">USD RETAIL S ❌</div></div>
         <select id="f-news" style="display:none">
           <option value="">— Fără știri —</option>
           <option value="FOMC ❌">FOMC ❌</option>
@@ -454,8 +450,8 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">Mișcarea sesiunii <span style="font-size:8px;color:var(--text3)">(opțional)</span></div>
       <div class="ac-wrap">
-        <input type="text" id="f-misc-ses-inp" autocomplete="off" placeholder="Mișcarea sesiunii..." oninput="csFilter(&#39;f-misc-ses&#39;)" onkeydown="csKeyInp(event,&#39;f-misc-ses&#39;)" onfocus="csFilter(&#39;f-misc-ses&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-misc-ses&#39;),150)">
-        <div id="cs-misc-ses" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="Neutru" onmousedown="csPick(&#39;f-misc-ses&#39;,&#39;&#39;,&#39;Neutru&#39;); event.preventDefault()">Neutru</div><div class="ac-item" data-val="Miscarea sesiunii efectuata" data-label="Mișcarea sesiunii efectuată" onmousedown="csPick(&#39;f-misc-ses&#39;,&#39;Miscarea sesiunii efectuata&#39;,&#39;Mișcarea sesiunii efectuată&#39;); event.preventDefault()">Mișcarea sesiunii efectuată</div><div class="ac-item" data-val="Miscarea sesiunii invalidata" data-label="Mișcarea sesiunii invalidată" onmousedown="csPick(&#39;f-misc-ses&#39;,&#39;Miscarea sesiunii invalidata&#39;,&#39;Mișcarea sesiunii invalidată&#39;); event.preventDefault()">Mișcarea sesiunii invalidată</div></div>
+        <input type="text" id="f-misc-ses-inp" autocomplete="off" placeholder="Mișcarea sesiunii..." oninput="csFilter('f-misc-ses')" onkeydown="csKeyInp(event,'f-misc-ses')" onfocus="csFilter('f-misc-ses')" onblur="setTimeout(()=&gt;csClose('f-misc-ses'),150)">
+        <div id="cs-misc-ses" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="Neutru" onmousedown="csPick('f-misc-ses','','Neutru'); event.preventDefault()">Neutru</div><div class="ac-item" data-val="Miscarea sesiunii efectuata" data-label="Mișcarea sesiunii efectuată" onmousedown="csPick('f-misc-ses','Miscarea sesiunii efectuata','Mișcarea sesiunii efectuată'); event.preventDefault()">Mișcarea sesiunii efectuată</div><div class="ac-item" data-val="Miscarea sesiunii invalidata" data-label="Mișcarea sesiunii invalidată" onmousedown="csPick('f-misc-ses','Miscarea sesiunii invalidata','Mișcarea sesiunii invalidată'); event.preventDefault()">Mișcarea sesiunii invalidată</div></div>
         <select id="f-misc-ses" style="display:none">
           <option value="">Neutru</option>
           <option value="Miscarea sesiunii efectuata">Mișcarea sesiunii efectuată</option>
@@ -467,8 +463,8 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">Dist. lichiditate <span style="font-size:8px;color:var(--text3)">(pips)</span></div>
       <div class="ac-wrap">
-        <input type="text" id="f-liq-dist-inp" autocomplete="off" placeholder="Dist. pips..." oninput="csFilter(&#39;f-liq-dist&#39;)" onkeydown="csKeyInp(event,&#39;f-liq-dist&#39;)" onfocus="csFilter(&#39;f-liq-dist&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-liq-dist&#39;),150)">
-        <div id="cs-liq-dist" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="—" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;&#39;,&#39;—&#39;); event.preventDefault()">—</div><div class="ac-item" data-val="0-1p" data-label="0–1p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;0-1p&#39;,&#39;0–1p&#39;); event.preventDefault()">0–1p</div><div class="ac-item" data-val="1-2p" data-label="1–2p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;1-2p&#39;,&#39;1–2p&#39;); event.preventDefault()">1–2p</div><div class="ac-item" data-val="2-3p" data-label="2–3p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;2-3p&#39;,&#39;2–3p&#39;); event.preventDefault()">2–3p</div><div class="ac-item" data-val="3-4p" data-label="3–4p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;3-4p&#39;,&#39;3–4p&#39;); event.preventDefault()">3–4p</div><div class="ac-item" data-val="4-5p" data-label="4–5p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;4-5p&#39;,&#39;4–5p&#39;); event.preventDefault()">4–5p</div><div class="ac-item" data-val="5-6p" data-label="5–6p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;5-6p&#39;,&#39;5–6p&#39;); event.preventDefault()">5–6p</div><div class="ac-item" data-val="6-7p" data-label="6–7p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;6-7p&#39;,&#39;6–7p&#39;); event.preventDefault()">6–7p</div><div class="ac-item" data-val="7-8p" data-label="7–8p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;7-8p&#39;,&#39;7–8p&#39;); event.preventDefault()">7–8p</div><div class="ac-item" data-val="8-9p" data-label="8–9p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;8-9p&#39;,&#39;8–9p&#39;); event.preventDefault()">8–9p</div><div class="ac-item" data-val="9-10p" data-label="9–10p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;9-10p&#39;,&#39;9–10p&#39;); event.preventDefault()">9–10p</div><div class="ac-item" data-val="10+p" data-label="10+p" onmousedown="csPick(&#39;f-liq-dist&#39;,&#39;10+p&#39;,&#39;10+p&#39;); event.preventDefault()">10+p</div></div>
+        <input type="text" id="f-liq-dist-inp" autocomplete="off" placeholder="Dist. pips..." oninput="csFilter('f-liq-dist')" onkeydown="csKeyInp(event,'f-liq-dist')" onfocus="csFilter('f-liq-dist')" onblur="setTimeout(()=&gt;csClose('f-liq-dist'),150)">
+        <div id="cs-liq-dist" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="—" onmousedown="csPick('f-liq-dist','','—'); event.preventDefault()">—</div><div class="ac-item" data-val="0-1p" data-label="0–1p" onmousedown="csPick('f-liq-dist','0-1p','0–1p'); event.preventDefault()">0–1p</div><div class="ac-item" data-val="1-2p" data-label="1–2p" onmousedown="csPick('f-liq-dist','1-2p','1–2p'); event.preventDefault()">1–2p</div><div class="ac-item" data-val="2-3p" data-label="2–3p" onmousedown="csPick('f-liq-dist','2-3p','2–3p'); event.preventDefault()">2–3p</div><div class="ac-item" data-val="3-4p" data-label="3–4p" onmousedown="csPick('f-liq-dist','3-4p','3–4p'); event.preventDefault()">3–4p</div><div class="ac-item" data-val="4-5p" data-label="4–5p" onmousedown="csPick('f-liq-dist','4-5p','4–5p'); event.preventDefault()">4–5p</div><div class="ac-item" data-val="5-6p" data-label="5–6p" onmousedown="csPick('f-liq-dist','5-6p','5–6p'); event.preventDefault()">5–6p</div><div class="ac-item" data-val="6-7p" data-label="6–7p" onmousedown="csPick('f-liq-dist','6-7p','6–7p'); event.preventDefault()">6–7p</div><div class="ac-item" data-val="7-8p" data-label="7–8p" onmousedown="csPick('f-liq-dist','7-8p','7–8p'); event.preventDefault()">7–8p</div><div class="ac-item" data-val="8-9p" data-label="8–9p" onmousedown="csPick('f-liq-dist','8-9p','8–9p'); event.preventDefault()">8–9p</div><div class="ac-item" data-val="9-10p" data-label="9–10p" onmousedown="csPick('f-liq-dist','9-10p','9–10p'); event.preventDefault()">9–10p</div><div class="ac-item" data-val="10+p" data-label="10+p" onmousedown="csPick('f-liq-dist','10+p','10+p'); event.preventDefault()">10+p</div></div>
         <select id="f-liq-dist" style="display:none">
           <option value="">—</option>
           <option value="0-1p">0–1p</option>
@@ -489,8 +485,8 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">Setup urat <span style="font-size:8px;color:var(--text3)">(opțional)</span></div>
       <div class="ac-wrap">
-        <input type="text" id="f-setup-urat-inp" autocomplete="off" placeholder="Setup urat..." oninput="csFilter(&#39;f-setup-urat&#39;)" onkeydown="csKeyInp(event,&#39;f-setup-urat&#39;)" onfocus="csFilter(&#39;f-setup-urat&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-setup-urat&#39;),150)">
-        <div id="cs-setup-urat" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="Fără" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;&#39;,&#39;Fără&#39;); event.preventDefault()">Fără</div><div class="ac-item" data-val="Indecizie" data-label="Indecizie" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;Indecizie&#39;,&#39;Indecizie&#39;); event.preventDefault()">Indecizie</div><div class="ac-item" data-val="MSS spre agresiv" data-label="MSS spre agresiv" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;MSS spre agresiv&#39;,&#39;MSS spre agresiv&#39;); event.preventDefault()">MSS spre agresiv</div><div class="ac-item" data-val="Inghesuit" data-label="Înghesuit" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;Inghesuit&#39;,&#39;Înghesuit&#39;); event.preventDefault()">Înghesuit</div><div class="ac-item" data-val="Setup dubios" data-label="Setup dubios" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;Setup dubios&#39;,&#39;Setup dubios&#39;); event.preventDefault()">Setup dubios</div><div class="ac-item" data-val="MSS cu wick before FVG" data-label="MSS cu wick before FVG" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;MSS cu wick before FVG&#39;,&#39;MSS cu wick before FVG&#39;); event.preventDefault()">MSS cu wick before FVG</div><div class="ac-item" data-val="MSS lung si candela &gt; SL" data-label="MSS lung și candela &gt; SL" onmousedown="csPick(&#39;f-setup-urat&#39;,&#39;MSS lung si candela &gt; SL&#39;,&#39;MSS lung și candela &gt; SL&#39;); event.preventDefault()">MSS lung și candela &gt; SL</div></div>
+        <input type="text" id="f-setup-urat-inp" autocomplete="off" placeholder="Setup urat..." oninput="csFilter('f-setup-urat')" onkeydown="csKeyInp(event,'f-setup-urat')" onfocus="csFilter('f-setup-urat')" onblur="setTimeout(()=&gt;csClose('f-setup-urat'),150)">
+        <div id="cs-setup-urat" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="Fără" onmousedown="csPick('f-setup-urat','','Fără'); event.preventDefault()">Fără</div><div class="ac-item" data-val="Indecizie" data-label="Indecizie" onmousedown="csPick('f-setup-urat','Indecizie','Indecizie'); event.preventDefault()">Indecizie</div><div class="ac-item" data-val="MSS spre agresiv" data-label="MSS spre agresiv" onmousedown="csPick('f-setup-urat','MSS spre agresiv','MSS spre agresiv'); event.preventDefault()">MSS spre agresiv</div><div class="ac-item" data-val="Inghesuit" data-label="Înghesuit" onmousedown="csPick('f-setup-urat','Inghesuit','Înghesuit'); event.preventDefault()">Înghesuit</div><div class="ac-item" data-val="Setup dubios" data-label="Setup dubios" onmousedown="csPick('f-setup-urat','Setup dubios','Setup dubios'); event.preventDefault()">Setup dubios</div><div class="ac-item" data-val="MSS cu wick before FVG" data-label="MSS cu wick before FVG" onmousedown="csPick('f-setup-urat','MSS cu wick before FVG','MSS cu wick before FVG'); event.preventDefault()">MSS cu wick before FVG</div><div class="ac-item" data-val="MSS lung si candela &gt; SL" data-label="MSS lung și candela &gt; SL" onmousedown="csPick('f-setup-urat','MSS lung si candela &gt; SL','MSS lung și candela &gt; SL'); event.preventDefault()">MSS lung și candela &gt; SL</div></div>
         <select id="f-setup-urat" style="display:none">
           <option value="">Fără</option>
           <option value="Indecizie">Indecizie</option>
@@ -506,8 +502,8 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">Risk</div>
       <div class="ac-wrap">
-        <input type="text" id="f-risk-inp" autocomplete="off" placeholder="Mic / Mediu / Mare" oninput="csFilter(&#39;f-risk&#39;)" onkeydown="csKeyInp(event,&#39;f-risk&#39;)" onfocus="csFilter(&#39;f-risk&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-risk&#39;),150)">
-        <div id="cs-risk" class="ac-dropdown"></div>
+        <input type="text" id="f-risk-inp" autocomplete="off" placeholder="Mic / Mediu / Mare" oninput="csFilter('f-risk')" onkeydown="csKeyInp(event,'f-risk')" onfocus="csFilter('f-risk')" onblur="setTimeout(()=&gt;csClose('f-risk'),150)">
+        <div id="cs-risk" class="ac-dropdown"><div class="ac-item active" data-val="Mediu" data-label="Mediu" onmousedown="csPick('f-risk','Mediu','Mediu'); event.preventDefault()"><mark>Mediu</mark></div></div>
         <select id="f-risk" style="display:none">
           <option value="">—</option>
           <option value="Mic">Mic</option>
@@ -520,8 +516,8 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">Alocare</div>
       <div class="ac-wrap">
-        <input type="text" id="f-alocare-inp" autocomplete="off" placeholder="0.5% / 1% / 1.5%" oninput="csFilter(&#39;f-alocare&#39;)" onkeydown="csKeyInp(event,&#39;f-alocare&#39;)" onfocus="csFilter(&#39;f-alocare&#39;)" onblur="setTimeout(()=&gt;csClose(&#39;f-alocare&#39;),150)">
-        <div id="cs-alocare" class="ac-dropdown"></div>
+        <input type="text" id="f-alocare-inp" autocomplete="off" placeholder="0.5% / 1% / 1.5%" oninput="csFilter('f-alocare')" onkeydown="csKeyInp(event,'f-alocare')" onfocus="csFilter('f-alocare')" onblur="setTimeout(()=&gt;csClose('f-alocare'),150)">
+        <div id="cs-alocare" class="ac-dropdown"><div class="ac-item active" data-val="1%" data-label="1%" onmousedown="csPick('f-alocare','1%','1%'); event.preventDefault()"><mark>1%</mark></div></div>
         <select id="f-alocare" style="display:none">
           <option value="">—</option>
           <option value="0.5%">0.5%</option>
@@ -534,16 +530,16 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="fld">
       <div class="flbl">Trade</div>
       <div class="link-inp-wrap">
-        <input type="url" id="f-trade-link" placeholder="https://www.tradingview.com/..." oninput="updateLinkBtn(&#39;f-trade-link&#39;,&#39;open-trade-link&#39;)" onkeydown="if(event.key===&#39;Tab&#39;&amp;&amp;!event.shiftKey){event.preventDefault();tabNext(&#39;f-trade-link&#39;)}if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;f-trade-link&#39;)}">
-        <a id="open-trade-link" class="link-open disabled" href="file:///Users/mac/Desktop/ULTIMUL%20BUN!!.html#" target="_blank" title="Deschide link">↗</a>
+        <input type="url" id="f-trade-link" placeholder="https://www.tradingview.com/..." oninput="updateLinkBtn('f-trade-link','open-trade-link')" onkeydown="if(event.key==='Tab'&amp;&amp;!event.shiftKey){event.preventDefault();tabNext('f-trade-link')}if(event.key==='ArrowUp'){event.preventDefault();tabPrev('f-trade-link')}">
+        <a id="open-trade-link" class="link-open disabled" href="#" target="_blank" title="Deschide link">↗</a>
       </div>
     </div>
     <!-- LIQ LINK -->
     <div class="fld">
       <div class="flbl">Lichiditate</div>
       <div class="link-inp-wrap">
-        <input type="url" id="f-liq-link" placeholder="https://www.tradingview.com/..." oninput="updateLinkBtn(&#39;f-liq-link&#39;,&#39;open-liq-link&#39;)" onkeydown="if(event.key===&#39;ArrowUp&#39;){event.preventDefault();tabPrev(&#39;f-liq-link&#39;)}">
-        <a id="open-liq-link" class="link-open disabled" href="file:///Users/mac/Desktop/ULTIMUL%20BUN!!.html#" target="_blank" title="Deschide link">↗</a>
+        <input type="url" id="f-liq-link" placeholder="https://www.tradingview.com/..." oninput="updateLinkBtn('f-liq-link','open-liq-link')" onkeydown="if(event.key==='ArrowUp'){event.preventDefault();tabPrev('f-liq-link')}">
+        <a id="open-liq-link" class="link-open disabled" href="#" target="_blank" title="Deschide link">↗</a>
       </div>
     </div>
     <div class="divider"></div>
@@ -561,13 +557,13 @@ table.bktbl tr:last-child td{border-bottom:none}
       </div>
     </div>
     <div class="mcards">
-      <div class="mc"><div class="mv" id="s-tot">6</div><div class="ml">Total</div></div>
+      <div class="mc"><div class="mv" id="s-tot">10</div><div class="ml">Total</div></div>
       <div class="mc"><div class="mv" style="color:var(--win)" id="s-w">3</div><div class="ml">WIN</div></div>
-      <div class="mc"><div class="mv" style="color:var(--lose)" id="s-l">2</div><div class="ml">LOSE</div></div>
-      <div class="mc"><div class="mv" style="color:var(--be)" id="s-be">1</div><div class="ml">BE</div></div>
-      <div class="mc"><div class="mv" id="s-wr">60.00%</div><div class="ml">WR %</div></div>
-      <div class="mc"><div class="mv" id="s-rr" style="color: var(--win);">+4R</div><div class="ml">NET RR</div></div>
-      <div class="mc"><div class="mv" id="s-alloc-pct" style="color: var(--win);">+4.00%</div><div class="ml">Procentaj cont</div></div>
+      <div class="mc"><div class="mv" style="color:var(--lose)" id="s-l">5</div><div class="ml">LOSE</div></div>
+      <div class="mc"><div class="mv" style="color:var(--be)" id="s-be">2</div><div class="ml">BE</div></div>
+      <div class="mc"><div class="mv" id="s-wr">37.50%</div><div class="ml">WR %</div></div>
+      <div class="mc"><div class="mv" id="s-rr" style="color: var(--win);">+1R</div><div class="ml">NET RR</div></div>
+      <div class="mc"><div class="mv" id="s-alloc-pct" style="color: var(--win);">+1.00%</div><div class="ml">Procentaj cont</div></div>
     </div>
     <div id="tbl-wrap">
       <div class="empty" id="empty-msg" style="display: none;">Niciun trade înregistrat încă.<br>Completează formularul și apasă Enter.</div>
@@ -576,6 +572,78 @@ table.bktbl tr:last-child td{border-bottom:none}
           <th>#</th><th>Data</th><th>Ora</th><th>Zi</th><th>Ses.</th><th>Rez.</th><th>Liq.</th><th>Setup</th><th>Tip</th><th>Re</th><th>Pot</th><th>BE</th><th>H/L</th><th>Știri</th><th>Trade</th><th>Liq.</th><th></th>
         </tr></thead>
         <tbody id="tbody">
+    <tr>
+      <td>10</td>
+      <td>29.06.2026</td>
+      <td>14:52</td>
+      <td>Luni</td>
+      <td>12:00-15:00</td>
+      <td><span class="badge bLOSE">LOSE</span></td>
+      <td>Locala 1</td>
+      <td>3G</td><td>SELL</td>
+      <td>Nu</td>
+      <td>—</td>
+      <td>—</td>
+      <td>PDH</td>
+      <td>—</td>
+      <td><a class="tbl-link" href="https://www.tradingview.com/x/IrpIFcs8/" target="_blank">↗ TV</a></td>
+      <td><a class="tbl-link" href="https://www.tradingview.com/x/MzRvRKFf/" target="_blank">↗ TV</a></td>
+      <td><button class="ebtn" onclick="editTrade(1782903018925)" title="Editează">✎</button><button class="dbtn" onclick="deleteTrade(1782903018925)">✕</button></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>26.06.2026</td>
+      <td>12:26</td>
+      <td>Vineri</td>
+      <td>12:00-15:00</td>
+      <td><span class="badge bLOSE">LOSE</span></td>
+      <td>Locala 1</td>
+      <td>3G</td><td>SELL</td>
+      <td>Nu</td>
+      <td>—</td>
+      <td>—</td>
+      <td>PDH</td>
+      <td>—</td>
+      <td><a class="tbl-link" href="https://www.tradingview.com/x/MuCwnGDf/" target="_blank">↗ TV</a></td>
+      <td><a class="tbl-link" href="https://www.tradingview.com/x/TGQOXFJc/" target="_blank">↗ TV</a></td>
+      <td><button class="ebtn" onclick="editTrade(1782809204270)" title="Editează">✎</button><button class="dbtn" onclick="deleteTrade(1782809204270)">✕</button></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>24.06.2026</td>
+      <td>14:34</td>
+      <td>Miercuri</td>
+      <td>12:00-15:00</td>
+      <td><span class="badge bLOSE">LOSE</span></td>
+      <td>Majora A++</td>
+      <td>OSG</td><td>BUY</td>
+      <td>Nu</td>
+      <td>—</td>
+      <td>—</td>
+      <td>PWL</td>
+      <td>—</td>
+      <td><a class="tbl-link" href="https://www.tradingview.com/x/jS6Y05E1/" target="_blank">↗ TV</a></td>
+      <td><a class="tbl-link" href="https://www.tradingview.com/x/V8RKQgkR/" target="_blank">↗ TV</a></td>
+      <td><button class="ebtn" onclick="editTrade(1782809129617)" title="Editează">✎</button><button class="dbtn" onclick="deleteTrade(1782809129617)">✕</button></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>24.06.2026</td>
+      <td>10:23</td>
+      <td>Miercuri</td>
+      <td>10:00-12:00</td>
+      <td><span class="badge bBE">BE</span></td>
+      <td>LOD + Locala</td>
+      <td>OSG</td><td>BUY</td>
+      <td>Nu</td>
+      <td>—</td>
+      <td>BE/LOSE</td>
+      <td>PDL</td>
+      <td>—</td>
+      <td><a class="tbl-link" href="https://www.tradingview.com/x/eCRM8VGx/" target="_blank">↗ TV</a></td>
+      <td><a class="tbl-link" href="https://www.tradingview.com/x/fUMTexwj/" target="_blank">↗ TV</a></td>
+      <td><button class="ebtn" onclick="editTrade(1782809029405)" title="Editează">✎</button><button class="dbtn" onclick="deleteTrade(1782809029405)">✕</button></td>
+    </tr>
     <tr>
       <td>6</td>
       <td>05.06.2026</td>
@@ -690,7 +758,7 @@ table.bktbl tr:last-child td{border-bottom:none}
 </div>
 
 <!-- ============ STATS TAB ============ -->
-<div id="p-stats" class="panel active">
+<div id="p-stats" class="panel">
   <div class="fbar">
     <span class="fltr-lbl">Filtre:</span>
     <select class="fsel" id="f-year" onchange="renderStats()"><option value="all">An</option><option value="2026">2026</option></select>
@@ -816,19 +884,19 @@ table.bktbl tr:last-child td{border-bottom:none}
       <option value="10+p">10+p</option>
     </select>
     <button class="freset" onclick="resetFilters()">✕ Reset</button>
-    <span style="margin-left:auto;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:10px;color:var(--text3)" id="filter-info">6 trades</span>
+    <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)" id="filter-info">9 trades</span>
   </div>
 
 
   <div class="scards">
-    <div class="sc"><div class="sv" id="st-tot">6</div><div class="sl">Total</div></div>
+    <div class="sc"><div class="sv" id="st-tot">9</div><div class="sl">Total</div></div>
     <div class="sc"><div class="sv" style="color:var(--win)" id="st-w">3</div><div class="sl">WIN</div></div>
-    <div class="sc"><div class="sv" style="color:var(--lose)" id="st-l">2</div><div class="sl">LOSE</div></div>
-    <div class="sc"><div class="sv" style="color:var(--be)" id="st-be">1</div><div class="sl">BE</div></div>
-    <div class="sc"><div class="sv" id="st-wr" style="color: rgb(0, 230, 118);">60.00%</div><div class="sl">WR %</div></div>
-    <div class="sc"><div class="sv" id="st-net" style="color: var(--win);">+4R</div><div class="sl">NET RR</div></div>
-    <div class="sc"><div class="sv" id="st-exp" style="color: var(--win);">+0.80R</div><div class="sl">E/trade</div></div>
-  <div class="sc"><div class="sv" id="st-pf" style="color: var(--win);">3.00</div><div class="sl">Profit Factor</div></div>
+    <div class="sc"><div class="sv" style="color:var(--lose)" id="st-l">4</div><div class="sl">LOSE</div></div>
+    <div class="sc"><div class="sv" style="color:var(--be)" id="st-be">2</div><div class="sl">BE</div></div>
+    <div class="sc"><div class="sv" id="st-wr" style="color: rgb(251, 191, 36);">42.86%</div><div class="sl">WR %</div></div>
+    <div class="sc"><div class="sv" id="st-net" style="color: var(--win);">+2R</div><div class="sl">NET RR</div></div>
+    <div class="sc"><div class="sv" id="st-exp" style="color: var(--win);">+0.29R</div><div class="sl">E/trade</div></div>
+  <div class="sc"><div class="sv" id="st-pf" style="color: var(--be);">1.50</div><div class="sl">Profit Factor</div></div>
   <div class="sc" id="edge-score-card" title="Prea puțin date">
     <div class="sv" id="st-edge" style="font-size: 14px; color: var(--lose);">—</div>
     <div class="sl">Edge Score</div>
@@ -840,12 +908,12 @@ table.bktbl tr:last-child td{border-bottom:none}
   <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:10px">
     <div class="cbox">
       <div class="ctitle">Streak Tracker</div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px" id="streak-cards"><div class="streak-sc"><div class="streak-val" style="color:var(--win)">2</div><div class="streak-lbl">Max WIN streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--lose)">2</div><div class="streak-lbl">Max LOSE streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--win)">2</div><div class="streak-lbl">Streak WIN curent</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--text2)">5</div><div class="streak-lbl">Total W/L trades</div></div></div>
-      <div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace" id="current-streak-label">↑ 2 WIN consecutive la curent</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px" id="streak-cards"><div class="streak-sc"><div class="streak-val" style="color:var(--win)">2</div><div class="streak-lbl">Max WIN streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--lose)">2</div><div class="streak-lbl">Max LOSE streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--lose)">2</div><div class="streak-lbl">Streak LOSE curent</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--text2)">7</div><div class="streak-lbl">Total W/L trades</div></div></div>
+      <div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace" id="current-streak-label">↓ 2 LOSE consecutive la curent</div>
     </div>
-    <div class="cbox"><div class="ctitle">WR Sesiune</div><div class="cwrap"><canvas id="ch-ses" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div>
-    <div class="cbox"><div class="ctitle">WR Setup</div><div class="cwrap"><canvas id="ch-setup" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div>
-    <div class="cbox"><div class="ctitle">WR Zi</div><div class="cwrap"><canvas id="ch-day" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div>
+    <div class="cbox"><div class="ctitle">WR Sesiune</div><div class="cwrap"><canvas id="ch-ses" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div></div>
+    <div class="cbox"><div class="ctitle">WR Setup</div><div class="cwrap"><canvas id="ch-setup" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div></div>
+    <div class="cbox"><div class="ctitle">WR Zi</div><div class="cwrap"><canvas id="ch-day" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div></div>
   </div>
 
   <!-- ZI × SESIUNE HEATMAP -->
@@ -853,8 +921,9 @@ table.bktbl tr:last-child td{border-bottom:none}
     <div class="ctitle">Heatmap WR% — Zi × Sesiune</div>
     <div id="hm-day-ses" style="margin-top:6px"><table class="hm-table"><thead><tr><th></th><th>10-12</th><th>12-15</th><th>15-19</th><th>Zi total</th></tr></thead><tbody><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Luni</th><td style="background:var(--bg3);color:var(--text3)" title="Luni × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Luni × 12:00-15:00: 0 trades, —">—</td><td style="background:rgba(0,230,118,.35);color:#00e676" title="Luni × 15:00-19:00: 2 trades, 100.0%">100%
 n=2</td><td style="background:rgba(0,230,118,.35);color:#00e676;font-weight:800">100%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Marti</th><td style="background:var(--bg3);color:var(--text3)" title="Marti × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Marti × 12:00-15:00: 0 trades, —">—</td><td style="background:rgba(255,64,64,.3);color:#ff4040" title="Marti × 15:00-19:00: 2 trades, 0.0%">0%
-n=2</td><td style="background:rgba(255,64,64,.3);color:#ff4040;font-weight:800">0%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Miercuri</th><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 12:00-15:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 15:00-19:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Joi</th><td style="background:var(--bg3);color:var(--text3)" title="Joi × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Joi × 12:00-15:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Joi × 15:00-19:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Vineri</th><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 10:00-12:00: 0 trades, —">—</td><td style="background:rgba(0,230,118,.35);color:#00e676" title="Vineri × 12:00-15:00: 1 trades, 100.0%">100%
-n=1</td><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 15:00-19:00: 0 trades, —">—</td><td style="background:rgba(0,230,118,.35);color:#00e676;font-weight:800">100%</td></tr><tr style="border-top:1px solid var(--border2)"><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Total</th><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td><td style="background:rgba(0,230,118,.35);color:#00e676;font-weight:800">100%</td><td style="background:rgba(74,222,128,.2);color:#4ade80;font-weight:800">50%</td><td></td></tr></tbody></table></div>
+n=2</td><td style="background:rgba(255,64,64,.3);color:#ff4040;font-weight:800">0%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Miercuri</th><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 10:00-12:00: 0 trades, —">—</td><td style="background:rgba(255,64,64,.3);color:#ff4040" title="Miercuri × 12:00-15:00: 1 trades, 0.0%">0%
+n=1</td><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 15:00-19:00: 0 trades, —">—</td><td style="background:rgba(255,64,64,.3);color:#ff4040;font-weight:800">0%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Joi</th><td style="background:var(--bg3);color:var(--text3)" title="Joi × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Joi × 12:00-15:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Joi × 15:00-19:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Vineri</th><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 10:00-12:00: 0 trades, —">—</td><td style="background:rgba(74,222,128,.2);color:#4ade80" title="Vineri × 12:00-15:00: 2 trades, 50.0%">50%
+n=2</td><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 15:00-19:00: 0 trades, —">—</td><td style="background:rgba(74,222,128,.2);color:#4ade80;font-weight:800">50%</td></tr><tr style="border-top:1px solid var(--border2)"><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Total</th><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td><td style="background:rgba(248,113,113,.18);color:#f87171;font-weight:800">33%</td><td style="background:rgba(74,222,128,.2);color:#4ade80;font-weight:800">50%</td><td></td></tr></tbody></table></div>
   </div>
 
   <!-- BE ANALYSIS CARD -->
@@ -863,35 +932,35 @@ n=1</td><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 15
     <div id="be-analysis-content">
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1.2fr;gap:8px;margin-bottom:10px">
       <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--win)">1</div>
+        <div style="font-size:20px;font-weight:800;color:var(--be)">1</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">BE/WIN</div>
-        <div style="font-size:11px;font-weight:700;color:var(--win);margin-top:2px">100%</div>
+        <div style="font-size:11px;font-weight:700;color:var(--be);margin-top:2px">50%</div>
       </div>
       <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--win)">0</div>
+        <div style="font-size:20px;font-weight:800;color:var(--be)">1</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">BE/LOSE</div>
-        <div style="font-size:11px;font-weight:700;color:var(--win);margin-top:2px">0%</div>
+        <div style="font-size:11px;font-weight:700;color:var(--be);margin-top:2px">50%</div>
       </div>
       <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--text)">1</div>
+        <div style="font-size:20px;font-weight:800;color:var(--text)">2</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">Total BE</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:2px">1 înreg.</div>
+        <div style="font-size:11px;color:var(--text3);margin-top:2px">2 înreg.</div>
       </div>
       <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--win)">+2.0R</div>
+        <div style="font-size:20px;font-weight:800;color:var(--win)">+1.0R</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">Net BE în R</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:2px">1×2.0R − 0×1R</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">1×2.0R − 1×1R</div>
       </div>
     </div>
     <div>
       <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-bottom:4px">
-        <span style="color:var(--win)">BE/WIN 100%</span>
-        <span style="color:var(--win)">BE/LOSE 0%</span>
+        <span style="color:var(--be)">BE/WIN 50%</span>
+        <span style="color:var(--be)">BE/LOSE 50%</span>
       </div>
       <div style="background:var(--bg3);border-radius:4px;height:6px;overflow:hidden">
-        <div style="height:100%;width:100%;background:var(--win);border-radius:4px;transition:width .3s"></div>
+        <div style="height:100%;width:50%;background:var(--win);border-radius:4px;transition:width .3s"></div>
       </div>
-      <div style="margin-top:8px;font-size:10px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace">Dacă toate BE/WIN → WIN: WR ar fi <strong style="color:var(--win)">66.7%</strong> <span style="color:var(--win)">+6.7%</span></div>
+      <div style="margin-top:8px;font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace">Dacă toate BE/WIN → WIN: WR ar fi <strong style="color:var(--win)">50.0%</strong> <span style="color:var(--win)">+7.1%</span></div>
     </div></div>
   </div>
 
@@ -952,43 +1021,35 @@ n=1</td><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 15
   <!-- STREAK WR CARD -->
   <div class="cbox" id="streak-wr-card">
     <div class="ctitle">📈 Streak WR</div>
-    <div id="streak-wr-content"><table class="bktbl"><thead><tr><th style="text-align:left">Streak</th><th>Cazuri</th><th>WIN</th><th>LOSE</th><th>WR%</th><th>Diferență</th></tr></thead><tbody><tr style="border-bottom:1px solid var(--border2)"><td style="color:var(--text2);font-size:10px">Baseline general</td><td style="color:var(--text2)">5</td><td style="color:var(--win)">3</td><td style="color:var(--lose)">2</td><td style="font-weight:700;color:#fbbf24">60%</td><td>—</td></tr><tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA LOSING STREAK</td></tr><tr><td>Dupa 1 LOSE</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">0</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#ff4040">0%</td><td><span style="color:#f87171">-60%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 2 LOSE</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="font-weight:700;color:#00e676">100%</td><td><span style="color:#4ade80">+40%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA WINNING STREAK</td></tr><tr><td>Dupa 1 WIN</td><td style="color:var(--text2)">2</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#4ade80">50%</td><td><span style="color:#f87171">-10%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr></tbody></table><div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:monospace;padding:8px;background:var(--bg3);border-radius:6px">BE-urile sunt excluse din calcul (nu rup și nu extind streak-ul). ⚠ = sub 10 cazuri, interpretare cu precauție.</div></div>
+    <div id="streak-wr-content"><table class="bktbl"><thead><tr><th style="text-align:left">Streak</th><th>Cazuri</th><th>WIN</th><th>LOSE</th><th>WR%</th><th>Diferență</th></tr></thead><tbody><tr style="border-bottom:1px solid var(--border2)"><td style="color:var(--text2);font-size:10px">Baseline general</td><td style="color:var(--text2)">7</td><td style="color:var(--win)">3</td><td style="color:var(--lose)">4</td><td style="font-weight:700;color:#fbbf24">43%</td><td>—</td></tr><tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA LOSING STREAK</td></tr><tr><td>Dupa 1 LOSE</td><td style="color:var(--text2)">2</td><td style="color:var(--win)">0</td><td style="color:var(--lose)">2</td><td style="font-weight:700;color:#ff4040">0%</td><td><span style="color:#f87171">-43%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 2 LOSE</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="font-weight:700;color:#00e676">100%</td><td><span style="color:#4ade80">+57%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA WINNING STREAK</td></tr><tr><td>Dupa 1 WIN</td><td style="color:var(--text2)">2</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#4ade80">50%</td><td><span style="color:#4ade80">+7%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 2 WIN</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">0</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#ff4040">0%</td><td><span style="color:#f87171">-43%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr></tbody></table><div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:monospace;padding:8px;background:var(--bg3);border-radius:6px">BE-urile sunt excluse din calcul (nu rup și nu extind streak-ul). ⚠ = sub 10 cazuri, interpretare cu precauție.</div></div>
   </div>
 
   <!-- DRAWDOWN + EQUITY CURVE side by side -->
   <div style="display:flex;gap:12px">
     <div class="cbox" style="flex:1;min-width:0">
       <div class="ctitle">Drawdown din peak (RR)</div>
-      <div class="cwrap"><canvas id="ch-dd" style="box-sizing: border-box; display: block; height: 150px; width: 700px;" width="1400" height="300"></canvas></div>
+      <div class="cwrap"><canvas id="ch-dd" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div>
     </div>
     <div class="cbox" style="flex:1;min-width:0">
       <div class="ctitle">Equity Curve</div>
-      <div class="cwrap"><canvas id="ch-equity" style="box-sizing: border-box; display: block; height: 150px; width: 700px;" width="1400" height="300"></canvas></div>
+      <div class="cwrap"><canvas id="ch-equity" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div>
     </div>
   </div>
 
   <div class="bk-nav">
-    <button class="bktab" onclick="setBkTab(this,&#39;year&#39;)">An</button>
-    <button class="bktab" onclick="setBkTab(this,&#39;liq&#39;)">Lichiditate</button>
-    <button class="bktab" onclick="setBkTab(this,&#39;session&#39;)">Sesiune</button>
-    <button class="bktab" onclick="setBkTab(this,&#39;setup&#39;)">Setup</button>
-    <button class="bktab" onclick="setBkTab(this,&#39;day&#39;)">Zi săptămână</button>
-    <button class="bktab" onclick="setBkTab(this,&#39;tip&#39;)">BUY / SELL</button>
-    <button class="bktab" onclick="setBkTab(this,&#39;re_impact&#39;)">Reentry</button>
-    <button class="bktab" onclick="setBkTab(this,&#39;hl&#39;)">H/L</button>
-    <button class="bktab" onclick="setBkTab(this,&#39;news&#39;)">Știri</button>
-    <button class="bktab on" onclick="setBkTab(this,&#39;combo_day_ses&#39;)">Zi × Sesiune</button>
-    <button class="bktab" onclick="setBkTab(this,&#39;rr_lunar&#39;)">RR Lunar</button>
+    <button class="bktab" onclick="setBkTab(this,'year')">An</button>
+    <button class="bktab" onclick="setBkTab(this,'liq')">Lichiditate</button>
+    <button class="bktab" onclick="setBkTab(this,'session')">Sesiune</button>
+    <button class="bktab" onclick="setBkTab(this,'setup')">Setup</button>
+    <button class="bktab" onclick="setBkTab(this,'day')">Zi săptămână</button>
+    <button class="bktab" onclick="setBkTab(this,'tip')">BUY / SELL</button>
+    <button class="bktab" onclick="setBkTab(this,'re_impact')">Reentry</button>
+    <button class="bktab" onclick="setBkTab(this,'hl')">H/L</button>
+    <button class="bktab" onclick="setBkTab(this,'news')">Știri</button>
+    <button class="bktab on" onclick="setBkTab(this,'combo_day_ses')">Zi × Sesiune</button>
+    <button class="bktab" onclick="setBkTab(this,'rr_lunar')">RR Lunar</button>
   </div>
   <div class="bkbox"><div id="bk-content"><table class="bktbl"><thead><tr><th style="text-align:left">Grup</th><th style="">Total</th><th style="">W</th><th style="">L</th><th style="">BE</th><th style="">WR%</th><th style="">CI 95%</th><th style="">NET RR</th><th style="">E/trade</th></tr></thead><tbody><tr>
-      <td>12:00-15:00</td>
-      <td style="color:var(--text2)">2</td>
-      <td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="color:var(--be)">1</td>
-      <td style="color:#00e676;font-weight:700">100.0%</td>
-      <td class="n-small">[21–100%]</td>
-      <td class="rp">+2R</td>
-      <td class="rp">+2.00R</td>
-    </tr><tr>
       <td>15:00-19:00</td>
       <td style="color:var(--text2)">4</td>
       <td style="color:var(--win)">2</td><td style="color:var(--lose)">2</td><td style="color:var(--be)">0</td>
@@ -997,9 +1058,17 @@ n=1</td><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 15
       <td class="rp">+2R</td>
       <td class="rp">+0.50R</td>
     </tr><tr>
+      <td>12:00-15:00</td>
+      <td style="color:var(--text2)">4</td>
+      <td style="color:var(--win)">1</td><td style="color:var(--lose)">2</td><td style="color:var(--be)">1</td>
+      <td style="color:#f87171;font-weight:700">33.3%</td>
+      <td class="n-small">[6–79%]</td>
+      <td class="rp">+0R</td>
+      <td class="rp">+0.00R</td>
+    </tr><tr>
       <td>10:00-12:00</td>
-      <td style="color:var(--text2)">0</td>
-      <td style="color:var(--win)">0</td><td style="color:var(--lose)">0</td><td style="color:var(--be)">0</td>
+      <td style="color:var(--text2)">1</td>
+      <td style="color:var(--win)">0</td><td style="color:var(--lose)">0</td><td style="color:var(--be)">1</td>
       <td style="color:#9090a8;font-weight:700">—</td>
       <td class="n-small">[0–100%]</td>
       <td class="rp">+0R</td>
@@ -1010,109 +1079,109 @@ n=1</td><td style="background:var(--bg3);color:var(--text3)" title="Vineri × 15
 
   <!-- SD & STREAK ANALYSIS -->
   <div id="sd-streak-wrap" style="margin-top: 18px; padding: 0px 14px 14px;">
-    <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;display:flex;align-items:center;gap:8px;margin-bottom:12px">Standard Deviation &amp; Losing Streaks<span style="height:1px;flex:1;background:var(--border)"></span></div>
+    <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);font-family:'JetBrains Mono',monospace;display:flex;align-items:center;gap:8px;margin-bottom:12px">Standard Deviation &amp; Losing Streaks<span style="height:1px;flex:1;background:var(--border)"></span></div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px">
       <div class="bkbox" style="padding:10px 12px">
-        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:&#39;JetBrains Mono&#39;,monospace">WR REAL</div>
-        <div id="sd-wr" style="font-size: 18px; font-weight: 700; color: var(--win);">60.0%</div>
-        <div id="sd-wl" style="font-size:10px;color:var(--text3);margin-top:2px">3W / 2L</div>
+        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:'JetBrains Mono',monospace">WR REAL</div>
+        <div id="sd-wr" style="font-size: 18px; font-weight: 700; color: var(--lose);">42.9%</div>
+        <div id="sd-wl" style="font-size:10px;color:var(--text3);margin-top:2px">3W / 4L</div>
       </div>
       <div class="bkbox" style="padding:10px 12px">
-        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:&#39;JetBrains Mono&#39;,monospace">STANDARD DEVIATION</div>
-        <div id="sd-val" style="font-size:18px;font-weight:700;color:var(--text)">1.64 R</div>
+        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:'JetBrains Mono',monospace">STANDARD DEVIATION</div>
+        <div id="sd-val" style="font-size:18px;font-weight:700;color:var(--text)">1.60 R</div>
         <div id="sd-sub" style="font-size:10px;color:var(--text3);margin-top:2px">pe WIN/LOSE</div>
       </div>
       <div class="bkbox" style="padding:10px 12px">
-        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:&#39;JetBrains Mono&#39;,monospace">MAX STREAK ACTUAL</div>
+        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:'JetBrains Mono',monospace">MAX STREAK ACTUAL</div>
         <div id="sd-maxstreak" style="font-size:18px;font-weight:700;color:var(--lose)">2× LOSE</div>
-        <div id="sd-maxexp" style="font-size:10px;color:var(--text3);margin-top:2px">așteptat teoretic 1.8</div>
+        <div id="sd-maxexp" style="font-size:10px;color:var(--text3);margin-top:2px">așteptat teoretic 3.5</div>
       </div>
       <div class="bkbox" style="padding:10px 12px">
-        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:&#39;JetBrains Mono&#39;,monospace">MEDIE STREAK</div>
+        <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:'JetBrains Mono',monospace">MEDIE STREAK</div>
         <div id="sd-avgstreak" style="font-size:18px;font-weight:700;color:var(--text)">2.0×</div>
-        <div id="sd-nstreaks" style="font-size:10px;color:var(--text3);margin-top:2px">1 streaks</div>
+        <div id="sd-nstreaks" style="font-size:10px;color:var(--text3);margin-top:2px">2 streaks</div>
       </div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
       <div class="bkbox" style="padding:10px 12px">
-        <div style="font-size:9px;color:var(--text3);margin-bottom:8px;font-family:&#39;JetBrains Mono&#39;,monospace">DISTRIBUȚIE STREAKS OBSERVATE</div>
-        <div style="position:relative;height:160px"><canvas id="ch-streak-dist" role="img" aria-label="Distribuție losing streaks observate" style="box-sizing: border-box; display: block; height: 160px; width: 690px;" width="1380" height="320"></canvas></div>
+        <div style="font-size:9px;color:var(--text3);margin-bottom:8px;font-family:'JetBrains Mono',monospace">DISTRIBUȚIE STREAKS OBSERVATE</div>
+        <div style="position:relative;height:160px"><canvas id="ch-streak-dist" role="img" aria-label="Distribuție losing streaks observate" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div>
       </div>
       <div class="bkbox" style="padding:10px 12px">
-        <div style="font-size:9px;color:var(--text3);margin-bottom:8px;font-family:&#39;JetBrains Mono&#39;,monospace">P(CEL PUȚIN UN STREAK ≥ N) ÎN SAMPLE</div>
-        <div style="position:relative;height:160px"><canvas id="ch-streak-prob" role="img" aria-label="Probabilitate cel puțin un streak de N în sample" style="box-sizing: border-box; display: block; height: 160px; width: 690px;" width="1380" height="320"></canvas></div>
+        <div style="font-size:9px;color:var(--text3);margin-bottom:8px;font-family:'JetBrains Mono',monospace">P(CEL PUȚIN UN STREAK ≥ N) ÎN SAMPLE</div>
+        <div style="position:relative;height:160px"><canvas id="ch-streak-prob" role="img" aria-label="Probabilitate cel puțin un streak de N în sample" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div>
       </div>
     </div>
     <div class="bkbox" style="padding:10px 12px">
-      <div style="font-size:9px;color:var(--text3);margin-bottom:8px;font-family:&#39;JetBrains Mono&#39;,monospace">TABEL PROBABILITĂȚI — CE ÎNSEAMNĂ ÎN PRACTICĂ</div>
+      <div style="font-size:9px;color:var(--text3);margin-bottom:8px;font-family:'JetBrains Mono',monospace">TABEL PROBABILITĂȚI — CE ÎNSEAMNĂ ÎN PRACTICĂ</div>
       <div id="sd-streak-table" style="overflow-x:auto">
     <table style="width:100%;border-collapse:collapse">
       <thead><tr style="border-bottom:1px solid var(--border2)">
-        <th style="text-align:left;padding:5px 8px;font-size:9px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;font-weight:600">STREAK</th>
-        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;font-weight:600">P(1 ocurență)</th>
-        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;font-weight:600">1 la N</th>
-        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;font-weight:600">P(≥1 în sample)</th>
-        <th style="text-align:left;padding:5px 8px;font-size:9px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;font-weight:600">CONCLUZIE</th>
+        <th style="text-align:left;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">STREAK</th>
+        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">P(1 ocurență)</th>
+        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">1 la N</th>
+        <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">P(≥1 în sample)</th>
+        <th style="text-align:left;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">CONCLUZIE</th>
       </tr></thead>
       <tbody><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">3× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">6.40%</td>
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">3× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">18.66%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 5</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#fbbf2422;color:#fbbf24;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">76.4%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Probabil</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">4× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">10.66%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 9</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#fbbf2422;color:#fbbf24;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">54.6%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">La limita normalului</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">5× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">6.09%</td>
       <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 16</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">28.2%</span></td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">35.6%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Rar</td>
     </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">4× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">2.56%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 39</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">12.2%</span></td>
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">6× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">3.48%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 29</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">22.0%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">7× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">1.99%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 50</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">13.1%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
     </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">5× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">1.02%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 98</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">5.0%</span></td>
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">8× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">1.14%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 88</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">7.7%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
     </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">6× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.41%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 244</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">2.0%</span></td>
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">9× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.65%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 154</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">4.5%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
     </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">7× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.16%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 610</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.8%</span></td>
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">10× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.37%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 269</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">2.6%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
     </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">8× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.07%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 1,526</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.3%</span></td>
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">11× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.21%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 471</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">1.5%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
     </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">9× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.03%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 3,815</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.1%</span></td>
-      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
-    </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">10× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.01%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 9,537</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.1%</span></td>
-      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
-    </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">11× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.00%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 23,842</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.0%</span></td>
-      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
-    </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text)">12× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11px;color:var(--text2)">0.00%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 59,605</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:&#39;JetBrains Mono&#39;,monospace">0.0%</span></td>
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">12× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.12%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 825</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">0.8%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
     </tr></tbody>
     </table></div>
@@ -1349,12 +1418,13 @@ Lichiditate:
         <div class="calc-lbl">Risc %</div>
         <div style="display:flex;gap:6px;align-items:center">
           <div class="risk-presets">
-            <button class="rp-btn" data-v="0.5" onclick="setRiskPreset(&#39;0.5&#39;)">0.5%</button>
-            <button class="rp-btn active" data-v="1" onclick="setRiskPreset(&#39;1&#39;)">1%</button>
-            <button class="rp-btn" data-v="1.5" onclick="setRiskPreset(&#39;1.5&#39;)">1.5%</button>
-            <button class="rp-btn" data-v="2" onclick="setRiskPreset(&#39;2&#39;)">2%</button>
+            <button class="rp-btn" data-v="0.5" onclick="setRiskPreset('0.5')">0.5%</button>
+            <button class="rp-btn" data-v="0.6" onclick="setRiskPreset('0.6')">0.6%</button>
+            <button class="rp-btn" data-v="0.65" onclick="setRiskPreset('0.65')">0.65%</button>
+            <button class="rp-btn active" data-v="1" onclick="setRiskPreset('1')">1%</button>
+            <button class="rp-btn" data-v="1.5" onclick="setRiskPreset('1.5')">1.5%</button>
           </div>
-          <input id="c-risk" class="calc-input" type="number" min="0.01" max="100" step="0.1" value="1" placeholder="1" oninput="document.querySelectorAll(&#39;.rp-btn&#39;).forEach(b=&gt;b.classList.remove(&#39;active&#39;));renderCalc()" style="width:80px">
+          <input id="c-risk" class="calc-input" type="number" min="0.01" max="100" step="0.1" value="1" placeholder="1" oninput="document.querySelectorAll('.rp-btn').forEach(b=&gt;b.classList.remove('active'));renderCalc()" style="width:80px">
         </div>
       </div>
       <div class="calc-fld">
@@ -1407,62 +1477,6 @@ Lichiditate:
             <div class="calc-diff-pill">▼ −0.24 lot</div>
           </div>
         </div></div>
-      <div class="calc-card ftmo80" id="cc-ftmo80">
-        <div class="calc-card-accent"></div>
-        <div class="calc-card-header">
-          <div>
-            <div class="calc-card-name">FTMO</div>
-            <div class="calc-card-balance">€80,000</div>
-          </div>
-          <div class="calc-card-meta">Risc <b style="color:var(--text)">1%</b> → <b style="color:var(--be)">€800.00 ≈ $914.88</b></div>
-        </div>
-        <div class="calc-card-body">
-          <div class="calc-card-col">
-            <div class="calc-col-label">Fără costuri</div>
-            <div class="calc-card-lot">9.15</div>
-            <div class="calc-card-sub">loturi · SL 10 pips</div>
-          </div>
-          <div class="calc-card-col-divider"></div>
-          <div class="calc-card-col">
-            <div class="calc-col-label">Cu costuri</div>
-            <div class="calc-card-lot-net">8.71</div>
-            <div class="calc-card-sub">loturi · efective</div>
-            <div class="calc-card-costs">
-              <div class="calc-cost-row"><span>Spread (0.2 pips)</span><span>−€15.24</span></div>
-              <div class="calc-cost-row"><span>Comision RT</span><span>−€22.86</span></div>
-              <div class="calc-cost-total"><span>Total</span><span>−€38.10</span></div>
-            </div>
-            <div class="calc-diff-pill">▼ −0.44 lot</div>
-          </div>
-        </div></div>
-      <div class="calc-card ftmo10" id="cc-ftmo10">
-        <div class="calc-card-accent"></div>
-        <div class="calc-card-header">
-          <div>
-            <div class="calc-card-name">FTMO</div>
-            <div class="calc-card-balance">€10,000</div>
-          </div>
-          <div class="calc-card-meta">Risc <b style="color:var(--text)">1%</b> → <b style="color:var(--be)">€100.00 ≈ $114.36</b></div>
-        </div>
-        <div class="calc-card-body">
-          <div class="calc-card-col">
-            <div class="calc-col-label">Fără costuri</div>
-            <div class="calc-card-lot">1.14</div>
-            <div class="calc-card-sub">loturi · SL 10 pips</div>
-          </div>
-          <div class="calc-card-col-divider"></div>
-          <div class="calc-card-col">
-            <div class="calc-col-label">Cu costuri</div>
-            <div class="calc-card-lot-net">1.09</div>
-            <div class="calc-card-sub">loturi · efective</div>
-            <div class="calc-card-costs">
-              <div class="calc-cost-row"><span>Spread (0.2 pips)</span><span>−€1.90</span></div>
-              <div class="calc-cost-row"><span>Comision RT</span><span>−€2.86</span></div>
-              <div class="calc-cost-total"><span>Total</span><span>−€4.76</span></div>
-            </div>
-            <div class="calc-diff-pill">▼ −0.05 lot</div>
-          </div>
-        </div></div>
     </div>
     <div class="calc-note" style="margin-top:10px">📌 GBPUSD: 1 pip = $10 / lot standard. Pip value este mereu în USD indiferent de moneda contului.</div>
   </div>
@@ -1486,7 +1500,7 @@ Lichiditate:
     <div style="position:relative;height:160px;display:none" id="mc-chart-wrap">
       <canvas id="ch-mc"></canvas>
     </div>
-    <div style="font-size:10px;color:var(--text3);font-family:&#39;JetBrains Mono&#39;,monospace;margin-top:6px" id="mc-caption"></div>
+    <div style="font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-top:6px" id="mc-caption"></div>
   </div>
   </div>
 </div>
@@ -1494,7 +1508,7 @@ Lichiditate:
 
 
 </main>
-<div class="toast err" id="toast">⚠ Selectează sesiunea (1/2/3)</div>
+<div class="toast ok" id="toast">✓ 29.06.2026 · LOSE · 3G</div>
 
 <script src="file:///Users/mac/Downloads/GUUUUUUUU_files/xlsx.full.min.js"></script>
 <script>/*!
@@ -1514,7 +1528,7 @@ Lichiditate:
 </script>
 <script>
 // ============ STATE ============
-let trades = [{"id":1778586624957,"luna":"MAY","ziua":"Luni","data":"11.05.2026","ora":"18:47","sesiune":"15:00-19:00","rezultat":"WIN","liq":"Majora","setup":"TCG","tip":"SELL","re":"Nu","pot":"5.1","be_type":"","hl":"PWH","trade_link":"https://www.tradingview.com/x/wke7IIzp/","liq_link":"https://www.tradingview.com/x/nfdiXv9R/","news":"","misc_ses":"","setup_urat":"","risk":"Mediu","alocare":"1%","liq_dist":""},{"id":1779620836689,"luna":"MAY","ziua":"Marti","data":"19.05.2026","ora":"17:02","sesiune":"15:00-19:00","rezultat":"LOSE","liq":"Locala","setup":"3G","tip":"BUY","re":"Nu","pot":"-","be_type":"","hl":"LL","trade_link":"https://www.tradingview.com/x/ajCghhNy/","liq_link":"https://www.tradingview.com/x/RXbRYYHL/","news":"GBP CCC","misc_ses":"Miscarea sesiunii invalidata","setup_urat":"","risk":"Mare","alocare":"1%","liq_dist":""},{"id":1779620960273,"luna":"MAY","ziua":"Miercuri","data":"20.05.2026","ora":"14:47","sesiune":"12:00-15:00","rezultat":"BE","liq":"Locala","setup":"TCG","tip":"SELL","re":"Nu","pot":"-","be_type":"BE/WIN","hl":"","trade_link":"https://www.tradingview.com/x/sFAz6on8/","liq_link":"https://www.tradingview.com/x/77iqRsNs/","news":"GBP CPI","misc_ses":"","setup_urat":"","risk":"Mediu","alocare":"1%","liq_dist":""},{"id":1780131657763,"luna":"MAY","ziua":"Marti","data":"26.05.2026","ora":"17:59","sesiune":"15:00-19:00","rezultat":"LOSE","liq":"Locala","setup":"OSG","tip":"BUY","re":"Nu","pot":"-","be_type":"","hl":"LL","trade_link":"https://www.tradingview.com/x/ZEzSguXi/","liq_link":"https://www.tradingview.com/x/bHmNpeqO/","news":"","misc_ses":"","setup_urat":"","risk":"Mare","alocare":"1%","liq_dist":""},{"id":1781175556731,"luna":"JUN","ziua":"Luni","data":"01.06.2026","ora":"17:18","sesiune":"15:00-19:00","rezultat":"WIN","liq":"Locala 1","setup":"OSG","tip":"BUY","re":"Nu","pot":"4.3","be_type":"","hl":"PDL","trade_link":"https://www.tradingview.com/x/9CEyFCfP/","liq_link":"https://www.tradingview.com/x/H7qdOIVd/","news":"USD ISM PMI","misc_ses":"","setup_urat":"","risk":"Mediu","alocare":"1%","liq_dist":""},{"id":1781175655233,"luna":"JUN","ziua":"Vineri","data":"05.06.2026","ora":"13:44","sesiune":"12:00-15:00","rezultat":"WIN","liq":"Majora","setup":"OSG","tip":"SELL","re":"Nu","pot":"-","be_type":"","hl":"LL","trade_link":"https://www.tradingview.com/x/h9Iqj7WU/","liq_link":"https://www.tradingview.com/x/8PYCy81F/","news":"NFP","misc_ses":"","setup_urat":"","risk":"Mediu","alocare":"1%","liq_dist":""}];
+let trades = [{"id": 1778586624957, "luna": "MAY", "ziua": "Luni", "data": "11.05.2026", "ora": "18:47", "sesiune": "15:00-19:00", "rezultat": "WIN", "liq": "Majora", "setup": "TCG", "tip": "SELL", "re": "Nu", "pot": "5.1", "be_type": "", "hl": "PWH", "trade_link": "https://www.tradingview.com/x/wke7IIzp/", "liq_link": "https://www.tradingview.com/x/nfdiXv9R/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1779620836689, "luna": "MAY", "ziua": "Marti", "data": "19.05.2026", "ora": "17:02", "sesiune": "15:00-19:00", "rezultat": "LOSE", "liq": "Locala", "setup": "3G", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "", "hl": "LL", "trade_link": "https://www.tradingview.com/x/ajCghhNy/", "liq_link": "https://www.tradingview.com/x/RXbRYYHL/", "news": "GBP CCC", "misc_ses": "Miscarea sesiunii invalidata", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1779620960273, "luna": "MAY", "ziua": "Miercuri", "data": "20.05.2026", "ora": "14:47", "sesiune": "12:00-15:00", "rezultat": "BE", "liq": "Locala", "setup": "TCG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "BE/WIN", "hl": "", "trade_link": "https://www.tradingview.com/x/sFAz6on8/", "liq_link": "https://www.tradingview.com/x/77iqRsNs/", "news": "GBP CPI", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1780131657763, "luna": "MAY", "ziua": "Marti", "data": "26.05.2026", "ora": "17:59", "sesiune": "15:00-19:00", "rezultat": "LOSE", "liq": "Locala", "setup": "OSG", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "", "hl": "LL", "trade_link": "https://www.tradingview.com/x/ZEzSguXi/", "liq_link": "https://www.tradingview.com/x/bHmNpeqO/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1781175556731, "luna": "JUN", "ziua": "Luni", "data": "01.06.2026", "ora": "17:18", "sesiune": "15:00-19:00", "rezultat": "WIN", "liq": "Locala 1", "setup": "OSG", "tip": "BUY", "re": "Nu", "pot": "4.3", "be_type": "", "hl": "PDL", "trade_link": "https://www.tradingview.com/x/9CEyFCfP/", "liq_link": "https://www.tradingview.com/x/H7qdOIVd/", "news": "USD ISM PMI", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1781175655233, "luna": "JUN", "ziua": "Vineri", "data": "05.06.2026", "ora": "13:44", "sesiune": "12:00-15:00", "rezultat": "WIN", "liq": "Majora", "setup": "OSG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "LL", "trade_link": "https://www.tradingview.com/x/h9Iqj7WU/", "liq_link": "https://www.tradingview.com/x/8PYCy81F/", "news": "NFP", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782809029405, "luna": "JUN", "ziua": "Miercuri", "data": "24.06.2026", "ora": "10:23", "sesiune": "10:00-12:00", "rezultat": "BE", "liq": "LOD + Locala", "setup": "OSG", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "BE/LOSE", "hl": "PDL", "trade_link": "https://www.tradingview.com/x/eCRM8VGx/", "liq_link": "https://www.tradingview.com/x/fUMTexwj/", "news": "", "misc_ses": "", "setup_urat": "", "liq_dist": "", "risk": "Mediu", "alocare": "1%"}, {"id": 1782809129617, "luna": "JUN", "ziua": "Miercuri", "data": "24.06.2026", "ora": "14:34", "sesiune": "12:00-15:00", "rezultat": "LOSE", "liq": "Majora A++", "setup": "OSG", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "", "hl": "PWL", "trade_link": "https://www.tradingview.com/x/jS6Y05E1/", "liq_link": "https://www.tradingview.com/x/V8RKQgkR/", "news": "", "misc_ses": "", "setup_urat": "", "liq_dist": "", "risk": "Mic", "alocare": "1%"}, {"id": 1782809204270, "luna": "JUN", "ziua": "Vineri", "data": "26.06.2026", "ora": "12:26", "sesiune": "12:00-15:00", "rezultat": "LOSE", "liq": "Locala 1", "setup": "3G", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "PDH", "trade_link": "https://www.tradingview.com/x/MuCwnGDf/", "liq_link": "https://www.tradingview.com/x/TGQOXFJc/", "news": "", "misc_ses": "", "setup_urat": "", "liq_dist": "", "risk": "Mediu", "alocare": "1%"}, {"id": 1782903018925, "luna": "JUN", "ziua": "Luni", "data": "29.06.2026", "ora": "14:52", "sesiune": "12:00-15:00", "rezultat": "LOSE", "liq": "Locala 1", "setup": "3G", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "PDH", "trade_link": "https://www.tradingview.com/x/IrpIFcs8/", "liq_link": "https://www.tradingview.com/x/MzRvRKFf/", "news": "", "misc_ses": "", "setup_urat": "", "liq_dist": "", "risk": "Mediu", "alocare": "1%"}, {"id": 1782903019925, "luna": "JUL", "ziua": "Miercuri", "data": "08.07.2026", "ora": "17:00", "sesiune": "15:00-19:00", "rezultat": "BE", "liq": "Locala", "setup": "3CG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "BE/LOSE", "hl": "LH", "trade_link": "https://www.tradingview.com/x/iGCT3c97/", "liq_link": "https://www.tradingview.com/x/cPhNtYkG/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903020925, "luna": "JUL", "ziua": "Miercuri", "data": "15.07.2026", "ora": "18:19", "sesiune": "15:00-19:00", "rezultat": "LOSE", "liq": "Majora", "setup": "TCG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "PWH", "trade_link": "https://www.tradingview.com/x/LFSRc7tZ/", "liq_link": "https://www.tradingview.com/x/Unm4mssj/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903021925, "luna": "JUL", "ziua": "Luni", "data": "20.07.2026", "ora": "10:56", "sesiune": "10:00-12:00", "rezultat": "WIN", "liq": "HOD + Locala", "setup": "OSG", "tip": "SELL", "re": "Nu", "pot": "2.4", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/f94KzqSV/", "liq_link": "https://www.tradingview.com/x/VdUVyJvi/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903022925, "luna": "JUL", "ziua": "Marti", "data": "21.07.2026", "ora": "15:49", "sesiune": "15:00-19:00", "rezultat": "LOSE", "liq": "Locala 1", "setup": "OSG", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "", "hl": "PDL", "trade_link": "https://www.tradingview.com/x/320wFQme/", "liq_link": "https://www.tradingview.com/x/320wFQme/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903023925, "luna": "JUL", "ziua": "Miercuri", "data": "22.07.2026", "ora": "16:05", "sesiune": "15:00-19:00", "rezultat": "WIN", "liq": "Locala 1", "setup": "TCG", "tip": "BUY", "re": "Nu", "pot": "2.5", "be_type": "", "hl": "PDL", "trade_link": "https://www.tradingview.com/x/0hw7DBGy/", "liq_link": "https://www.tradingview.com/x/IHCiMAdZ/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903024925, "luna": "JUL", "ziua": "Joi", "data": "23.07.2026", "ora": "11:13", "sesiune": "10:00-12:00", "rezultat": "LOSE", "liq": "Locala / LOD", "setup": "TCG", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/VDP5vQxL/", "liq_link": "https://www.tradingview.com/x/mEQV4r92/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903025925, "luna": "JUL", "ziua": "Joi", "data": "23.07.2026", "ora": "11:59", "sesiune": "10:00-12:00", "rezultat": "LOSE", "liq": "LOD + Locala", "setup": "TCG", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/bueuNSQv/", "liq_link": "https://www.tradingview.com/x/WPOayyG9/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903026925, "luna": "JUL", "ziua": "Joi", "data": "23.07.2026", "ora": "15:00", "sesiune": "12:00-15:00", "rezultat": "LOSE", "liq": "Majora", "setup": "TG", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "", "hl": "PWL", "trade_link": "https://www.tradingview.com/x/XUKxTwgO/", "liq_link": "https://www.tradingview.com/x/ZSycn8U6/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903027925, "luna": "JUL", "ziua": "Joi", "data": "23.07.2026", "ora": "17:17", "sesiune": "15:00-19:00", "rezultat": "LOSE", "liq": "Majora", "setup": "OSG", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/BdRFDzun/", "liq_link": "https://www.tradingview.com/x/z68Ljg31/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903028925, "luna": "JUL", "ziua": "Vineri", "data": "24.07.2026", "ora": "10:52", "sesiune": "10:00-12:00", "rezultat": "WIN", "liq": "Locala / HOD", "setup": "3G", "tip": "SELL", "re": "Nu", "pot": "2.5", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/rjx4L3yD/", "liq_link": "https://www.tradingview.com/x/4rROhi6x/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903029925, "luna": "JUL", "ziua": "Vineri", "data": "24.07.2026", "ora": "16:22", "sesiune": "15:00-19:00", "rezultat": "WIN", "liq": "Locala", "setup": "TCG", "tip": "BUY", "re": "Nu", "pot": "5.8", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/zXg3vmTV/", "liq_link": "https://www.tradingview.com/x/cocpiFx0/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903030925, "luna": "JUL", "ziua": "Luni", "data": "27.07.2026", "ora": "15:54", "sesiune": "15:00-19:00", "rezultat": "LOSE", "liq": "Locala 1", "setup": "3G", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "BE/LOSE", "hl": "PDL", "trade_link": "https://www.tradingview.com/x/FuiMsZdl/", "liq_link": "https://www.tradingview.com/x/yhOCpW67/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903031925, "luna": "JUL", "ziua": "Marti", "data": "28.07.2026", "ora": "13:26", "sesiune": "12:00-15:00", "rezultat": "WIN", "liq": "Locala", "setup": "TCG", "tip": "BUY", "re": "Nu", "pot": "5.5", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/fRk1PYt3/", "liq_link": "https://www.tradingview.com/x/h8ozJPxk/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903032925, "luna": "AUG", "ziua": "Marti", "data": "04.08.2026", "ora": "11:16", "sesiune": "10:00-12:00", "rezultat": "LOSE", "liq": "HOD + Locala", "setup": "OSG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/OljIt9Zg/", "liq_link": "https://www.tradingview.com/x/cWcb7yOh/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903033925, "luna": "AUG", "ziua": "Joi", "data": "06.08.2026", "ora": "17:43", "sesiune": "15:00-19:00", "rezultat": "WIN", "liq": "Locala 1", "setup": "OSG", "tip": "SELL", "re": "Nu", "pot": "2.1", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/AXwICk2o/", "liq_link": "https://www.tradingview.com/x/yIRtxYBB/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903034925, "luna": "AUG", "ziua": "Vineri", "data": "07.08.2026", "ora": "16:07", "sesiune": "15:00-19:00", "rezultat": "BE", "liq": "Majora", "setup": "OSG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/5Mqfn3K6/", "liq_link": "https://www.tradingview.com/x/3v4Vy4BG/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903035925, "luna": "AUG", "ziua": "Luni", "data": "10.08.2026", "ora": "11:06", "sesiune": "10:00-12:00", "rezultat": "LOSE", "liq": "Locala / HOD", "setup": "OSG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/LYD4XsxC/", "liq_link": "https://www.tradingview.com/x/X82SZpqM/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903036925, "luna": "AUG", "ziua": "Luni", "data": "10.08.2026", "ora": "11:51", "sesiune": "10:00-12:00", "rezultat": "BE", "liq": "HOD + Locala", "setup": "3G", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "BE/WIN", "hl": "", "trade_link": "https://www.tradingview.com/x/qYXcQ6rd/", "liq_link": "https://www.tradingview.com/x/C8Bzg9OQ/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903037925, "luna": "AUG", "ziua": "Luni", "data": "10.08.2026", "ora": "16:32", "sesiune": "12:00-15:00", "rezultat": "LOSE", "liq": "Locala", "setup": "OSG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "LH", "trade_link": "https://www.tradingview.com/x/eP5yePug/", "liq_link": "https://www.tradingview.com/x/ayw54VGd/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903038925, "luna": "AUG", "ziua": "Miercuri", "data": "12.08.2026", "ora": "13:11", "sesiune": "12:00-15:00", "rezultat": "LOSE", "liq": "Locala 1", "setup": "3G", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "PDH", "trade_link": "https://www.tradingview.com/x/DS5cAKQ1/", "liq_link": "https://www.tradingview.com/x/foGoa2im/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903039925, "luna": "AUG", "ziua": "Vineri", "data": "14.08.2026", "ora": "16:56", "sesiune": "15:00-19:00", "rezultat": "WIN", "liq": "Majora A++", "setup": "TCG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/bMmlbsd6/", "liq_link": "https://www.tradingview.com/x/xv9MEx9E/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903040925, "luna": "AUG", "ziua": "Luni", "data": "17.08.2026", "ora": "11:15", "sesiune": "10:00-12:00", "rezultat": "WIN", "liq": "HOD + Locala", "setup": "3G", "tip": "SELL", "re": "Nu", "pot": "2.8", "be_type": "", "hl": "PWH", "trade_link": "https://www.tradingview.com/x/hOzPvlz5/", "liq_link": "https://www.tradingview.com/x/3NBIM2jU/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903041925, "luna": "AUG", "ziua": "Miercuri", "data": "19.08.2026", "ora": "17:24", "sesiune": "15:00-19:00", "rezultat": "LOSE", "liq": "Locala 2", "setup": "OSG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/7b6fcyYZ/", "liq_link": "https://www.tradingview.com/x/3WwXm4po/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903042925, "luna": "AUG", "ziua": "Miercuri", "data": "19.08.2026", "ora": "17:52", "sesiune": "15:00-19:00", "rezultat": "BE", "liq": "Locala 2", "setup": "TG", "tip": "SELL", "re": "Da", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/bIoVlHFv/", "liq_link": "https://www.tradingview.com/x/3WwXm4po/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903043925, "luna": "AUG", "ziua": "Joi", "data": "20.08.2026", "ora": "12:06", "sesiune": "12:00-15:00", "rezultat": "LOSE", "liq": "Locala 1", "setup": "TCG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "PDH", "trade_link": "https://www.tradingview.com/x/gnY9grJx/", "liq_link": "https://www.tradingview.com/x/q524xUnX/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903044925, "luna": "AUG", "ziua": "Vineri", "data": "21.08.2026", "ora": "18:37", "sesiune": "15:00-19:00", "rezultat": "BE", "liq": "Locala 1", "setup": "OSG", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/2q0pGQwH/", "liq_link": "https://www.tradingview.com/x/1NaQhLA0/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903045925, "luna": "AUG", "ziua": "Luni", "data": "24.08.2026", "ora": "10:56", "sesiune": "10:00-12:00", "rezultat": "LOSE", "liq": "Locala / LOD", "setup": "OSG", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/pvRx6GOJ/", "liq_link": "https://www.tradingview.com/x/HNfD6qJu/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mare", "alocare": "1%", "liq_dist": ""}, {"id": 1782903046925, "luna": "AUG", "ziua": "Marti", "data": "25.08.2026", "ora": "16:19", "sesiune": "15:00-19:00", "rezultat": "WIN", "liq": "Locala 1", "setup": "TG", "tip": "SELL", "re": "Nu", "pot": "2.2", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/ugtxLmNq/", "liq_link": "https://www.tradingview.com/x/f4UN42tY/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903047925, "luna": "AUG", "ziua": "Miercuri", "data": "26.08.2026", "ora": "13:40", "sesiune": "12:00-15:00", "rezultat": "WIN", "liq": "Majora", "setup": "OSG", "tip": "BUY", "re": "Nu", "pot": "2.7", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/9wOBQ01o/", "liq_link": "https://www.tradingview.com/x/9YRRgn2t/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903048925, "luna": "AUG", "ziua": "Joi", "data": "27.08.2026", "ora": "12:12", "sesiune": "12:00-15:00", "rezultat": "LOSE", "liq": "Locala 1", "setup": "TG", "tip": "BUY", "re": "Nu", "pot": "-", "be_type": "", "hl": "PDL", "trade_link": "https://www.tradingview.com/x/1YzSVZeD/", "liq_link": "https://www.tradingview.com/x/nOvuuY3z/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}, {"id": 1782903049925, "luna": "AUG", "ziua": "Joi", "data": "27.08.2026", "ora": "16:52", "sesiune": "15:00-19:00", "rezultat": "WIN", "liq": "Locala", "setup": "TG", "tip": "SELL", "re": "Nu", "pot": "-", "be_type": "", "hl": "", "trade_link": "https://www.tradingview.com/x/2WkOaRNi/", "liq_link": "https://www.tradingview.com/x/nOvuuY3z/", "news": "", "misc_ses": "", "setup_urat": "", "risk": "Mediu", "alocare": "1%", "liq_dist": ""}];
 let pendingImport = null;
 let bkView = 'session';
 let charts = {};
@@ -3210,8 +3224,6 @@ renderList(); renderStats();
   // --- state ---
   const ACCOUNTS = [
     { id:'inst',   label:'Institutional Funding', balance:50000, currency:'USD', cls:'inst' },
-    { id:'ftmo80', label:'FTMO',                  balance:80000, currency:'EUR', cls:'ftmo80' },
-    { id:'ftmo10', label:'FTMO',                  balance:10000, currency:'EUR', cls:'ftmo10' },
   ];
 
   function getEurUsd(){ return parseFloat(document.getElementById('c-eurusd').value)||1.09; }

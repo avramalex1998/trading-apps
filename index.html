@@ -121,8 +121,7 @@ table.ttbl tr:hover td{background:var(--bg3)}
 .calc-card{background:var(--bg3);border:1px solid var(--border2);border-radius:10px;overflow:hidden;position:relative}
 .calc-card-accent{height:2px;width:100%}
 .calc-card.inst .calc-card-accent{background:linear-gradient(90deg,var(--win),transparent)}
-.calc-card.ftmo80 .calc-card-accent{background:linear-gradient(90deg,var(--blue),transparent)}
-.calc-card.ftmo10 .calc-card-accent{background:linear-gradient(90deg,var(--blue),transparent)}
+
 .calc-card-header{display:flex;align-items:center;justify-content:space-between;padding:6px 12px 5px;border-bottom:1px solid var(--border)}
 .calc-card-name{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3);font-family:'JetBrains Mono',monospace}
 .calc-card-balance{font-size:10px;color:var(--text2);font-family:'JetBrains Mono',monospace}
@@ -133,8 +132,7 @@ table.ttbl tr:hover td{background:var(--bg3)}
 .calc-col-label{font-size:8px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-bottom:1px}
 .calc-card-lot{font-size:24px;font-weight:800;font-family:'JetBrains Mono',monospace;letter-spacing:-1px;line-height:1}
 .calc-card.inst .calc-card-lot{color:var(--win)}
-.calc-card.ftmo80 .calc-card-lot{color:var(--blue)}
-.calc-card.ftmo10 .calc-card-lot{color:var(--blue)}
+
 .calc-card-lot-net{font-size:24px;font-weight:800;font-family:'JetBrains Mono',monospace;letter-spacing:-1px;line-height:1;color:var(--text)}
 .calc-card-sub{font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-top:0}
 .calc-divider{height:1px;background:var(--border);margin:3px 0}
@@ -418,7 +416,7 @@ table.bktbl tr:last-child td{border-bottom:none}
       <div class="flbl">Știri <span style="font-size:8px;color:var(--text3)">(opțional)</span></div>
       <div class="ac-wrap">
         <input type="text" id="f-news-inp" autocomplete="off" placeholder="Fără știri..." oninput="csFilter('f-news')" onkeydown="csKeyInp(event,'f-news')" onfocus="csFilter('f-news')" onblur="setTimeout(()=&gt;csClose('f-news'),150)">
-        <div id="cs-news" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="— Fără știri —" onmousedown="csPick('f-news','','— Fără știri —'); event.preventDefault()">— Fără știri —</div><div class="ac-item" data-val="FOMC ❌" data-label="FOMC ❌" onmousedown="csPick('f-news','FOMC ❌','FOMC ❌'); event.preventDefault()">FOMC ❌</div><div class="ac-item" data-val="FOMC MM" data-label="FOMC MM" onmousedown="csPick('f-news','FOMC MM','FOMC MM'); event.preventDefault()">FOMC MM</div><div class="ac-item" data-val="GBP CCC" data-label="GBP CCC" onmousedown="csPick('f-news','GBP CCC','GBP CCC'); event.preventDefault()">GBP CCC</div><div class="ac-item" data-val="GBP CPI" data-label="GBP CPI" onmousedown="csPick('f-news','GBP CPI','GBP CPI'); event.preventDefault()">GBP CPI</div><div class="ac-item" data-val="GBP GDP ❌" data-label="GBP GDP ❌" onmousedown="csPick('f-news','GBP GDP ❌','GBP GDP ❌'); event.preventDefault()">GBP GDP ❌</div><div class="ac-item" data-val="GBP MON PRH ❌" data-label="GBP MON PRH ❌" onmousedown="csPick('f-news','GBP MON PRH ❌','GBP MON PRH ❌'); event.preventDefault()">GBP MON PRH ❌</div><div class="ac-item" data-val="GBP AFS ❌" data-label="GBP AFS ❌" onmousedown="csPick('f-news','GBP AFS ❌','GBP AFS ❌'); event.preventDefault()">GBP AFS ❌</div><div class="ac-item" data-val="GBP PMI" data-label="GBP PMI" onmousedown="csPick('f-news','GBP PMI','GBP PMI'); event.preventDefault()">GBP PMI</div><div class="ac-item" data-val="GBP RETAIL S" data-label="GBP RETAIL S" onmousedown="csPick('f-news','GBP RETAIL S','GBP RETAIL S'); event.preventDefault()">GBP RETAIL S</div><div class="ac-item" data-val="USD ISM PMI" data-label="USD ISM PMI" onmousedown="csPick('f-news','USD ISM PMI','USD ISM PMI'); event.preventDefault()">USD ISM PMI</div><div class="ac-item" data-val="USD JOLTS JOB" data-label="USD JOLTS JOB" onmousedown="csPick('f-news','USD JOLTS JOB','USD JOLTS JOB'); event.preventDefault()">USD JOLTS JOB</div><div class="ac-item" data-val="NFP" data-label="NFP" onmousedown="csPick('f-news','NFP','NFP'); event.preventDefault()">NFP</div><div class="ac-item" data-val="UK BH ❌" data-label="UK BH ❌" onmousedown="csPick('f-news','UK BH ❌','UK BH ❌'); event.preventDefault()">UK BH ❌</div><div class="ac-item" data-val="UK RATE ❌" data-label="UK RATE ❌" onmousedown="csPick('f-news','UK RATE ❌','UK RATE ❌'); event.preventDefault()">UK RATE ❌</div><div class="ac-item" data-val="USD UNEMP. CLAIMS" data-label="USD UNEMP. CLAIMS" onmousedown="csPick('f-news','USD UNEMP. CLAIMS','USD UNEMP. CLAIMS'); event.preventDefault()">USD UNEMP. CLAIMS</div><div class="ac-item" data-val="USA BH ❌" data-label="USA BH ❌" onmousedown="csPick('f-news','USA BH ❌','USA BH ❌'); event.preventDefault()">USA BH ❌</div><div class="ac-item" data-val="USD CPI" data-label="USD CPI" onmousedown="csPick('f-news','USD CPI','USD CPI'); event.preventDefault()">USD CPI</div><div class="ac-item" data-val="USD CORE PCE" data-label="USD CORE PCE" onmousedown="csPick('f-news','USD CORE PCE','USD CORE PCE'); event.preventDefault()">USD CORE PCE</div><div class="ac-item" data-val="USD FINAL GDP ❌" data-label="USD FINAL GDP ❌" onmousedown="csPick('f-news','USD FINAL GDP ❌','USD FINAL GDP ❌'); event.preventDefault()">USD FINAL GDP ❌</div><div class="ac-item" data-val="USD ADP NFEC" data-label="USD ADP NFEC" onmousedown="csPick('f-news','USD ADP NFEC','USD ADP NFEC'); event.preventDefault()">USD ADP NFEC</div><div class="ac-item" data-val="USD ADVANCE GDP" data-label="USD ADVANCE GDP" onmousedown="csPick('f-news','USD ADVANCE GDP','USD ADVANCE GDP'); event.preventDefault()">USD ADVANCE GDP</div><div class="ac-item" data-val="USD PMI" data-label="USD PMI" onmousedown="csPick('f-news','USD PMI','USD PMI'); event.preventDefault()">USD PMI</div><div class="ac-item" data-val="USD PPI" data-label="USD PPI" onmousedown="csPick('f-news','USD PPI','USD PPI'); event.preventDefault()">USD PPI</div><div class="ac-item" data-val="USD RETAIL S ❌" data-label="USD RETAIL S ❌" onmousedown="csPick('f-news','USD RETAIL S ❌','USD RETAIL S ❌'); event.preventDefault()">USD RETAIL S ❌</div></div>
+        <div id="cs-news" class="ac-dropdown"><div class="ac-item active" data-val="" data-label="— Fără știri —" onmousedown="csPick('f-news','','— Fără știri —'); event.preventDefault()">— Fără știri —</div><div class="ac-item" data-val="FOMC ❌" data-label="FOMC ❌" onmousedown="csPick('f-news','FOMC ❌','FOMC ❌'); event.preventDefault()">FOMC ❌</div><div class="ac-item" data-val="FOMC MM" data-label="FOMC MM" onmousedown="csPick('f-news','FOMC MM','FOMC MM'); event.preventDefault()">FOMC MM</div><div class="ac-item" data-val="GBP CCC" data-label="GBP CCC" onmousedown="csPick('f-news','GBP CCC','GBP CCC'); event.preventDefault()">GBP CCC</div><div class="ac-item" data-val="GBP CPI" data-label="GBP CPI" onmousedown="csPick('f-news','GBP CPI','GBP CPI'); event.preventDefault()">GBP CPI</div><div class="ac-item" data-val="GBP GDP ❌" data-label="GBP GDP ❌" onmousedown="csPick('f-news','GBP GDP ❌','GBP GDP ❌'); event.preventDefault()">GBP GDP ❌</div><div class="ac-item" data-val="GBP MON PRH ❌" data-label="GBP MON PRH ❌" onmousedown="csPick('f-news','GBP MON PRH ❌','GBP MON PRH ❌'); event.preventDefault()">GBP MON PRH ❌</div><div class="ac-item" data-val="GBP AFS ❌" data-label="GBP AFS ❌" onmousedown="csPick('f-news','GBP AFS ❌','GBP AFS ❌'); event.preventDefault()">GBP AFS ❌</div><div class="ac-item" data-val="GBP PMI" data-label="GBP PMI" onmousedown="csPick('f-news','GBP PMI','GBP PMI'); event.preventDefault()">GBP PMI</div><div class="ac-item" data-val="GBP RETAIL S" data-label="GBP RETAIL S" onmousedown="csPick('f-news','GBP RETAIL S','GBP RETAIL S'); event.preventDefault()">GBP RETAIL S</div><div class="ac-item" data-val="USD ISM PMI" data-label="USD ISM PMI" onmousedown="csPick('f-news','USD ISM PMI','USD ISM PMI'); event.preventDefault()">USD ISM PMI</div><div class="ac-item" data-val="USD JOLTS JOB" data-label="USD JOLTS JOB" onmousedown="csPick('f-news','USD JOLTS JOB','USD JOLTS JOB'); event.preventDefault()">USD JOLTS JOB</div><div class="ac-item" data-val="NFP" data-label="NFP" onmousedown="csPick('f-news','NFP','NFP'); event.preventDefault()">NFP</div><div class="ac-item" data-val="UK BH ❌" data-label="UK BH ❌" onmousedown="csPick('f-news','UK BH ❌','UK BH ❌'); event.preventDefault()">UK BH ❌</div><div class="ac-item" data-val="UK RATE ❌" data-label="UK RATE ❌" onmousedown="csPick('f-news','UK RATE ❌','UK RATE ❌'); event.preventDefault()">UK RATE ❌</div><div class="ac-item" data-val="USD UNEMP. CLAIMS" data-label="USD UNEMP. CLAIMS" onmousedown="csPick('f-news','USD UNEMP. CLAIMS','USD UNEMP. CLAIMS'); event.preventDefault()">USD UNEMP. CLAIMS</div><div class="ac-item" data-val="USA BH ❌" data-label="USA BH ❌" onmousedown="csPick('f-news','USA BH ❌','USA BH ❌'); event.preventDefault()">USA BH ❌</div><div class="ac-item" data-val="USD CPI" data-label="USD CPI" onmousedown="csPick('f-news','USD CPI','USD CPI'); event.preventDefault()">USD CPI</div><div class="ac-item" data-val="USD CORE PCE" data-label="USD CORE PCE" onmousedown="csPick('f-news','USD CORE PCE','USD CORE PCE'); event.preventDefault()">USD CORE PCE</div><div class="ac-item" data-val="USD FINAL GDP ❌" data-label="USD FINAL GDP ❌" onmousedown="csPick('f-news','USD FINAL GDP ❌','USD FINAL GDP ❌'); event.preventDefault()">USD FINAL GDP ❌</div><div class="ac-item" data-val="USD ADP NFEC" data-label="USD ADP NFEC" onmousedown="csPick('f-news','USD ADP NFEC','USD ADP NFEC'); event.preventDefault()">USD ADP NFEC</div><div class="ac-item" data-val="USD ADVANCE GDP" data-label="USD ADVANCE GDP" onmousedown="csPick('f-news','USD ADVANCE GDP','USD ADVANCE GDP'); event.preventDefault()">USD ADVANCE GDP</div><div class="ac-item" data-val="USD PMI" data-label="USD PMI" onmousedown="csPick('f-news','USD PMI','USD PMI'); event.preventDefault()">USD PMI</div><div class="ac-item" data-val="USD PPI ❌" data-label="USD PPI ❌" onmousedown="csPick('f-news','USD PPI ❌','USD PPI ❌'); event.preventDefault()">USD PPI ❌</div><div class="ac-item" data-val="USD RETAIL S ❌" data-label="USD RETAIL S ❌" onmousedown="csPick('f-news','USD RETAIL S ❌','USD RETAIL S ❌'); event.preventDefault()">USD RETAIL S ❌</div></div>
         <select id="f-news" style="display:none">
           <option value="">— Fără știri —</option>
           <option value="FOMC ❌">FOMC ❌</option>
@@ -443,7 +441,7 @@ table.bktbl tr:last-child td{border-bottom:none}
           <option value="USD ADP NFEC">USD ADP NFEC</option>
           <option value="USD ADVANCE GDP">USD ADVANCE GDP</option>
           <option value="USD PMI">USD PMI</option>
-          <option value="USD PPI">USD PPI</option>
+          <option value="USD PPI ❌">USD PPI ❌</option>
           <option value="USD RETAIL S ❌">USD RETAIL S ❌</option>
         </select>
       </div>
@@ -9948,6 +9946,10 @@ table.bktbl tr:last-child td{border-bottom:none}
       <option value="all">Zi</option>
       <option>Luni</option><option>Marti</option><option>Miercuri</option><option>Joi</option><option>Vineri</option>
     </select>
+    <select class="fsel" id="f-datacal" onchange="renderStats()">
+      <option value="all">Data</option>
+      <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+    </select>
     <select class="fsel" id="f-tip" onchange="renderStats()">
       <option value="all">Buy / Sell</option>
       <option>BUY</option><option>SELL</option>
@@ -10002,7 +10004,7 @@ table.bktbl tr:last-child td{border-bottom:none}
       <option value="USD ADP NFEC">USD ADP NFEC</option>
       <option value="USD ADVANCE GDP">USD ADVANCE GDP</option>
       <option value="USD PMI">USD PMI</option>
-      <option value="USD PPI">USD PPI</option>
+      <option value="USD PPI ❌">USD PPI ❌</option>
       <option value="USD RETAIL S ❌">USD RETAIL S ❌</option>
     </select>
     <select class="fsel" id="f-misc-ses-filter" onchange="renderStats()">
@@ -10037,323 +10039,239 @@ table.bktbl tr:last-child td{border-bottom:none}
       <option value="10+p">10+p</option>
     </select>
     <button class="freset" onclick="resetFilters()">✕ Reset</button>
-    <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)" id="filter-info">520 trades</span>
+    <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)" id="filter-info">12 / 520 trades filtrate</span>
   </div>
 
 
   <div class="scards">
-    <div class="sc"><div class="sv" id="st-tot">520</div><div class="sl">Total</div></div>
-    <div class="sc"><div class="sv" style="color:var(--win)" id="st-w">234</div><div class="sl">WIN</div></div>
-    <div class="sc"><div class="sv" style="color:var(--lose)" id="st-l">212</div><div class="sl">LOSE</div></div>
-    <div class="sc"><div class="sv" style="color:var(--be)" id="st-be">74</div><div class="sl">BE</div></div>
-    <div class="sc"><div class="sv" id="st-wr" style="color: rgb(74, 222, 128);">52.47%</div><div class="sl">WR %</div></div>
-    <div class="sc"><div class="sv" id="st-net" style="color: var(--win);">+256R</div><div class="sl">NET RR</div></div>
-    <div class="sc"><div class="sv" id="st-exp" style="color: var(--win);">+0.57R</div><div class="sl">E/trade</div></div>
-  <div class="sc"><div class="sv" id="st-pf" style="color: var(--win);">2.21</div><div class="sl">Profit Factor</div></div>
-  <div class="sc" id="edge-score-card" title="WR 52.5% · E/trade +0.57R · MaxLose 9 — Edge solid ✓">
-    <div class="sv" id="st-edge" style="font-size: 14px; color: var(--win);">80 A</div>
+    <div class="sc"><div class="sv" id="st-tot">12</div><div class="sl">Total</div></div>
+    <div class="sc"><div class="sv" style="color:var(--win)" id="st-w">3</div><div class="sl">WIN</div></div>
+    <div class="sc"><div class="sv" style="color:var(--lose)" id="st-l">6</div><div class="sl">LOSE</div></div>
+    <div class="sc"><div class="sv" style="color:var(--be)" id="st-be">3</div><div class="sl">BE</div></div>
+    <div class="sc"><div class="sv" id="st-wr" style="color: rgb(248, 113, 113);">33.33%</div><div class="sl">WR %</div></div>
+    <div class="sc"><div class="sv" id="st-net" style="color: var(--text);">+0R</div><div class="sl">NET RR</div></div>
+    <div class="sc"><div class="sv" id="st-exp" style="color: var(--text);">+0.00R</div><div class="sl">E/trade</div></div>
+  <div class="sc"><div class="sv" id="st-pf" style="color: var(--lose);">1.00</div><div class="sl">Profit Factor</div></div>
+  <div class="sc" id="edge-score-card" title="Prea puțin date">
+    <div class="sv" id="st-edge" style="font-size: 14px; color: var(--lose);">—</div>
     <div class="sl">Edge Score</div>
-    <div class="score-bar-wrap"><div id="edge-bar" style="height: 100%; border-radius: 3px; width: 80%; background: var(--win); transition: width 0.4s;"></div></div>
+    <div class="score-bar-wrap"><div id="edge-bar" style="height: 100%; border-radius: 3px; width: 0%; background: var(--win); transition: width 0.4s;"></div></div>
   </div>
 </div>
 
   <!-- ROW: STREAK + WR CHARTS -->
   <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:10px">
-    <div class="cbox">
-      <div class="ctitle">Streak Tracker</div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px" id="streak-cards"><div class="streak-sc"><div class="streak-val" style="color:var(--win)">17</div><div class="streak-lbl">Max WIN streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--lose)">9</div><div class="streak-lbl">Max LOSE streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--win)">1</div><div class="streak-lbl">Streak WIN curent</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--text2)">446</div><div class="streak-lbl">Total W/L trades</div></div></div>
+    <div class="cbox" data-collapsible-init="1">
+      <div class="ctitle" style="cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;">Streak Tracker<span class="cbox-chevron" style="font-size: 11px; color: var(--text3); transition: transform 0.2s; margin-left: 8px; flex-shrink: 0;">▾</span></div><div class="cbox-body">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px" id="streak-cards"><div class="streak-sc"><div class="streak-val" style="color:var(--win)">1</div><div class="streak-lbl">Max WIN streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--lose)">3</div><div class="streak-lbl">Max LOSE streak</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--win)">1</div><div class="streak-lbl">Streak WIN curent</div></div><div class="streak-sc"><div class="streak-val" style="color:var(--text2)">9</div><div class="streak-lbl">Total W/L trades</div></div></div>
       <div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace" id="current-streak-label">↑ 1 WIN consecutiv la curent</div>
-    </div>
-    <div class="cbox"><div class="ctitle">WR Sesiune</div><div class="cwrap"><canvas id="ch-ses" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div>
-    <div class="cbox"><div class="ctitle">WR Setup</div><div class="cwrap"><canvas id="ch-setup" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div>
-    <div class="cbox"><div class="ctitle">WR Zi</div><div class="cwrap"><canvas id="ch-day" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div>
+    </div></div>
+    <div class="cbox" data-collapsible-init="1"><div class="ctitle" style="cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;">WR Sesiune<span class="cbox-chevron" style="font-size: 11px; color: var(--text3); transition: transform 0.2s; margin-left: 8px; flex-shrink: 0;">▾</span></div><div class="cbox-body"><div class="cwrap"><canvas id="ch-ses" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div></div>
+    <div class="cbox" data-collapsible-init="1"><div class="ctitle" style="cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;">WR Setup<span class="cbox-chevron" style="font-size: 11px; color: var(--text3); transition: transform 0.2s; margin-left: 8px; flex-shrink: 0;">▾</span></div><div class="cbox-body"><div class="cwrap"><canvas id="ch-setup" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div></div>
+    <div class="cbox" data-collapsible-init="1"><div class="ctitle" style="cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;">WR Zi<span class="cbox-chevron" style="font-size: 11px; color: var(--text3); transition: transform 0.2s; margin-left: 8px; flex-shrink: 0;">▾</span></div><div class="cbox-body"><div class="cwrap"><canvas id="ch-day" style="box-sizing: border-box; display: block; height: 150px; width: 290px;" width="580" height="300"></canvas></div></div></div>
   </div>
 
   <!-- ZI × SESIUNE HEATMAP -->
-  <div class="cbox">
-    <div class="ctitle">Heatmap WR% — Zi × Sesiune</div>
-    <div id="hm-day-ses" style="margin-top:6px"><table class="hm-table"><thead><tr><th></th><th>10-12</th><th>12-15</th><th>15-19</th><th>Zi total</th></tr></thead><tbody><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Luni</th><td style="background:rgba(0,230,118,.35);color:#00e676" title="Luni × 10:00-12:00: 33 trades, 63.6%">64%
-n=33</td><td style="background:rgba(74,222,128,.2);color:#4ade80" title="Luni × 12:00-15:00: 30 trades, 56.7%">57%
-n=30</td><td style="background:rgba(251,191,36,.18);color:#fbbf24" title="Luni × 15:00-19:00: 34 trades, 44.1%">44%
-n=34</td><td style="background:rgba(74,222,128,.2);color:#4ade80;font-weight:800">55%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Marti</th><td style="background:rgba(248,113,113,.18);color:#f87171" title="Marti × 10:00-12:00: 43 trades, 37.2%">37%
-n=43</td><td style="background:rgba(74,222,128,.2);color:#4ade80" title="Marti × 12:00-15:00: 36 trades, 52.8%">53%
-n=36</td><td style="background:rgba(74,222,128,.2);color:#4ade80" title="Marti × 15:00-19:00: 40 trades, 55.0%">55%
-n=40</td><td style="background:rgba(251,191,36,.18);color:#fbbf24;font-weight:800">48%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Miercuri</th><td style="background:rgba(74,222,128,.2);color:#4ade80" title="Miercuri × 10:00-12:00: 32 trades, 56.3%">56%
-n=32</td><td style="background:rgba(0,230,118,.35);color:#00e676" title="Miercuri × 12:00-15:00: 24 trades, 75.0%">75%
-n=24</td><td style="background:rgba(74,222,128,.2);color:#4ade80" title="Miercuri × 15:00-19:00: 32 trades, 56.3%">56%
-n=32</td><td style="background:rgba(0,230,118,.35);color:#00e676;font-weight:800">61%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Joi</th><td style="background:rgba(74,222,128,.2);color:#4ade80" title="Joi × 10:00-12:00: 30 trades, 56.7%">57%
-n=30</td><td style="background:rgba(0,230,118,.35);color:#00e676" title="Joi × 12:00-15:00: 17 trades, 64.7%">65%
-n=17</td><td style="background:rgba(255,64,64,.3);color:#ff4040" title="Joi × 15:00-19:00: 18 trades, 22.2%">22%
-n=18</td><td style="background:rgba(251,191,36,.18);color:#fbbf24;font-weight:800">49%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Vineri</th><td style="background:rgba(251,191,36,.18);color:#fbbf24" title="Vineri × 10:00-12:00: 36 trades, 47.2%">47%
-n=36</td><td style="background:rgba(74,222,128,.2);color:#4ade80" title="Vineri × 12:00-15:00: 18 trades, 50.0%">50%
-n=18</td><td style="background:rgba(74,222,128,.2);color:#4ade80" title="Vineri × 15:00-19:00: 23 trades, 52.2%">52%
-n=23</td><td style="background:rgba(251,191,36,.18);color:#fbbf24;font-weight:800">49%</td></tr><tr style="border-top:1px solid var(--border2)"><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Total</th><td style="background:rgba(74,222,128,.2);color:#4ade80;font-weight:800">51%</td><td style="background:rgba(74,222,128,.2);color:#4ade80;font-weight:800">59%</td><td style="background:rgba(251,191,36,.18);color:#fbbf24;font-weight:800">48%</td><td></td></tr></tbody></table></div>
-  </div>
+  <div class="cbox" data-collapsible-init="1">
+    <div class="ctitle" style="cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;">Heatmap WR% — Zi × Sesiune<span class="cbox-chevron" style="font-size: 11px; color: var(--text3); transition: transform 0.2s; margin-left: 8px; flex-shrink: 0;">▾</span></div><div class="cbox-body">
+    <div id="hm-day-ses" style="margin-top:6px"><table class="hm-table"><thead><tr><th></th><th>10-12</th><th>12-15</th><th>15-19</th><th>Zi total</th></tr></thead><tbody><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Luni</th><td style="background:var(--bg3);color:var(--text3)" title="Luni × 10:00-12:00: 0 trades, —">—</td><td style="background:rgba(0,230,118,.35);color:#00e676" title="Luni × 12:00-15:00: 1 trades, 100.0%">100%
+n=1</td><td style="background:var(--bg3);color:var(--text3)" title="Luni × 15:00-19:00: 0 trades, —">—</td><td style="background:rgba(0,230,118,.35);color:#00e676;font-weight:800">100%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Marti</th><td style="background:rgba(255,64,64,.3);color:#ff4040" title="Marti × 10:00-12:00: 3 trades, 0.0%">0%
+n=3</td><td style="background:var(--bg3);color:var(--text3)" title="Marti × 12:00-15:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Marti × 15:00-19:00: 0 trades, —">—</td><td style="background:rgba(255,64,64,.3);color:#ff4040;font-weight:800">0%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Miercuri</th><td style="background:rgba(255,64,64,.3);color:#ff4040" title="Miercuri × 10:00-12:00: 1 trades, 0.0%">0%
+n=1</td><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 12:00-15:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Miercuri × 15:00-19:00: 0 trades, —">—</td><td style="background:rgba(255,64,64,.3);color:#ff4040;font-weight:800">0%</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Joi</th><td style="background:var(--bg3);color:var(--text3)" title="Joi × 10:00-12:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Joi × 12:00-15:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3)" title="Joi × 15:00-19:00: 0 trades, —">—</td><td style="background:var(--bg3);color:var(--text3);font-weight:800">—</td></tr><tr><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Vineri</th><td style="background:rgba(0,230,118,.35);color:#00e676" title="Vineri × 10:00-12:00: 1 trades, 100.0%">100%
+n=1</td><td style="background:rgba(255,64,64,.3);color:#ff4040" title="Vineri × 12:00-15:00: 1 trades, 0.0%">0%
+n=1</td><td style="background:rgba(74,222,128,.2);color:#4ade80" title="Vineri × 15:00-19:00: 2 trades, 50.0%">50%
+n=2</td><td style="background:rgba(74,222,128,.2);color:#4ade80;font-weight:800">50%</td></tr><tr style="border-top:1px solid var(--border2)"><th style="text-align:left;font-size:9px;color:var(--text2);padding:4px 8px">Total</th><td style="background:rgba(255,64,64,.3);color:#ff4040;font-weight:800">20%</td><td style="background:rgba(74,222,128,.2);color:#4ade80;font-weight:800">50%</td><td style="background:rgba(74,222,128,.2);color:#4ade80;font-weight:800">50%</td><td></td></tr></tbody></table></div>
+  </div></div>
 
   <!-- BE ANALYSIS CARD -->
-  <div class="cbox" id="be-analysis-card">
-    <div class="ctitle">⚖️ Breakeven Analysis</div>
+  <div class="cbox" id="be-analysis-card" data-collapsible-init="1">
+    <div class="ctitle" style="cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;">⚖️ Breakeven Analysis<span class="cbox-chevron" style="font-size: 11px; color: var(--text3); transition: transform 0.2s; margin-left: 8px; flex-shrink: 0;">▾</span></div><div class="cbox-body">
     <div id="be-analysis-content">
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1.2fr;gap:8px;margin-bottom:10px">
       <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--lose)">26</div>
+        <div style="font-size:20px;font-weight:800;color:var(--lose)">0</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">BE/WIN</div>
-        <div style="font-size:11px;font-weight:700;color:var(--lose);margin-top:2px">41%</div>
+        <div style="font-size:11px;font-weight:700;color:var(--lose);margin-top:2px">0%</div>
       </div>
       <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--lose)">38</div>
+        <div style="font-size:20px;font-weight:800;color:var(--lose)">2</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">BE/LOSE</div>
-        <div style="font-size:11px;font-weight:700;color:var(--lose);margin-top:2px">59%</div>
+        <div style="font-size:11px;font-weight:700;color:var(--lose);margin-top:2px">100%</div>
       </div>
       <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--text)">64</div>
+        <div style="font-size:20px;font-weight:800;color:var(--text)">2</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">Total BE</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:2px">74 înreg.</div>
+        <div style="font-size:11px;color:var(--text3);margin-top:2px">3 înreg.</div>
       </div>
       <div style="background:var(--bg3);border-radius:8px;padding:8px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--win)">+14.0R</div>
+        <div style="font-size:20px;font-weight:800;color:var(--lose)">-2.0R</div>
         <div style="font-size:10px;color:var(--text2);margin-top:2px">Net BE în R</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:2px">26×2.0R − 38×1R</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">0×0R − 2×1R</div>
       </div>
     </div>
     <div>
       <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-bottom:4px">
-        <span style="color:var(--lose)">BE/WIN 41%</span>
-        <span style="color:var(--lose)">BE/LOSE 59%</span>
+        <span style="color:var(--lose)">BE/WIN 0%</span>
+        <span style="color:var(--lose)">BE/LOSE 100%</span>
       </div>
       <div style="background:var(--bg3);border-radius:4px;height:6px;overflow:hidden">
-        <div style="height:100%;width:41%;background:var(--win);border-radius:4px;transition:width .3s"></div>
+        <div style="height:100%;width:0%;background:var(--win);border-radius:4px;transition:width .3s"></div>
       </div>
-      <div style="margin-top:8px;font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace">Dacă toate BE/WIN → WIN: WR ar fi <strong style="color:var(--win)">55.1%</strong> <span style="color:var(--win)">+2.6%</span></div>
+      <div style="margin-top:8px;font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace">Dacă toate BE/WIN → WIN: WR ar fi <strong style="color:var(--be)">33.3%</strong> <span style="color:var(--win)">+0.0%</span></div>
     </div></div>
-  </div>
+  </div></div>
 
   <!-- RR DISTRIBUTION CARD -->
-  <div class="cbox" id="rr-dist-card">
-    <div class="ctitle">📊 Distribuție RR</div>
-    <div id="rr-dist-content"><div style="font-size:10px;color:var(--text2);margin-bottom:10px">Din <b style="color:var(--text)">234 WIN-uri</b> filtrate</div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+  <div class="cbox" id="rr-dist-card" data-collapsible-init="1">
+    <div class="ctitle" style="cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;">📊 Distribuție RR<span class="cbox-chevron" style="font-size: 11px; color: var(--text3); transition: transform 0.2s; margin-left: 8px; flex-shrink: 0;">▾</span></div><div class="cbox-body">
+    <div id="rr-dist-content"><div style="font-size:10px;color:var(--text2);margin-bottom:10px">Din <b style="color:var(--text)">3 WIN-uri</b> filtrate</div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
       <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥2R</div>
       <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
         <div style="height:100%;width:100%;background:var(--win);border-radius:3px;transition:width .3s"></div>
       </div>
-      <div style="width:60px;font-size:11px;font-weight:700;color:var(--win);text-align:right;flex-shrink:0">234 (100%)</div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--win);text-align:right;flex-shrink:0">3 (100%)</div>
     </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
       <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥2.2R</div>
       <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
-        <div style="height:100%;width:83%;background:var(--win);border-radius:3px;transition:width .3s"></div>
+        <div style="height:100%;width:100%;background:var(--win);border-radius:3px;transition:width .3s"></div>
       </div>
-      <div style="width:60px;font-size:11px;font-weight:700;color:var(--win);text-align:right;flex-shrink:0">195 (83%)</div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--win);text-align:right;flex-shrink:0">3 (100%)</div>
     </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
       <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥2.5R</div>
       <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
-        <div style="height:100%;width:69%;background:var(--be);border-radius:3px;transition:width .3s"></div>
+        <div style="height:100%;width:100%;background:var(--win);border-radius:3px;transition:width .3s"></div>
       </div>
-      <div style="width:60px;font-size:11px;font-weight:700;color:var(--be);text-align:right;flex-shrink:0">161 (69%)</div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--win);text-align:right;flex-shrink:0">3 (100%)</div>
     </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
       <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥3R</div>
       <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
-        <div style="height:100%;width:55%;background:var(--be);border-radius:3px;transition:width .3s"></div>
+        <div style="height:100%;width:100%;background:var(--win);border-radius:3px;transition:width .3s"></div>
       </div>
-      <div style="width:60px;font-size:11px;font-weight:700;color:var(--be);text-align:right;flex-shrink:0">129 (55%)</div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--win);text-align:right;flex-shrink:0">3 (100%)</div>
     </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
       <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥4R</div>
       <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
-        <div style="height:100%;width:35%;background:var(--lose);border-radius:3px;transition:width .3s"></div>
+        <div style="height:100%;width:33%;background:var(--lose);border-radius:3px;transition:width .3s"></div>
       </div>
-      <div style="width:60px;font-size:11px;font-weight:700;color:var(--lose);text-align:right;flex-shrink:0">81 (35%)</div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--lose);text-align:right;flex-shrink:0">1 (33%)</div>
     </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
       <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥5R</div>
       <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
-        <div style="height:100%;width:20%;background:var(--lose);border-radius:3px;transition:width .3s"></div>
+        <div style="height:100%;width:0%;background:var(--lose);border-radius:3px;transition:width .3s"></div>
       </div>
-      <div style="width:60px;font-size:11px;font-weight:700;color:var(--lose);text-align:right;flex-shrink:0">47 (20%)</div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--lose);text-align:right;flex-shrink:0">0 (0%)</div>
     </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
       <div style="width:42px;font-size:11px;font-weight:700;color:var(--text2);flex-shrink:0">≥10R</div>
       <div style="flex:1;background:var(--bg3);border-radius:3px;height:14px;overflow:hidden">
-        <div style="height:100%;width:3%;background:var(--lose);border-radius:3px;transition:width .3s"></div>
+        <div style="height:100%;width:0%;background:var(--lose);border-radius:3px;transition:width .3s"></div>
       </div>
-      <div style="width:60px;font-size:11px;font-weight:700;color:var(--lose);text-align:right;flex-shrink:0">7 (3%)</div>
+      <div style="width:60px;font-size:11px;font-weight:700;color:var(--lose);text-align:right;flex-shrink:0">0 (0%)</div>
     </div></div>
-  </div>
+  </div></div>
 
   <!-- ACTIONABLE INSIGHTS -->
-  <div class="insight-card">
-    <div class="ctitle">Actionable Insights</div>
-    <div id="insights-list"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+  <div class="insight-card" data-collapsible-init="1">
+    <div class="ctitle" style="cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;">Actionable Insights<span class="cbox-chevron" style="font-size: 11px; color: var(--text3); transition: transform 0.2s; margin-left: 8px; flex-shrink: 0;">▾</span></div><div class="cbox-body">
+    <div id="insights-list"><div style="font-size:9px;color:var(--text3);letter-spacing:.6px;margin-bottom:8px;text-transform:uppercase">Insights pentru: <strong style="color:var(--text2)"></strong> — 9 trade-uri WIN/LOSE</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
     <div>
       <div style="font-size:9px;font-weight:700;color:var(--win);letter-spacing:.8px;margin-bottom:8px">EXECUTĂ</div>
-      <div class="insight-item insight-pos"><span class="insight-icon">🏆</span><span class="insight-text">Edge confirmat: WR <strong>52.5%</strong>, expectancy <strong>+0.57R</strong>/trade pe 446 trade-uri.</span></div><div class="insight-item insight-pos"><span class="insight-icon">✅</span><span class="insight-text">Execută <strong>3G</strong> — cel mai bun setup: WR <strong>61%</strong>, +0.83R exp. (36 trades)</span></div><div class="insight-item insight-pos"><span class="insight-icon">✅</span><span class="insight-text"><strong>3CG</strong> pe locul 2: WR <strong>57%</strong>, +0.71R exp. (21 trades)</span></div><div class="insight-item insight-pos"><span class="insight-icon">🕐</span><span class="insight-text">Tranzacționează sesiunea <strong>12-15</strong> — WR <strong>59%</strong> pe 125 trades.</span></div><div class="insight-item insight-pos"><span class="insight-icon">📅</span><span class="insight-text"><strong>Miercuri</strong> — cea mai bună zi: WR <strong>61%</strong> pe 88 trades.</span></div>
+      <div class="insight-item insight-pos"><span class="insight-icon">✅</span><span class="insight-text">Setup top: <strong>TCG</strong> — WR <strong>20%</strong>, -0.40R (5 trades)</span></div><div class="insight-item insight-pos"><span class="insight-icon">🕐</span><span class="insight-text">Sesiunea <strong>10-12</strong> — WR <strong>20%</strong> (5 trades)</span></div>
     </div>
     <div>
       <div style="font-size:9px;font-weight:700;color:var(--lose);letter-spacing:.8px;margin-bottom:8px">EVITĂ</div>
-      <div class="insight-item insight-neg"><span class="insight-icon">📉</span><span class="insight-text">Max losing streak: <strong>9</strong> LOSE consecutive. Definește o regulă de pauză după 4 lose-uri.</span></div>
+      <div class="insight-item insight-neg"><span class="insight-icon">🚨</span><span class="insight-text">WR de <strong>33.3%</strong> sub breakeven în această selecție (9 trades).</span></div>
     </div>
   </div></div>
-  </div>
+  </div></div>
 
-  <!-- STREAK WR CARD -->
-  <div class="cbox" id="streak-wr-card">
-    <div class="ctitle">📈 Streak WR</div>
-    <div id="streak-wr-content"><table class="bktbl"><thead><tr><th style="text-align:left">Streak</th><th>Cazuri</th><th>WIN</th><th>LOSE</th><th>WR%</th><th>Diferență</th></tr></thead><tbody><tr style="border-bottom:1px solid var(--border2)"><td style="color:var(--text2);font-size:10px">Baseline general</td><td style="color:var(--text2)">446</td><td style="color:var(--win)">234</td><td style="color:var(--lose)">212</td><td style="font-weight:700;color:#fbbf24">52%</td><td>—</td></tr><tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA LOSING STREAK</td></tr><tr><td>Dupa 1 LOSE</td><td style="color:var(--text2)">101</td><td style="color:var(--win)">49</td><td style="color:var(--lose)">52</td><td style="font-weight:700;color:#fbbf24">49%</td><td><span style="color:#f87171">-3%</span></td></tr><tr><td>Dupa 2 LOSE</td><td style="color:var(--text2)">52</td><td style="color:var(--win)">27</td><td style="color:var(--lose)">25</td><td style="font-weight:700;color:#4ade80">52%</td><td><span style="color:#4ade80">+0%</span></td></tr><tr><td>Dupa 3 LOSE</td><td style="color:var(--text2)">25</td><td style="color:var(--win)">10</td><td style="color:var(--lose)">15</td><td style="font-weight:700;color:#fbbf24">40%</td><td><span style="color:#f87171">-12%</span></td></tr><tr><td>Dupa 4 LOSE</td><td style="color:var(--text2)">15</td><td style="color:var(--win)">5</td><td style="color:var(--lose)">10</td><td style="font-weight:700;color:#f87171">33%</td><td><span style="color:#f87171">-19%</span></td></tr><tr><td>Dupa 5 LOSE</td><td style="color:var(--text2)">10</td><td style="color:var(--win)">5</td><td style="color:var(--lose)">5</td><td style="font-weight:700;color:#4ade80">50%</td><td><span style="color:#f87171">-2%</span></td></tr><tr><td>Dupa 6 LOSE</td><td style="color:var(--text2)">5</td><td style="color:var(--win)">3</td><td style="color:var(--lose)">2</td><td style="font-weight:700;color:#00e676">60%</td><td><span style="color:#4ade80">+8%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 7 LOSE</td><td style="color:var(--text2)">2</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#4ade80">50%</td><td><span style="color:#f87171">-2%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 8 LOSE</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">0</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#ff4040">0%</td><td><span style="color:#f87171">-52%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 9 LOSE</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="font-weight:700;color:#00e676">100%</td><td><span style="color:#4ade80">+48%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA WINNING STREAK</td></tr><tr><td>Dupa 1 WIN</td><td style="color:var(--text2)">101</td><td style="color:var(--win)">52</td><td style="color:var(--lose)">49</td><td style="font-weight:700;color:#4ade80">51%</td><td><span style="color:#f87171">-1%</span></td></tr><tr><td>Dupa 2 WIN</td><td style="color:var(--text2)">52</td><td style="color:var(--win)">28</td><td style="color:var(--lose)">24</td><td style="font-weight:700;color:#4ade80">54%</td><td><span style="color:#4ade80">+2%</span></td></tr><tr><td>Dupa 3 WIN</td><td style="color:var(--text2)">28</td><td style="color:var(--win)">16</td><td style="color:var(--lose)">12</td><td style="font-weight:700;color:#4ade80">57%</td><td><span style="color:#4ade80">+5%</span></td></tr><tr><td>Dupa 4 WIN</td><td style="color:var(--text2)">16</td><td style="color:var(--win)">9</td><td style="color:var(--lose)">7</td><td style="font-weight:700;color:#4ade80">56%</td><td><span style="color:#4ade80">+4%</span></td></tr><tr><td>Dupa 5 WIN</td><td style="color:var(--text2)">9</td><td style="color:var(--win)">6</td><td style="color:var(--lose)">3</td><td style="font-weight:700;color:#00e676">67%</td><td><span style="color:#4ade80">+15%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 6 WIN</td><td style="color:var(--text2)">6</td><td style="color:var(--win)">4</td><td style="color:var(--lose)">2</td><td style="font-weight:700;color:#00e676">67%</td><td><span style="color:#4ade80">+15%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 7 WIN</td><td style="color:var(--text2)">4</td><td style="color:var(--win)">4</td><td style="color:var(--lose)">0</td><td style="font-weight:700;color:#00e676">100%</td><td><span style="color:#4ade80">+48%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 8 WIN</td><td style="color:var(--text2)">4</td><td style="color:var(--win)">3</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#00e676">75%</td><td><span style="color:#4ade80">+23%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 9 WIN</td><td style="color:var(--text2)">3</td><td style="color:var(--win)">2</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#00e676">67%</td><td><span style="color:#4ade80">+15%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 10 WIN</td><td style="color:var(--text2)">2</td><td style="color:var(--win)">2</td><td style="color:var(--lose)">0</td><td style="font-weight:700;color:#00e676">100%</td><td><span style="color:#4ade80">+48%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 11 WIN</td><td style="color:var(--text2)">2</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#4ade80">50%</td><td><span style="color:#f87171">-2%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 12 WIN</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="font-weight:700;color:#00e676">100%</td><td><span style="color:#4ade80">+48%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 13 WIN</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="font-weight:700;color:#00e676">100%</td><td><span style="color:#4ade80">+48%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 14 WIN</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="font-weight:700;color:#00e676">100%</td><td><span style="color:#4ade80">+48%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 15 WIN</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="font-weight:700;color:#00e676">100%</td><td><span style="color:#4ade80">+48%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 16 WIN</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="font-weight:700;color:#00e676">100%</td><td><span style="color:#4ade80">+48%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr><tr><td>Dupa 17 WIN</td><td style="color:var(--text2)">1</td><td style="color:var(--win)">0</td><td style="color:var(--lose)">1</td><td style="font-weight:700;color:#ff4040">0%</td><td><span style="color:#f87171">-52%</span><span style="color:var(--text3);font-size:9px"> ⚠ n mic</span></td></tr></tbody></table><div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:monospace;padding:8px;background:var(--bg3);border-radius:6px">BE-urile sunt excluse din calcul (nu rup și nu extind streak-ul). ⚠ = sub 10 cazuri, interpretare cu precauție.</div></div>
-  </div>
 
   <!-- DRAWDOWN + EQUITY CURVE side by side -->
   <div style="display:flex;gap:12px">
-    <div class="cbox" style="flex:1;min-width:0">
-      <div class="ctitle">Drawdown din peak (RR)</div>
+    <div class="cbox" style="flex:1;min-width:0" data-collapsible-init="1">
+      <div class="ctitle" style="cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;">Drawdown din peak (RR)<span class="cbox-chevron" style="font-size: 11px; color: var(--text3); transition: transform 0.2s; margin-left: 8px; flex-shrink: 0;">▾</span></div><div class="cbox-body">
       <div class="cwrap"><canvas id="ch-dd" style="box-sizing: border-box; display: block; height: 150px; width: 700px;" width="1400" height="300"></canvas></div>
-    </div>
-    <div class="cbox" style="flex:1;min-width:0">
-      <div class="ctitle">Equity Curve</div>
+    </div></div>
+    <div class="cbox" style="flex:1;min-width:0" data-collapsible-init="1">
+      <div class="ctitle" style="cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;">Equity Curve<span class="cbox-chevron" style="font-size: 11px; color: var(--text3); transition: transform 0.2s; margin-left: 8px; flex-shrink: 0;">▾</span></div><div class="cbox-body">
       <div class="cwrap"><canvas id="ch-equity" style="box-sizing: border-box; display: block; height: 150px; width: 700px;" width="1400" height="300"></canvas></div>
-    </div>
+    </div></div>
   </div>
 
   <div class="bk-nav">
-    <button class="bktab" onclick="setBkTab(this,'year')">An</button>
+    <button class="bktab on" onclick="setBkTab(this,'year')">An</button>
     <button class="bktab" onclick="setBkTab(this,'liq')">Lichiditate</button>
     <button class="bktab" onclick="setBkTab(this,'session')">Sesiune</button>
     <button class="bktab" onclick="setBkTab(this,'setup')">Setup</button>
     <button class="bktab" onclick="setBkTab(this,'day')">Zi săptămână</button>
+    <button class="bktab" onclick="setBkTab(this,'day_cal')">Data</button>
     <button class="bktab" onclick="setBkTab(this,'tip')">BUY / SELL</button>
     <button class="bktab" onclick="setBkTab(this,'re_impact')">Reentry</button>
     <button class="bktab" onclick="setBkTab(this,'hl')">H/L</button>
     <button class="bktab" onclick="setBkTab(this,'news')">Știri</button>
-    <button class="bktab on" onclick="setBkTab(this,'combo_day_ses')">Zi × Sesiune</button>
+    <button class="bktab" onclick="setBkTab(this,'combo_day_ses')">Zi × Sesiune</button>
     <button class="bktab" onclick="setBkTab(this,'rr_lunar')">RR Lunar</button>
+    <button class="bktab" onclick="setBkTab(this,'streak_wr')">Streak WR</button>
   </div>
   <div class="bkbox"><div id="bk-content"><table class="bktbl"><thead><tr><th style="text-align:left">Grup</th><th style="">Total</th><th style="">W</th><th style="">L</th><th style="">BE</th><th style="">WR%</th><th style="">CI 95%</th><th style="">NET RR</th><th style="">E/trade</th></tr></thead><tbody><tr>
-      <td>Miercuri × 12:00-15:00</td>
-      <td style="color:var(--text2)">30</td>
-      <td style="color:var(--win)">18</td><td style="color:var(--lose)">6</td><td style="color:var(--be)">6</td>
-      <td style="color:#00e676;font-weight:700">75.0%</td>
-      <td class="n-small">[55–88%]</td>
-      <td class="rp">+30R</td>
-      <td class="rp">+1.25R</td>
+      <td>2021</td>
+      <td style="color:var(--text2)">3</td>
+      <td style="color:var(--win)">0</td><td style="color:var(--lose)">2</td><td style="color:var(--be)">1</td>
+      <td style="color:#ff4040;font-weight:700">0.0%</td>
+      <td class="n-small">[0–66%]</td>
+      <td class="rn">-2R</td>
+      <td class="rn">-1.00R</td>
     </tr><tr>
-      <td>Joi × 12:00-15:00</td>
-      <td style="color:var(--text2)">19</td>
-      <td style="color:var(--win)">11</td><td style="color:var(--lose)">6</td><td style="color:var(--be)">2</td>
-      <td style="color:#00e676;font-weight:700">64.7%</td>
-      <td class="n-small">[41–83%]</td>
-      <td class="rp">+16R</td>
-      <td class="rp">+0.94R</td>
+      <td>2022</td>
+      <td style="color:var(--text2)">3</td>
+      <td style="color:var(--win)">1</td><td style="color:var(--lose)">2</td><td style="color:var(--be)">0</td>
+      <td style="color:#f87171;font-weight:700">33.3%</td>
+      <td class="n-small">[6–79%]</td>
+      <td class="rp">+0R</td>
+      <td class="rp">+0.00R</td>
     </tr><tr>
-      <td>Luni × 10:00-12:00</td>
-      <td style="color:var(--text2)">36</td>
-      <td style="color:var(--win)">21</td><td style="color:var(--lose)">12</td><td style="color:var(--be)">3</td>
-      <td style="color:#00e676;font-weight:700">63.6%</td>
-      <td class="n-small">[47–78%]</td>
-      <td class="rp">+30R</td>
-      <td class="rp">+0.91R</td>
+      <td>2023</td>
+      <td style="color:var(--text2)">2</td>
+      <td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="color:var(--be)">1</td>
+      <td style="color:#00e676;font-weight:700">100.0%</td>
+      <td class="n-small">[21–100%]</td>
+      <td class="rp">+2R</td>
+      <td class="rp">+2.00R</td>
     </tr><tr>
-      <td>Luni × 12:00-15:00</td>
-      <td style="color:var(--text2)">32</td>
-      <td style="color:var(--win)">17</td><td style="color:var(--lose)">13</td><td style="color:var(--be)">2</td>
-      <td style="color:#4ade80;font-weight:700">56.7%</td>
-      <td class="n-small">[39–73%]</td>
-      <td class="rp">+21R</td>
-      <td class="rp">+0.70R</td>
+      <td>2024</td>
+      <td style="color:var(--text2)">1</td>
+      <td style="color:var(--win)">0</td><td style="color:var(--lose)">0</td><td style="color:var(--be)">1</td>
+      <td style="color:#9090a8;font-weight:700">—</td>
+      <td class="n-small">[0–100%]</td>
+      <td class="rp">+0R</td>
+      <td class="rp">—</td>
     </tr><tr>
-      <td>Joi × 10:00-12:00</td>
-      <td style="color:var(--text2)">32</td>
-      <td style="color:var(--win)">17</td><td style="color:var(--lose)">13</td><td style="color:var(--be)">2</td>
-      <td style="color:#4ade80;font-weight:700">56.7%</td>
-      <td class="n-small">[39–73%]</td>
-      <td class="rp">+21R</td>
-      <td class="rp">+0.70R</td>
+      <td>2025</td>
+      <td style="color:var(--text2)">2</td>
+      <td style="color:var(--win)">0</td><td style="color:var(--lose)">2</td><td style="color:var(--be)">0</td>
+      <td style="color:#ff4040;font-weight:700">0.0%</td>
+      <td class="n-small">[0–66%]</td>
+      <td class="rn">-2R</td>
+      <td class="rn">-1.00R</td>
     </tr><tr>
-      <td>Miercuri × 10:00-12:00</td>
-      <td style="color:var(--text2)">37</td>
-      <td style="color:var(--win)">18</td><td style="color:var(--lose)">14</td><td style="color:var(--be)">5</td>
-      <td style="color:#4ade80;font-weight:700">56.3%</td>
-      <td class="n-small">[39–72%]</td>
-      <td class="rp">+22R</td>
-      <td class="rp">+0.69R</td>
-    </tr><tr>
-      <td>Miercuri × 15:00-19:00</td>
-      <td style="color:var(--text2)">37</td>
-      <td style="color:var(--win)">18</td><td style="color:var(--lose)">14</td><td style="color:var(--be)">5</td>
-      <td style="color:#4ade80;font-weight:700">56.3%</td>
-      <td class="n-small">[39–72%]</td>
-      <td class="rp">+22R</td>
-      <td class="rp">+0.69R</td>
-    </tr><tr>
-      <td>Marti × 15:00-19:00</td>
-      <td style="color:var(--text2)">47</td>
-      <td style="color:var(--win)">22</td><td style="color:var(--lose)">18</td><td style="color:var(--be)">7</td>
-      <td style="color:#4ade80;font-weight:700">55.0%</td>
-      <td class="n-small">[40–69%]</td>
-      <td class="rp">+26R</td>
-      <td class="rp">+0.65R</td>
-    </tr><tr>
-      <td>Marti × 12:00-15:00</td>
-      <td style="color:var(--text2)">39</td>
-      <td style="color:var(--win)">19</td><td style="color:var(--lose)">17</td><td style="color:var(--be)">3</td>
-      <td style="color:#4ade80;font-weight:700">52.8%</td>
-      <td class="n-small">[37–68%]</td>
-      <td class="rp">+21R</td>
-      <td class="rp">+0.58R</td>
-    </tr><tr>
-      <td>Vineri × 15:00-19:00</td>
-      <td style="color:var(--text2)">31</td>
-      <td style="color:var(--win)">12</td><td style="color:var(--lose)">11</td><td style="color:var(--be)">8</td>
-      <td style="color:#4ade80;font-weight:700">52.2%</td>
-      <td class="n-small">[33–71%]</td>
-      <td class="rp">+13R</td>
-      <td class="rp">+0.57R</td>
-    </tr><tr>
-      <td>Vineri × 12:00-15:00</td>
-      <td style="color:var(--text2)">20</td>
-      <td style="color:var(--win)">9</td><td style="color:var(--lose)">9</td><td style="color:var(--be)">2</td>
-      <td style="color:#4ade80;font-weight:700">50.0%</td>
-      <td class="n-small">[29–71%]</td>
-      <td class="rp">+9R</td>
-      <td class="rp">+0.50R</td>
-    </tr><tr>
-      <td>Vineri × 10:00-12:00</td>
-      <td style="color:var(--text2)">42</td>
-      <td style="color:var(--win)">17</td><td style="color:var(--lose)">19</td><td style="color:var(--be)">6</td>
-      <td style="color:#fbbf24;font-weight:700">47.2%</td>
-      <td class="n-small">[32–63%]</td>
-      <td class="rp">+15R</td>
-      <td class="rp">+0.42R</td>
-    </tr><tr>
-      <td>Luni × 15:00-19:00</td>
-      <td style="color:var(--text2)">47</td>
-      <td style="color:var(--win)">15</td><td style="color:var(--lose)">19</td><td style="color:var(--be)">13</td>
-      <td style="color:#fbbf24;font-weight:700">44.1%</td>
-      <td class="n-small">[29–61%]</td>
-      <td class="rp">+11R</td>
-      <td class="rp">+0.32R</td>
-    </tr><tr>
-      <td>Marti × 10:00-12:00</td>
-      <td style="color:var(--text2)">49</td>
-      <td style="color:var(--win)">16</td><td style="color:var(--lose)">27</td><td style="color:var(--be)">6</td>
-      <td style="color:#f87171;font-weight:700">37.2%</td>
-      <td class="n-small">[24–52%]</td>
-      <td class="rp">+5R</td>
-      <td class="rp">+0.12R</td>
-    </tr><tr>
-      <td>Joi × 15:00-19:00</td>
-      <td style="color:var(--text2)">22</td>
-      <td style="color:var(--win)">4</td><td style="color:var(--lose)">14</td><td style="color:var(--be)">4</td>
-      <td style="color:#ff4040;font-weight:700">22.2%</td>
-      <td class="n-small">[9–45%]</td>
-      <td class="rn">-6R</td>
-      <td class="rn">-0.33R</td>
+      <td>2026</td>
+      <td style="color:var(--text2)">1</td>
+      <td style="color:var(--win)">1</td><td style="color:var(--lose)">0</td><td style="color:var(--be)">0</td>
+      <td style="color:#00e676;font-weight:700">100.0%</td>
+      <td class="n-small">[21–100%]</td>
+      <td class="rp">+2R</td>
+      <td class="rp">+2.00R</td>
     </tr></tbody></table></div></div>
 
   <!-- MONTE CARLO + FTMO SIMULATOR -->
 
   <!-- SD & STREAK ANALYSIS -->
-  <div id="sd-streak-wrap" style="margin-top: 18px; padding: 0px 14px 14px;">
-    <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);font-family:'JetBrains Mono',monospace;display:flex;align-items:center;gap:8px;margin-bottom:12px">Standard Deviation &amp; Losing Streaks<span style="height:1px;flex:1;background:var(--border)"></span></div>
+  <div id="sd-streak-wrap" style="margin-top: 18px; padding: 0px 14px 14px;" data-collapsible-init="1">
+    <div class="sd-streak-title" style="font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text3); font-family: &quot;JetBrains Mono&quot;, monospace; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; cursor: pointer; user-select: none; justify-content: space-between;">Standard Deviation &amp; Losing Streaks<span style="height:1px;flex:1;background:var(--border)"></span><span class="cbox-chevron" style="font-size: 11px; color: var(--text3); transition: transform 0.2s; margin-left: 8px; flex-shrink: 0;">▾</span></div><div class="cbox-body">
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px">
       <div class="bkbox" style="padding:10px 12px">
         <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:'JetBrains Mono',monospace">WR REAL</div>
-        <div id="sd-wr" style="font-size: 18px; font-weight: 700; color: var(--win);">52.5%</div>
-        <div id="sd-wl" style="font-size:10px;color:var(--text3);margin-top:2px">234W / 212L</div>
+        <div id="sd-wr" style="font-size: 18px; font-weight: 700; color: var(--lose);">33.3%</div>
+        <div id="sd-wl" style="font-size:10px;color:var(--text3);margin-top:2px">3W / 6L</div>
       </div>
       <div class="bkbox" style="padding:10px 12px">
         <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:'JetBrains Mono',monospace">STANDARD DEVIATION</div>
@@ -10362,13 +10280,13 @@ n=23</td><td style="background:rgba(251,191,36,.18);color:#fbbf24;font-weight:80
       </div>
       <div class="bkbox" style="padding:10px 12px">
         <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:'JetBrains Mono',monospace">MAX STREAK ACTUAL</div>
-        <div id="sd-maxstreak" style="font-size:18px;font-weight:700;color:var(--lose)">9× LOSE</div>
-        <div id="sd-maxexp" style="font-size:10px;color:var(--text3);margin-top:2px">așteptat teoretic 8.2</div>
+        <div id="sd-maxstreak" style="font-size:18px;font-weight:700;color:var(--lose)">3× LOSE</div>
+        <div id="sd-maxexp" style="font-size:10px;color:var(--text3);margin-top:2px">așteptat teoretic 5.4</div>
       </div>
       <div class="bkbox" style="padding:10px 12px">
         <div style="font-size:9px;color:var(--text3);margin-bottom:4px;font-family:'JetBrains Mono',monospace">MEDIE STREAK</div>
-        <div id="sd-avgstreak" style="font-size:18px;font-weight:700;color:var(--text)">2.1×</div>
-        <div id="sd-nstreaks" style="font-size:10px;color:var(--text3);margin-top:2px">101 streaks</div>
+        <div id="sd-avgstreak" style="font-size:18px;font-weight:700;color:var(--text)">2.0×</div>
+        <div id="sd-nstreaks" style="font-size:10px;color:var(--text3);margin-top:2px">3 streaks</div>
       </div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
@@ -10392,70 +10310,70 @@ n=23</td><td style="background:rgba(251,191,36,.18);color:#fbbf24;font-weight:80
         <th style="text-align:right;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">P(≥1 în sample)</th>
         <th style="text-align:left;padding:5px 8px;font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-weight:600">CONCLUZIE</th>
       </tr></thead>
-      <tbody><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">5× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">2.43%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 41</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#4ade8022;color:#4ade80;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">100.0%</span></td>
-      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Normal, garantat în sample</td>
-    </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">6× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">1.15%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 87</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#4ade8022;color:#4ade80;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">99.4%</span></td>
-      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Normal, garantat în sample</td>
-    </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">7× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.55%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 182</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#4ade8022;color:#4ade80;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">91.4%</span></td>
+      <tbody><tr style="border-bottom:1px solid var(--border);background:rgba(251,191,36,.05)">
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">3× LOSE <span style="color:var(--be);font-size:10px">← tu</span></td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">29.63%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 3</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#4ade8022;color:#4ade80;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">95.8%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Normal</td>
     </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">8× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.26%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 384</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#fbbf2422;color:#fbbf24;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">68.8%</span></td>
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">4× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">19.75%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 5</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#4ade8022;color:#4ade80;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">86.2%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Normal</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">5× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">13.17%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 8</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#fbbf2422;color:#fbbf24;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">71.9%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Probabil</td>
-    </tr><tr style="border-bottom:1px solid var(--border);background:rgba(251,191,36,.05)">
-      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">9× LOSE <span style="color:var(--be);font-size:10px">← tu</span></td>
-      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.12%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 807</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">42.5%</span></td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">6× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">8.78%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 11</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#fbbf2422;color:#fbbf24;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">56.3%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">La limita normalului</td>
     </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">10× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.06%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 1,698</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">23.1%</span></td>
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">7× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">5.85%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 17</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">41.9%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">La limita normalului</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">8× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">3.90%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 26</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">30.1%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Rar</td>
     </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">9× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">2.60%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 38</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">21.1%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
+      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">10× LOSE</td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">1.73%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 58</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">14.6%</span></td>
+      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
+    </tr><tr style="border-bottom:1px solid var(--border);">
       <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">11× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.03%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 3,573</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">11.7%</span></td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">1.16%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 86</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">9.9%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
     </tr><tr style="border-bottom:1px solid var(--border);">
       <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">12× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.01%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 7,516</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">5.8%</span></td>
-      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
-    </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">13× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.01%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 15,812</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">2.8%</span></td>
-      <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
-    </tr><tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:5px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text)">14× LOSE</td>
-      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.00%</td>
-      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 33,265</td>
-      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">1.3%</span></td>
+      <td style="padding:5px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2)">0.77%</td>
+      <td style="padding:5px 8px;text-align:right;font-size:11px;color:var(--text3)">1 la 130</td>
+      <td style="padding:5px 8px;text-align:right"><span style="background:#f8717122;color:#f87171;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace">6.7%</span></td>
       <td style="padding:5px 8px;font-size:10px;color:var(--text3)">Foarte rar</td>
     </tr></tbody>
     </table></div>
     </div>
-  </div>
+  </div></div>
 
 </div>
 
@@ -10490,7 +10408,7 @@ Stiri:
 - FOMC MM, USD ADVANCE GDP
 
 Potential 3 RR:
-- Majora</textarea><div class="note-footer"><span class="note-date">23.06.2026</span><button class="note-del">✕ Șterge</button></div></div><div class="note-card"><input class="note-title-inp" type="text" placeholder="Titlu notă..." value="Atentie!!!"><div class="note-sep"></div><textarea class="note-body-ta" placeholder="Scrie aici..." rows="5" style="height: 306px;">Lichiditate: 
+- Majora</textarea><div class="note-footer"><span class="note-date">23.06.2026</span><button class="note-del">✕ Șterge</button></div></div><div class="note-card"><input class="note-title-inp" type="text" placeholder="Titlu notă..." value="Atentie!!!"><div class="note-sep"></div><textarea class="note-body-ta" placeholder="Scrie aici..." rows="5" style="height: 469px;">Lichiditate: 
 - HOD + Locala
 - LOD + Locala
 
@@ -10504,13 +10422,27 @@ Ziua:
 - Joi Buy
 - Joi OSG
 - Joi PDL
-- Marti 10-12</textarea><div class="note-footer"><span class="note-date">23.06.2026</span><button class="note-del">✕ Șterge</button></div></div><div class="note-card"><input class="note-title-inp" type="text" placeholder="Titlu notă..." value="Breakeven"><div class="note-sep"></div><textarea class="note-body-ta" placeholder="Scrie aici..." rows="5" style="height: 143px;">Sesiune:
+- Marti 10-12
+
+Data:
+- 1
+- 8 
+- 13
+
+
+</textarea><div class="note-footer"><span class="note-date">23.06.2026</span><button class="note-del">✕ Șterge</button></div></div><div class="note-card"><input class="note-title-inp" type="text" placeholder="Titlu notă..." value="Breakeven"><div class="note-sep"></div><textarea class="note-body-ta" placeholder="Scrie aici..." rows="5" style="height: 265px;">Sesiune:
 - 10-12 - DA
 - 12-15 - NU
 - 15-19 - DA
 
 Lichiditate:
-- Majora - NU</textarea><div class="note-footer"><span class="note-date">23.06.2026</span><button class="note-del">✕ Șterge</button></div></div><div class="note-card"><input class="note-title-inp" type="text" placeholder="Titlu notă..." value="No trade!"><div class="note-sep"></div><textarea class="note-body-ta" placeholder="Scrie aici..." rows="5" style="height: 265px;">- USA Bank Holiday
+- Majora - NU
+
+
+
+
+
+</textarea><div class="note-footer"><span class="note-date">23.06.2026</span><button class="note-del">✕ Șterge</button></div></div><div class="note-card"><input class="note-title-inp" type="text" placeholder="Titlu notă..." value="No trade!"><div class="note-sep"></div><textarea class="note-body-ta" placeholder="Scrie aici..." rows="5" style="height: 265px;">- USA Bank Holiday
 - UK Bank Holiday
 - FOMC 
 - BoE Official Bank Rate
@@ -10552,6 +10484,29 @@ Lichiditate:
     });
   }
 
+  // Wiring comun pentru orice textarea de notă: Tab inserează linie nouă + auto-resize pe măsură ce scrii
+  function wireNoteTextarea(ta){
+    ta.addEventListener('keydown', function(e){
+      if(e.key === 'Tab'){
+        e.preventDefault();
+        var s = this.selectionStart, en = this.selectionEnd;
+        this.value = this.value.substring(0,s) + '\n' + this.value.substring(en);
+        this.selectionStart = this.selectionEnd = s + 1;
+        this.dispatchEvent(new Event('input'));
+      }
+    });
+    ta.addEventListener('input', function(){
+      this.style.height = 'auto';
+      this.style.height = this.scrollHeight + 'px';
+    });
+    // Redimensionare imediată la afișare, ca să nu ascundă text existent
+    ta.style.height = 'auto';
+    ta.style.height = ta.scrollHeight + 'px';
+  }
+
+  // Aplic wiring-ul pe TOATE notele existente, imediat la încărcare — nu doar la crearea uneia noi
+  document.querySelectorAll('.note-body-ta').forEach(wireNoteTextarea);
+
   var btn = document.getElementById('notes-add-btn');
   if(!btn) return;
   btn.addEventListener('click', function(){
@@ -10574,40 +10529,7 @@ Lichiditate:
     bodyTA.className = 'note-body-ta';
     bodyTA.placeholder = 'Scrie aici...';
     bodyTA.rows = 5;
-    // Tab key inserts newline instead of focusing next element
-    bodyTA.addEventListener('keydown', function(e){
-      if(e.key === 'Tab'){
-        e.preventDefault();
-        var s = this.selectionStart, en = this.selectionEnd;
-        this.value = this.value.substring(0,s) + '\n' + this.value.substring(en);
-        this.selectionStart = this.selectionEnd = s + 1;
-        this.dispatchEvent(new Event('input'));
-      }
-    });
-    // Auto-resize
-    bodyTA.addEventListener('input', function(){
-      this.style.height = 'auto';
-      this.style.height = this.scrollHeight + 'px';
-    });
-
-    // Apply Tab handler + auto-resize to existing notes on load
-    document.querySelectorAll('.note-body-ta').forEach(function(ta){
-      ta.addEventListener('keydown', function(e){
-        if(e.key==='Tab'){
-          e.preventDefault();
-          var s=this.selectionStart,en=this.selectionEnd;
-          this.value=this.value.substring(0,s)+'\n'+this.value.substring(en);
-          this.selectionStart=this.selectionEnd=s+1;
-        }
-      });
-      ta.addEventListener('input', function(){
-        this.style.height='auto';
-        this.style.height=this.scrollHeight+'px';
-      });
-      // Resize on load
-      ta.style.height='auto';
-      ta.style.height=ta.scrollHeight+'px';
-    });
+    wireNoteTextarea(bodyTA);
 
     var footer = document.createElement('div');
     footer.className = 'note-footer';
@@ -10688,9 +10610,10 @@ Lichiditate:
         <div style="display:flex;gap:6px;align-items:center">
           <div class="risk-presets">
             <button class="rp-btn" data-v="0.5" onclick="setRiskPreset('0.5')">0.5%</button>
+            <button class="rp-btn" data-v="0.6" onclick="setRiskPreset('0.6')">0.6%</button>
+            <button class="rp-btn" data-v="0.65" onclick="setRiskPreset('0.65')">0.65%</button>
             <button class="rp-btn active" data-v="1" onclick="setRiskPreset('1')">1%</button>
             <button class="rp-btn" data-v="1.5" onclick="setRiskPreset('1.5')">1.5%</button>
-            <button class="rp-btn" data-v="2" onclick="setRiskPreset('2')">2%</button>
           </div>
           <input id="c-risk" class="calc-input" type="number" min="0.01" max="100" step="0.1" value="1" placeholder="1" oninput="document.querySelectorAll('.rp-btn').forEach(b=&gt;b.classList.remove('active'));renderCalc()" style="width:80px">
         </div>
@@ -10725,62 +10648,6 @@ Lichiditate:
             <div class="calc-card-balance">$50,000</div>
           </div>
           <div class="calc-card-meta">Risc <b style="color:var(--text)">1%</b> → <b style="color:var(--be)">$500.00</b></div>
-        </div>
-        <div class="calc-card-body">
-          <div class="calc-card-col">
-            <div class="calc-col-label">Fără costuri</div>
-            <div class="calc-card-lot">—</div>
-            <div class="calc-card-sub">loturi · SL 0 pips</div>
-          </div>
-          <div class="calc-card-col-divider"></div>
-          <div class="calc-card-col">
-            <div class="calc-col-label">Cu costuri</div>
-            <div class="calc-card-lot-net">—</div>
-            <div class="calc-card-sub">loturi · efective</div>
-            <div class="calc-card-costs">
-              <div class="calc-cost-row"><span>Spread (0.2 pips)</span><span>−—</span></div>
-              <div class="calc-cost-row"><span>Comision RT</span><span>−—</span></div>
-              <div class="calc-cost-total"><span>Total</span><span>−—</span></div>
-            </div>
-            <div class="calc-diff-pill">▼ —</div>
-          </div>
-        </div></div>
-      <div class="calc-card ftmo80" id="cc-ftmo80">
-        <div class="calc-card-accent"></div>
-        <div class="calc-card-header">
-          <div>
-            <div class="calc-card-name">FTMO</div>
-            <div class="calc-card-balance">€80,000</div>
-          </div>
-          <div class="calc-card-meta">Risc <b style="color:var(--text)">1%</b> → <b style="color:var(--be)">€800.00 ≈ $914.88</b></div>
-        </div>
-        <div class="calc-card-body">
-          <div class="calc-card-col">
-            <div class="calc-col-label">Fără costuri</div>
-            <div class="calc-card-lot">—</div>
-            <div class="calc-card-sub">loturi · SL 0 pips</div>
-          </div>
-          <div class="calc-card-col-divider"></div>
-          <div class="calc-card-col">
-            <div class="calc-col-label">Cu costuri</div>
-            <div class="calc-card-lot-net">—</div>
-            <div class="calc-card-sub">loturi · efective</div>
-            <div class="calc-card-costs">
-              <div class="calc-cost-row"><span>Spread (0.2 pips)</span><span>−—</span></div>
-              <div class="calc-cost-row"><span>Comision RT</span><span>−—</span></div>
-              <div class="calc-cost-total"><span>Total</span><span>−—</span></div>
-            </div>
-            <div class="calc-diff-pill">▼ —</div>
-          </div>
-        </div></div>
-      <div class="calc-card ftmo10" id="cc-ftmo10">
-        <div class="calc-card-accent"></div>
-        <div class="calc-card-header">
-          <div>
-            <div class="calc-card-name">FTMO</div>
-            <div class="calc-card-balance">€10,000</div>
-          </div>
-          <div class="calc-card-meta">Risc <b style="color:var(--text)">1%</b> → <b style="color:var(--be)">€100.00 ≈ $114.36</b></div>
         </div>
         <div class="calc-card-body">
           <div class="calc-card-col">
@@ -11146,6 +11013,7 @@ function getFiltered() {
   const ses=document.getElementById('f-ses')?.value||'all';
   const su=document.getElementById('sf-setup')?.value||'all';
   const ziua=document.getElementById('f-ziua')?.value||'all';
+  const datacal=document.getElementById('f-datacal')?.value||'all';
   const tip=document.getElementById('f-tip')?.value||'all';
   const re=document.getElementById('f-re')?.value||'all';
   const rez=document.getElementById('f-rez')?.value||'all';
@@ -11162,6 +11030,10 @@ function getFiltered() {
     if(ses!=='all'&&t.sesiune!==ses) return false;
     if(su!=='all' && t.setup!==su) return false;
     if(ziua!=='all'&&t.ziua!==ziua) return false;
+    if(datacal!=='all'){
+      const p=(t.data||'').split('.');
+      if(p.length!==3||parseInt(p[0],10)!==parseInt(datacal,10)) return false;
+    }
     if(tip!=='all'&&t.tip!==tip) return false;
     if(re!=='all'&&t.re!==re) return false;
     if(rez==='WINLOSE'){if(!['WIN','LOSE'].includes(t.rezultat)) return false;}
@@ -11197,7 +11069,7 @@ function updateYearFilter() {
 }
 
 function resetFilters() {
-  ['f-year','sf-liq','f-ses','sf-setup','f-ziua','f-tip','f-re','f-rez','sf-hl','f-news-filter','f-misc-ses-filter','f-setup-urat-filter','f-liq-dist-filter'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value='all'; });
+  ['f-year','sf-liq','f-ses','sf-setup','f-ziua','f-datacal','f-tip','f-re','f-rez','sf-hl','f-news-filter','f-misc-ses-filter','f-setup-urat-filter','f-liq-dist-filter'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value='all'; });
   renderStats();
 }
 
@@ -11245,7 +11117,6 @@ function renderStats() {
   renderStreakTracker(arr);
   renderBECard(arr);
   renderRRDist(arr);
-  renderStreakWRCard(arr);
   renderInsights(arr);
   // Profit Factor
   const pfEl=document.getElementById('st-pf');
@@ -11598,6 +11469,42 @@ function renderBkTable(arr) {
     const dayData=['Luni','Marti','Miercuri','Joi','Vineri'].map(k=>({k,s:wrStats(arr.filter(t=>t.ziua===k))}));
     dayData.sort((a,b)=>(b.s.rate??-1)-(a.s.rate??-1));
     el.innerHTML=tblHdr(hCols)+dayData.map(({k,s})=>mkRow(k,s)).join('')+tblFtr;
+  } else if(bkView==='day_cal'){
+    function wrColorCal(rate){
+      if(rate===null) return 'var(--text3)';
+      if(Math.abs(rate-100/3)<0.05) return '#fb923c';
+      if(rate<100/3) return '#ff4040';
+      if(rate<40) return '#facc15';
+      if(rate<50) return '#86efac';
+      if(rate<=60) return '#4ade80';
+      return '#00e676';
+    }
+    function mkRowCal(day, s) {
+      const [ci_l,ci_h]=wilsonCI(s.w,s.n);
+      const nMic = s.n<15 ? ' <span style="color:var(--text3);font-size:9px"> ⚠ n mic</span>' : '';
+      return `<tr>
+        <td>Ziua ${day}${nMic}</td>
+        <td style="color:var(--text2)">${s.n+s.be}</td>
+        <td style="color:var(--win)">${s.w}</td><td style="color:var(--lose)">${s.l}</td><td style="color:var(--be)">${s.be}</td>
+        <td style="color:${wrColorCal(s.rate)};font-weight:700">${s.rate!==null?s.rate.toFixed(1)+'%':'—'}</td>
+        <td class="n-small">[${ci_l.toFixed(0)}–${ci_h.toFixed(0)}%]</td>
+        <td class="${s.net>=0?'rp':'rn'}">${s.net>=0?'+':''}${s.net}R</td>
+        <td class="${s.exp>=0?'rp':'rn'}">${s.exp!==null?(s.exp>=0?'+':'')+s.exp.toFixed(2)+'R':'—'}</td>
+      </tr>`;
+    }
+    const dayCalData=[];
+    for(let d=1; d<=31; d++){
+      const sub=arr.filter(t=>{
+        const p=(t.data||'').split('.');
+        return p.length===3 && parseInt(p[0],10)===d;
+      });
+      dayCalData.push({d,s:wrStats(sub)});
+    }
+    dayCalData.sort((a,b)=>(b.s.rate??-1)-(a.s.rate??-1));
+    el.innerHTML=tblHdr(hCols)+dayCalData.map(({d,s})=>mkRowCal(d,s)).join('')+tblFtr
+      +`<div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:monospace;padding:8px;background:var(--bg3);border-radius:6px">Praguri WR: <span style="color:#ff4040">roșu</span> &lt;33.33% · <span style="color:#fb923c">portocaliu</span> =33.33% · <span style="color:#facc15">galben</span> 33.33-40% · <span style="color:#86efac">verde șters</span> 40-50% · <span style="color:#4ade80">verde închis</span> 50-60% · <span style="color:#00e676">verde aprins</span> &gt;60%. ⚠ n mic = sub 15 trade-uri decisive, interpretare cu precauție.</div>`;
+  } else if(bkView==='streak_wr'){
+    el.innerHTML=buildStreakWRHtml(arr);
   } else if(bkView==='year'){
     const keys=[...new Set(arr.map(getYear))].filter(Boolean).sort();
     el.innerHTML=tblHdr(hCols)+keys.map(k=>mkRow(k,wrStats(arr.filter(t=>getYear(t)===k)))).join('')+tblFtr;
@@ -11759,46 +11666,6 @@ function renderBkTable(arr) {
     const hlData=[...new Set(arr.map(t=>t.hl).filter(Boolean))].map(k=>({k,s:wrStats(arr.filter(t=>t.hl===k))}));
     hlData.sort((a,b)=>(b.s.rate??-1)-(a.s.rate??-1));
     el.innerHTML=tblHdr(hCols)+hlData.map(({k,s})=>mkRow(k,s,3)).join('')+tblFtr;
-  } else if(bkView==='streak_wr'){
-    // Sort trades by date chronologically
-    function parseD(s){const p=(s||'').split('.');return p.length===3?new Date(+p[2],+p[1]-1,+p[0]):new Date(0);}
-    const sorted=[...arr].sort((a,b)=>parseD(a.data)-parseD(b.data));
-    const wl=sorted.filter(t=>t.rezultat==='WIN'||t.rezultat==='LOSE');
-    const baseW=wl.filter(t=>t.rezultat==='WIN').length;
-    const baseN=wl.length;
-    const baseWR=baseN>0?Math.round(baseW/baseN*100):0;
-
-    // For each trade i, count consecutive loses/wins ending at i-1
-    const afterLose={};
-    const afterWin={};
-    for(let i=1;i<wl.length;i++){
-      let ls=0,j=i-1;
-      while(j>=0&&wl[j].rezultat==='LOSE'){ls++;j--;}
-      let ws=0;j=i-1;
-      while(j>=0&&wl[j].rezultat==='WIN'){ws++;j--;}
-      const rez=wl[i].rezultat;
-      if(ls>=1){if(!afterLose[ls])afterLose[ls]=[];afterLose[ls].push(rez);}
-      if(ws>=1){if(!afterWin[ws])afterWin[ws]=[];afterWin[ws].push(rez);}
-    }
-    function streakRow(n,results,type){
-      const w=results.filter(r=>r==='WIN').length;
-      const l=results.filter(r=>r==='LOSE').length;
-      const tot=w+l;
-      const wr=tot>0?Math.round(w/tot*100):0;
-      const diff=wr-baseWR;
-      const wrCol=wr>=60?'#00e676':wr>=50?'#4ade80':wr>=40?'#fbbf24':wr>=33?'#f87171':'#ff4040';
-      const diffStr=diff>=0?`<span style="color:#4ade80">+${diff}%</span>`:`<span style="color:#f87171">${diff}%</span>`;
-      const warn=tot<10?`<span style="color:var(--text3);font-size:9px"> ⚠ n mic</span>`:'';
-      return `<tr><td>Dupa ${n} ${type}</td><td style="color:var(--text2)">${tot}</td><td style="color:var(--win)">${w}</td><td style="color:var(--lose)">${l}</td><td style="font-weight:700;color:${wrCol}">${wr}%</td><td>${diffStr}${warn}</td></tr>`;
-    }
-    const hdr=`<table class="bktbl"><thead><tr><th style="text-align:left">Streak</th><th>Cazuri</th><th>WIN</th><th>LOSE</th><th>WR%</th><th>Diferență</th></tr></thead><tbody>`;
-    const baseRow=`<tr style="border-bottom:1px solid var(--border2)"><td style="color:var(--text2);font-size:10px">Baseline general</td><td style="color:var(--text2)">${baseN}</td><td style="color:var(--win)">${baseW}</td><td style="color:var(--lose)">${baseN-baseW}</td><td style="font-weight:700;color:#fbbf24">${baseWR}%</td><td>—</td></tr>`;
-    let loseRows='',winRows='';
-    for(const n of Object.keys(afterLose).map(Number).sort((a,b)=>a-b)) loseRows+=streakRow(n,afterLose[n],'LOSE');
-    for(const n of Object.keys(afterWin).map(Number).sort((a,b)=>a-b)) winRows+=streakRow(n,afterWin[n],'WIN');
-    const sep=`<tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA WINNING STREAK</td></tr>`;
-    const sep2=`<tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA LOSING STREAK</td></tr>`;
-    el.innerHTML=hdr+baseRow+sep2+loseRows+sep+winRows+`</tbody></table><div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:monospace;padding:8px;background:var(--bg3);border-radius:6px">BE-urile sunt excluse din calcul (nu rup și nu extind streak-ul). ⚠ = sub 10 cazuri, interpretare cu precauție.</div>`;
   }
 }
 
@@ -11996,8 +11863,55 @@ function calcProfitFactor(arr) {
 
 // ============ ACTIONABLE INSIGHTS ============
 // ============ RR DISTRIBUTION CARD ============
-function renderStreakWRCard(arr) {
-  const el = document.getElementById('streak-wr-content'); if(!el) return;
+function makeCollapsible(container, title, keyOverride) {
+  if(!container || !title) return;
+  if(container.dataset.collapsibleInit) return;
+  container.dataset.collapsibleInit = '1';
+
+  const body = document.createElement('div');
+  body.className = 'cbox-body';
+  let sib = title.nextSibling;
+  const toMove = [];
+  while(sib){ toMove.push(sib); sib = sib.nextSibling; }
+  toMove.forEach(n => body.appendChild(n));
+  container.appendChild(body);
+
+  const chevron = document.createElement('span');
+  chevron.className = 'cbox-chevron';
+  chevron.textContent = '▾';
+  chevron.style.cssText = 'font-size:11px;color:var(--text3);transition:transform .2s;margin-left:8px;flex-shrink:0';
+  title.style.cursor = 'pointer';
+  title.style.userSelect = 'none';
+  const disp = getComputedStyle(title).display;
+  if(disp!=='flex') title.style.display = 'flex';
+  title.style.alignItems = 'center';
+  title.style.justifyContent = 'space-between';
+  title.appendChild(chevron);
+
+  const key = 'boxCollapsed_' + (keyOverride || title.textContent || 'box').trim().replace(/[^a-zA-Z0-9]/g,'_');
+  let collapsed = false;
+  try { collapsed = localStorage.getItem(key)==='true'; } catch(e){}
+  if(collapsed){ body.style.display='none'; chevron.style.transform='rotate(-90deg)'; }
+
+  title.addEventListener('click', () => {
+    const isHidden = body.style.display==='none';
+    body.style.display = isHidden ? '' : 'none';
+    chevron.style.transform = isHidden ? 'rotate(0deg)' : 'rotate(-90deg)';
+    try { localStorage.setItem(key, isHidden?'false':'true'); } catch(e){}
+  });
+}
+
+function initCollapsibleCards() {
+  document.querySelectorAll('.cbox, .insight-card').forEach(box => {
+    const title = box.querySelector(':scope > .ctitle');
+    makeCollapsible(box, title);
+  });
+
+  const sdWrap = document.getElementById('sd-streak-wrap');
+  if(sdWrap) makeCollapsible(sdWrap, sdWrap.querySelector(':scope > .sd-streak-title'), 'sd_streak_analysis');
+}
+
+function buildStreakWRHtml(arr) {
   function parseD(s){const p=(s||'').split('.');return p.length===3?new Date(+p[2],+p[1]-1,+p[0]):new Date(0);}
   const sorted=[...arr].sort((a,b)=>parseD(a.data)-parseD(b.data));
   const wl=sorted.filter(t=>t.rezultat==='WIN'||t.rezultat==='LOSE');
@@ -12033,7 +11947,7 @@ function renderStreakWRCard(arr) {
   for(const n of Object.keys(afterWin).map(Number).sort((a,b)=>a-b)) winRows+=streakRow2(n,afterWin[n],'WIN');
   const sep=`<tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA WINNING STREAK</td></tr>`;
   const sep2=`<tr><td colspan="6" style="padding:4px 6px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--text3);background:var(--bg3)">DUPA LOSING STREAK</td></tr>`;
-  el.innerHTML=hdr+baseRow+sep2+loseRows+sep+winRows+`</tbody></table><div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:monospace;padding:8px;background:var(--bg3);border-radius:6px">BE-urile sunt excluse din calcul (nu rup și nu extind streak-ul). ⚠ = sub 10 cazuri, interpretare cu precauție.</div>`;
+  return hdr+baseRow+sep2+loseRows+sep+winRows+`</tbody></table><div style="margin-top:10px;font-size:10px;color:var(--text3);font-family:monospace;padding:8px;background:var(--bg3);border-radius:6px">BE-urile sunt excluse din calcul (nu rup și nu extind streak-ul). ⚠ = sub 10 cazuri, interpretare cu precauție.</div>`;
 }
 
 function renderRRDist(arr) {
@@ -12063,10 +11977,10 @@ function renderInsights(arr) {
 
   // Detecteaza filtrele active
   const gv=id=>{const e=document.getElementById(id);return e?e.value:'all';};
-  const fSes=gv('f-ses'), fLiq=gv('sf-liq'), fSetup=gv('sf-setup'), fDay=gv('f-ziua');
+  const fSes=gv('f-ses'), fLiq=gv('sf-liq'), fSetup=gv('sf-setup'), fDay=gv('f-ziua'), fDatacal=gv('f-datacal');
   const fNews=gv('f-news-filter'), fYear=gv('f-year'), fTip=gv('f-tip'), fRez=gv('f-rez');
   const fHL=gv('sf-hl'), fRe=gv('f-re'), fMiscSes=gv('f-misc-ses-filter'), fSetupUrat=gv('f-setup-urat-filter'), fLiqDist=gv('f-liq-dist-filter');
-  const hasFilter=[fSes,fLiq,fSetup,fDay,fNews,fYear,fTip,fRez,fHL,fRe,fMiscSes,fSetupUrat,fLiqDist].some(v=>v&&v!=='all');
+  const hasFilter=[fSes,fLiq,fSetup,fDay,fDatacal,fNews,fYear,fTip,fRez,fHL,fRe,fMiscSes,fSetupUrat,fLiqDist].some(v=>v&&v!=='all');
   const minN=hasFilter?5:8;
 
   const wl=arr.filter(t=>['WIN','LOSE'].includes(t.rezultat));
@@ -12143,6 +12057,70 @@ function renderInsights(arr) {
     }
   }
 
+  // === DATA (zi calendaristică 1-31) ===
+  if(fDatacal==='all'){
+    const dcData=[];
+    for(let dnum=1; dnum<=31; dnum++){
+      const sub=wl.filter(t=>{const p=(t.data||'').split('.');return p.length===3&&parseInt(p[0],10)===dnum;});
+      const st=wrStats(sub);
+      if(st.n>=(hasFilter?6:8)&&st.rate!==null) dcData.push({dnum,st});
+    }
+    dcData.sort((a,b)=>a.st.rate-b.st.rate);
+    if(!hasFilter){
+      if(dcData.length>=1&&dcData[0].st.rate<40) neg.push({icon:'📆',text:`Ziua <strong>${dcData[0].dnum}</strong> a lunii — WR <strong>${dcData[0].st.rate.toFixed(0)}%</strong> pe ${dcData[0].st.n} trade-uri decisive. Evită execuția în această zi.`});
+      const bestDC=[...dcData].sort((a,b)=>b.st.rate-a.st.rate)[0];
+      if(bestDC&&bestDC.st.rate>=65) pos.push({icon:'📆',text:`Ziua <strong>${bestDC.dnum}</strong> a lunii — WR <strong>${bestDC.st.rate.toFixed(0)}%</strong> pe ${bestDC.st.n} trades.`});
+    } else {
+      if(dcData.length>=1){const bot=dcData[0];neg.push({icon:'📆',text:`Data slabă: ziua <strong>${bot.dnum}</strong> — WR <strong>${bot.st.rate.toFixed(0)}%</strong> (${bot.st.n} trades)`});}
+    }
+  }
+
+  // === COMBO ZI × SESIUNE × TIP (doar fără filtre — panoramă generală) ===
+  if(!hasFilter && fDay==='all' && fSes==='all' && fTip==='all'){
+    const dayKeys=['Luni','Marti','Miercuri','Joi','Vineri'];
+    const sesKeys=['10:00-12:00','12:00-15:00','15:00-19:00'];
+    const sesLbl={'10:00-12:00':'10-12','12:00-15:00':'12-15','15:00-19:00':'15-19'};
+    const tipKeys=['BUY','SELL'];
+    const combos=[];
+    dayKeys.forEach(d=>sesKeys.forEach(s=>tipKeys.forEach(tp=>{
+      const sub=wl.filter(t=>t.ziua===d&&t.sesiune===s&&t.tip===tp);
+      const st=wrStats(sub);
+      if(st.n>=6&&st.rate!==null) combos.push({d,s,tp,st});
+    })));
+    combos.sort((a,b)=>a.st.rate-b.st.rate);
+    if(combos.length>=1&&combos[0].st.rate<38){const c=combos[0];neg.push({icon:'⚠️',text:`<strong>${c.d} ${sesLbl[c.s]} ${c.tp}</strong> — WR <strong>${c.st.rate.toFixed(0)}%</strong> pe ${c.st.n} trade-uri. Combo de evitat.`});}
+  }
+
+  // === COMBO SETUP × SESIUNE (doar fără filtre) ===
+  if(!hasFilter && fSetup==='all' && fSes==='all'){
+    const sesKeys=['10:00-12:00','12:00-15:00','15:00-19:00'];
+    const sesLbl={'10:00-12:00':'10-12','12:00-15:00':'12-15','15:00-19:00':'15-19'};
+    const setupKeys=[...new Set(wl.map(t=>t.setup).filter(Boolean))];
+    const combos=[];
+    setupKeys.forEach(su=>sesKeys.forEach(s=>{
+      const sub=wl.filter(t=>t.setup===su&&t.sesiune===s);
+      const st=wrStats(sub);
+      if(st.n>=15&&st.rate!==null) combos.push({su,s,st});
+    }));
+    combos.sort((a,b)=>a.st.rate-b.st.rate);
+    if(combos.length>=1&&combos[0].st.rate<42){const c=combos[0];neg.push({icon:'🧩',text:`<strong>${c.su}</strong> în sesiunea <strong>${sesLbl[c.s]}</strong> — WR <strong>${c.st.rate.toFixed(0)}%</strong> pe ${c.st.n} trade-uri. Setup solid, dar nu în această sesiune.`});}
+  }
+
+  // === COMBO LICHIDITATE × SESIUNE (doar fără filtre) ===
+  if(!hasFilter && fLiq==='all' && fSes==='all'){
+    const sesKeys=['10:00-12:00','12:00-15:00','15:00-19:00'];
+    const sesLbl={'10:00-12:00':'10-12','12:00-15:00':'12-15','15:00-19:00':'15-19'};
+    const liqKeys=[...new Set(wl.map(t=>t.liq).filter(Boolean))];
+    const combos=[];
+    liqKeys.forEach(lq=>sesKeys.forEach(s=>{
+      const sub=wl.filter(t=>t.liq===lq&&t.sesiune===s);
+      const st=wrStats(sub);
+      if(st.n>=15&&st.rate!==null) combos.push({lq,s,st});
+    }));
+    combos.sort((a,b)=>a.st.rate-b.st.rate);
+    if(combos.length>=1&&combos[0].st.rate<42){const c=combos[0];neg.push({icon:'💧',text:`Lichiditate <strong>${c.lq}</strong> în sesiunea <strong>${sesLbl[c.s]}</strong> — WR <strong>${c.st.rate.toFixed(0)}%</strong> pe ${c.st.n} trade-uri.`});}
+  }
+
   // === LICHIDITATE ===
   if(fLiq==='all'){
     const liqKeys=['Majora','Majora A++','Locala','Locala / HOD','Locala / LOD','HOD + Majora','LOD + Majora','HOD + Locala','LOD + Locala'];
@@ -12204,8 +12182,9 @@ function renderInsights(arr) {
   if(!pos.length&&!neg.length){el.innerHTML=ctxHtml+'<div style="color:var(--text3);font-size:11px">Niciun insight detectat pentru această selecție.</div>';return;}
 
   const maxItems=5;
+  const negMaxItems=hasFilter?5:8;
   const posHtml=pos.slice(0,maxItems).map(i=>`<div class="insight-item insight-pos"><span class="insight-icon">${i.icon}</span><span class="insight-text">${i.text}</span></div>`).join('');
-  const negHtml=neg.slice(0,maxItems).map(i=>`<div class="insight-item insight-neg"><span class="insight-icon">${i.icon}</span><span class="insight-text">${i.text}</span></div>`).join('');
+  const negHtml=neg.slice(0,negMaxItems).map(i=>`<div class="insight-item insight-neg"><span class="insight-icon">${i.icon}</span><span class="insight-text">${i.text}</span></div>`).join('');
 
   el.innerHTML=ctxHtml+`<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
     <div>
@@ -12322,7 +12301,7 @@ function updateLinkBtn(inputId, btnId) {
 // ============ CUSTOM SELECT (csel) ============
 // ============ CUSTOM SELECT (input-based) ============
 const CS_OPTS = {
-  'f-news':[{v:'',l:'— Fără știri —'},{v:'FOMC ❌',l:'FOMC ❌'},{v:'FOMC MM',l:'FOMC MM'},{v:'GBP CCC',l:'GBP CCC'},{v:'GBP CPI',l:'GBP CPI'},{v:'GBP GDP ❌',l:'GBP GDP ❌'},{v:'GBP MON PRH ❌',l:'GBP MON PRH ❌'},{v:'GBP AFS ❌',l:'GBP AFS ❌'},{v:'GBP PMI',l:'GBP PMI'},{v:'GBP RETAIL S',l:'GBP RETAIL S'},{v:'USD ISM PMI',l:'USD ISM PMI'},{v:'USD JOLTS JOB',l:'USD JOLTS JOB'},{v:'NFP',l:'NFP'},{v:'UK BH ❌',l:'UK BH ❌'},{v:'UK RATE ❌',l:'UK RATE ❌'},{v:'USD UNEMP. CLAIMS',l:'USD UNEMP. CLAIMS'},{v:'USA BH ❌',l:'USA BH ❌'},{v:'USD CPI',l:'USD CPI'},{v:'USD CORE PCE',l:'USD CORE PCE'},{v:'USD FINAL GDP ❌',l:'USD FINAL GDP ❌'},{v:'USD ADP NFEC',l:'USD ADP NFEC'},{v:'USD ADVANCE GDP',l:'USD ADVANCE GDP'},{v:'USD PMI',l:'USD PMI'},{v:'USD PPI',l:'USD PPI'},{v:'USD RETAIL S ❌',l:'USD RETAIL S ❌'}],
+  'f-news':[{v:'',l:'— Fără știri —'},{v:'FOMC ❌',l:'FOMC ❌'},{v:'FOMC MM',l:'FOMC MM'},{v:'GBP CCC',l:'GBP CCC'},{v:'GBP CPI',l:'GBP CPI'},{v:'GBP GDP ❌',l:'GBP GDP ❌'},{v:'GBP MON PRH ❌',l:'GBP MON PRH ❌'},{v:'GBP AFS ❌',l:'GBP AFS ❌'},{v:'GBP PMI',l:'GBP PMI'},{v:'GBP RETAIL S',l:'GBP RETAIL S'},{v:'USD ISM PMI',l:'USD ISM PMI'},{v:'USD JOLTS JOB',l:'USD JOLTS JOB'},{v:'NFP',l:'NFP'},{v:'UK BH ❌',l:'UK BH ❌'},{v:'UK RATE ❌',l:'UK RATE ❌'},{v:'USD UNEMP. CLAIMS',l:'USD UNEMP. CLAIMS'},{v:'USA BH ❌',l:'USA BH ❌'},{v:'USD CPI',l:'USD CPI'},{v:'USD CORE PCE',l:'USD CORE PCE'},{v:'USD FINAL GDP ❌',l:'USD FINAL GDP ❌'},{v:'USD ADP NFEC',l:'USD ADP NFEC'},{v:'USD ADVANCE GDP',l:'USD ADVANCE GDP'},{v:'USD PMI',l:'USD PMI'},{v:'USD PPI ❌',l:'USD PPI ❌'},{v:'USD RETAIL S ❌',l:'USD RETAIL S ❌'}],
   'f-misc-ses':[{v:'',l:'Neutru'},{v:'Miscarea sesiunii efectuata',l:'Mișcarea sesiunii efectuată'},{v:'Miscarea sesiunii invalidata',l:'Mișcarea sesiunii invalidată'}],
   'f-liq-dist':[{v:'',l:'—'},{v:'0-1p',l:'0–1p'},{v:'1-2p',l:'1–2p'},{v:'2-3p',l:'2–3p'},{v:'3-4p',l:'3–4p'},{v:'4-5p',l:'4–5p'},{v:'5-6p',l:'5–6p'},{v:'6-7p',l:'6–7p'},{v:'7-8p',l:'7–8p'},{v:'8-9p',l:'8–9p'},{v:'9-10p',l:'9–10p'},{v:'10+p',l:'10+p'}],
   'f-setup-urat':[{v:'',l:'Fără'},{v:'Indecizie',l:'Indecizie'},{v:'MSS spre agresiv',l:'MSS spre agresiv'},{v:'Inghesuit',l:'Înghesuit'},{v:'Setup dubios',l:'Setup dubios'},{v:'MSS cu wick before FVG',l:'MSS cu wick before FVG'},{v:'MSS lung si candela > SL',l:'MSS lung și candela > SL'}]
@@ -12525,14 +12504,13 @@ function updateLinkBtn(inputId, btnId) {
 // ============ INIT ============
 document.getElementById('f-data').value=new Date().toISOString().split('T')[0];
 renderList(); renderStats();
+initCollapsibleCards();
 
 // ============ CALCULATOR ============
 (function(){
   // --- state ---
   const ACCOUNTS = [
     { id:'inst',   label:'Institutional Funding', balance:50000, currency:'USD', cls:'inst' },
-    { id:'ftmo80', label:'FTMO',                  balance:80000, currency:'EUR', cls:'ftmo80' },
-    { id:'ftmo10', label:'FTMO',                  balance:10000, currency:'EUR', cls:'ftmo10' },
   ];
 
   function getEurUsd(){ return parseFloat(document.getElementById('c-eurusd').value)||1.09; }
